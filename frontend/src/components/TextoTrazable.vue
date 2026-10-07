@@ -4,7 +4,7 @@ import { computed } from "vue";
 import { ETIQUETAS } from "../utils.js";
 
 const props = defineProps({ texto: { type: [String, Number], default: "" } });
-const RE = /\[(OFICIAL|CALCULADO|DERIVADO|USUARIO|SUPUESTO|INFERENCIA|PROPUESTO|RELACIONADO|NO DISPONIBLE)([^\]]*)\]|(NO DISPONIBLE)/g;
+const RE = /\[(OFICIAL|CALCULADO|DERIVADO|USUARIO|SUPUESTO|INFERENCIA|PROPUESTO|RELACIONADO|HISTORICO|NO DISPONIBLE)([^\]]*)\]|(NO DISPONIBLE)/g;
 
 const partes = computed(() => {
   const s = String(props.texto ?? "");

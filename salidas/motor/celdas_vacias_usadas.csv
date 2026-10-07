@@ -22,7 +22,7 @@ Guarne · Riesgo de desastres · Capacidad adaptativa,0.5,valor de referencia (p
 Guarne · Riesgo de desastres · Riesgo SSP3-7.0 2060,0.5,valor de referencia (parámetro)
 Guarne · Riesgo de desastres · Riesgo hoy,0.5,valor de referencia (parámetro)
 Guarne · Riesgo de desastres · Robustez 2060,0.5,valor de referencia (parámetro)
-Guarne · Riesgo de desastres · Vulnerabilidad,0.5,valor de referencia (parámetro)
+Guarne · Riesgo de desastres · Vulnerabilidad,0.2367586007137318,estimado desde histórico (n=3 registros)
 Guarne · Salud · Capacidad adaptativa,0.5,valor de referencia (parámetro)
 Guarne · Salud · Riesgo SSP3-7.0 2060,0.5,valor de referencia (parámetro)
 Guarne · Salud · Riesgo hoy,0.5,valor de referencia (parámetro)
@@ -83,7 +83,7 @@ Rionegro · Recurso hídrico · Riesgo SSP3-7.0 2060,0.5,valor de referencia (pa
 Rionegro · Recurso hídrico · Riesgo hoy,0.5,valor de referencia (parámetro)
 Rionegro · Recurso hídrico · Robustez 2060,0.5,valor de referencia (parámetro)
 Rionegro · Recurso hídrico · Vulnerabilidad,0.53,promedio regional oficial
-Rionegro · Riesgo de desastres · Vulnerabilidad,0.5,valor de referencia (parámetro)
+Rionegro · Riesgo de desastres · Vulnerabilidad,0.8015396840445483,estimado desde histórico (n=8 registros)
 Rionegro · Salud · Capacidad adaptativa,0.5,valor de referencia (parámetro)
 Rionegro · Salud · Riesgo SSP3-7.0 2060,0.5,valor de referencia (parámetro)
 Rionegro · Salud · Riesgo hoy,0.5,valor de referencia (parámetro)

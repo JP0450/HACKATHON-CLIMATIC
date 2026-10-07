@@ -5,19 +5,18 @@ Ficha CORNARE,Riesgo SSP3-7.0 2060 por municipio × dimensión,1 de 21,Stress te
 Ficha CORNARE,Sensibilidad por municipio × dimensión,1 de 21,Contexto (no entra al puntaje),Ver filas 'Dato que cambia la decisión'
 Ficha CORNARE,Amenaza por municipio × dimensión,1 de 21,Contexto (no entra al puntaje),Ver filas 'Dato que cambia la decisión'
 Dato que cambia la decisión,Guarne · Biodiversidad · Vulnerabilidad,NO,Resultado si se cruza el umbral: M01-RIO + M02-GUA + M03-COR + M07-MAR + M14-COR,cambia DÓNDE si ≥ 0.79
-Dato que cambia la decisión,Guarne · Recurso hídrico · Capacidad adaptativa,NO,Resultado si se cruza el umbral: M03-COR + M05-GUA + M05-MAR + M07-MAR + M14-COR,cambia QUÉ medidas si ≤ 0.09
-Dato que cambia la decisión,Guarne · Recurso hídrico · Vulnerabilidad,NO,Resultado si se cruza el umbral: M03-COR + M05-GUA + M05-MAR + M07-MAR + M14-COR,cambia QUÉ medidas si ≥ 0.67
-Dato que cambia la decisión,Guarne · Riesgo de desastres · Vulnerabilidad,NO,Resultado si se cruza el umbral: M01-RIO + M03-COR + M05-MAR + M13-COR + M14-COR,cambia QUÉ medidas si ≥ 0.93
+Dato que cambia la decisión,Guarne · Recurso hídrico · Capacidad adaptativa,NO,Resultado si se cruza el umbral: M01-RIO + M03-COR + M05-GUA + M13-COR + M14-COR,cambia QUÉ medidas si ≤ 0.12
+Dato que cambia la decisión,Guarne · Recurso hídrico · Vulnerabilidad,NO,Resultado si se cruza el umbral: M01-RIO + M03-COR + M05-GUA + M13-COR + M14-COR,cambia QUÉ medidas si ≥ 0.66
+Dato que cambia la decisión,Guarne · Riesgo de desastres · Vulnerabilidad,NO,Resultado si se cruza el umbral: M01-RIO + M03-COR + M05-MAR + M13-COR + M14-COR,cambia QUÉ medidas si ≥ 0.63
 Dato que cambia la decisión,Guarne · Seguridad alimentaria · Capacidad adaptativa,NO,Resultado si se cruza el umbral: M03-COR + M07-GUA + M07-MAR + M08-GUA + M08-MAR + M14-COR,cambia QUÉ medidas si ≤ 0.04; cambia DÓNDE si ≤ 0.49
 Dato que cambia la decisión,Guarne · Seguridad alimentaria · Vulnerabilidad,NO,Resultado si se cruza el umbral: M03-COR + M07-GUA + M07-MAR + M08-GUA + M08-MAR + M14-COR,cambia QUÉ medidas si ≥ 0.81; cambia DÓNDE si ≥ 0.51
-Dato que cambia la decisión,Marinilla · Recurso hídrico · Capacidad adaptativa,NO,Resultado si se cruza el umbral: M03-COR + M05-RIO + M05-MAR + M07-MAR + M14-COR,cambia QUÉ medidas si ≤ 0.09
-Dato que cambia la decisión,Marinilla · Recurso hídrico · Vulnerabilidad,NO,Resultado si se cruza el umbral: M03-COR + M05-RIO + M05-MAR + M07-MAR + M14-COR,cambia QUÉ medidas si ≥ 0.67
-Dato que cambia la decisión,Marinilla · Riesgo de desastres · Vulnerabilidad,NO,Resultado si se cruza el umbral: M01-RIO + M03-COR + M05-MAR + M13-COR + M14-COR,cambia QUÉ medidas si ≥ 0.93
+Dato que cambia la decisión,Marinilla · Recurso hídrico · Capacidad adaptativa,NO,Resultado si se cruza el umbral: M01-RIO + M03-COR + M05-MAR + M13-COR + M14-COR,cambia QUÉ medidas si ≤ 0.12
+Dato que cambia la decisión,Marinilla · Recurso hídrico · Vulnerabilidad,NO,Resultado si se cruza el umbral: M01-RIO + M03-COR + M05-MAR + M13-COR + M14-COR,cambia QUÉ medidas si ≥ 0.66
+Dato que cambia la decisión,Marinilla · Riesgo de desastres · Vulnerabilidad,NO,Resultado si se cruza el umbral: M01-RIO + M03-COR + M05-MAR + M13-COR + M14-COR,cambia QUÉ medidas si ≥ 0.90
 Dato que cambia la decisión,Marinilla · Seguridad alimentaria · Capacidad adaptativa,NO,Resultado si se cruza el umbral: M01-RIO + M02-RIO + M03-COR + M07-GUA + M14-COR,cambia QUÉ medidas si ≤ 0.04; cambia DÓNDE si ≥ 0.51
 Dato que cambia la decisión,Marinilla · Seguridad alimentaria · Vulnerabilidad,NO,Resultado si se cruza el umbral: M03-COR + M07-RIO + M07-MAR + M08-GUA + M08-MAR + M14-COR,cambia QUÉ medidas si ≥ 0.81; cambia DÓNDE si ≤ 0.49
-Dato que cambia la decisión,Rionegro · Recurso hídrico · Capacidad adaptativa,NO,Resultado si se cruza el umbral: M03-COR + M05-RIO + M05-MAR + M07-MAR + M14-COR,cambia QUÉ medidas si ≤ 0.09
-Dato que cambia la decisión,Rionegro · Recurso hídrico · Vulnerabilidad,NO,Resultado si se cruza el umbral: M03-COR + M05-RIO + M05-MAR + M07-MAR + M14-COR,cambia QUÉ medidas si ≥ 0.67
-Dato que cambia la decisión,Rionegro · Riesgo de desastres · Vulnerabilidad,NO,Resultado si se cruza el umbral: M01-RIO + M03-COR + M05-MAR + M13-COR + M14-COR,cambia QUÉ medidas si ≥ 0.93
+Dato que cambia la decisión,Rionegro · Recurso hídrico · Capacidad adaptativa,NO,Resultado si se cruza el umbral: M01-RIO + M03-COR + M05-RIO + M13-COR + M14-COR,cambia QUÉ medidas si ≤ 0.12
+Dato que cambia la decisión,Rionegro · Recurso hídrico · Vulnerabilidad,NO,Resultado si se cruza el umbral: M01-RIO + M03-COR + M05-RIO + M13-COR + M14-COR,cambia QUÉ medidas si ≥ 0.66
 Dato que cambia la decisión,Rionegro · Seguridad alimentaria · Capacidad adaptativa,NO,Resultado si se cruza el umbral: M01-RIO + M02-RIO + M03-COR + M07-RIO + M14-COR,cambia DÓNDE si ≤ 0.49
 Dato que cambia la decisión,Rionegro · Seguridad alimentaria · Vulnerabilidad,NO,Resultado si se cruza el umbral: M01-RIO + M02-RIO + M03-COR + M07-RIO + M14-COR,cambia DÓNDE si ≥ 0.51
 Dependencias (Reto sec. 5),"Empresa ACV → captación o fuente hídrica, caudal concesionado vs usado",NO,Sin esto no se puede priorizar 'Uso intersectorial eficiente del agua' (M04),—

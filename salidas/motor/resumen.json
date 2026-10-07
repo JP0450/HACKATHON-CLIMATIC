@@ -134,11 +134,10 @@
   {
    "peso_robustez": 0.45,
    "portafolio": [
+    "M01-RIO",
     "M03-COR",
-    "M07-RIO",
-    "M07-MAR",
-    "M08-GUA",
-    "M08-MAR",
+    "M05-MAR",
+    "M13-COR",
     "M14-COR"
    ],
    "igual_a_referencia": false

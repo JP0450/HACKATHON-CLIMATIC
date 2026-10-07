@@ -3,7 +3,10 @@
 PASO 2 · PREPARAR DATOS  (módulos 1–4: ingesta, calidad, matriz de riesgo, catálogo de medidas)
 
 Lee  datos/datos_entrada.xlsx  (la plantilla que edita el usuario) y deja tablas limpias en  salidas/preparado/
-para que el motor (2_motor.py) las use. No inventa ni corrige datos: solo valida, clasifica y reporta.
+para que el motor (2_motor.py) las use. No inventa ni corrige datos actuales: solo valida, clasifica y reporta.
+Además calcula, solo para celdas de Vulnerabilidad sin dato y sin promedio regional, una estimación
+basada en el histórico de inversión (salidas/preparado/prior_historico.csv) cuando hay suficientes
+registros (ver sección 7 del LEEME.md); si no alcanza, el motor sigue usando el valor fijo de referencia.
 
 Uso:   python 1_preparar.py
 """
@@ -30,6 +33,10 @@ DIMENSIONES = ["Biodiversidad", "Recurso hídrico", "Seguridad alimentaria", "H�
 COMPONENTES = ["Amenaza", "Sensibilidad", "Capacidad adaptativa", "Vulnerabilidad",
                "Riesgo hoy", "Riesgo SSP3-7.0 2060"]
 CRITERIOS = ["Necesidad", "Brecha CA", "Evidencia", "Cobertura", "Cobeneficios", "Robustez 2060"]
+# amenaza (columna "Vulnerabilidad" del histórico) -> dimensión del modelo que mejor la describe
+AMENAZA_A_DIMENSION = {"Inundaciones": "Riesgo de desastres", "Movimiento en masa": "Riesgo de desastres",
+                       "Avenidas torrenciales": "Riesgo de desastres", "Incendios forestales": "Riesgo de desastres",
+                       "Vendavales": "Riesgo de desastres"}
 
 errores, avisos = [], []
 
@@ -214,12 +221,17 @@ def leer_parametros(wb):
                 errores.append(f"Parámetros: decisión del stress test '{fila[1]}' (debe ser A, B o C)")
             p["decision_stress"] = d
             continue
+        if fila[0] == "Mínimo de registros históricos para usarlos":
+            v = como_numero(fila[1])
+            p["minimo_registros_historico"] = int(v) if v not in (None, "NO_NUMERICO") else 3
+            continue
         if fila[0] in claves:
             v = como_numero(fila[1], entero_grande=(claves[fila[0]] in ("presupuesto", "n_simulaciones", "semilla")))
             if v is None or v == "NO_NUMERICO":
                 errores.append(f"Parámetros: '{fila[0]}' vacío o no numérico")
             p[claves[fila[0]]] = v
     p.setdefault("decision_stress", "A")
+    p.setdefault("minimo_registros_historico", 3)
     for k in claves.values():
         if k not in p:
             errores.append(f"Parámetros: falta '{k}'")
@@ -236,12 +248,13 @@ def leer_parametros(wb):
 
 
 # ----------------------------------------------------------------------------------------------
-# Antecedentes: registro histórico de medidas de adaptación (solo contexto, no entra al puntaje)
+# Antecedentes: registro histórico de medidas de adaptación
+# (contexto siempre; además, estimación para celdas de Vulnerabilidad sin dato cuando alcanza el mínimo)
 # ----------------------------------------------------------------------------------------------
-def resumir_historico():
+def resumir_historico(minimo_registros):
     if not os.path.exists(HISTORICO):
         avisos.append("No se encontró el Excel histórico de medidas; se omite el resumen de antecedentes")
-        return None, None
+        return None, None, None
     h = pd.read_excel(HISTORICO)
     calidad = dict(filas=len(h), filas_duplicadas=int(h.duplicated().sum()),
                    inversion_vacia=int(h["Valor Inversion"].isna().sum()),
@@ -249,7 +262,27 @@ def resumir_historico():
                    vulnerabilidad_no_aplica=int((h["Vulnerabilidad"] == "No Aplica").sum()))
     corr = h[h["Municipio"].str.upper().isin([m.upper() for m in MUNICIPIOS])].copy()
     corr["Municipio"] = corr["Municipio"].str.title()
-    return corr, calidad
+
+    # dimensión de cada fila: columna manual "Dimensión (sistema)" si la agregaron y es válida;
+    # si no, lo que se pueda deducir de la amenaza (columna Vulnerabilidad); si no, queda sin clasificar
+    if "Dimensión (sistema)" in corr.columns:
+        manual = corr["Dimensión (sistema)"].where(corr["Dimensión (sistema)"].isin(DIMENSIONES))
+    else:
+        manual = pd.Series(None, index=corr.index, dtype=object)
+    automatica = corr["Vulnerabilidad"].map(AMENAZA_A_DIMENSION)
+    corr["dimension_detectada"] = manual.fillna(automatica)
+
+    clasif = corr.dropna(subset=["dimension_detectada"])
+    total_municipio = corr.groupby("Municipio")["Valor Inversion"].sum()
+    prior = (clasif.groupby(["Municipio", "dimension_detectada"])["Valor Inversion"]
+             .agg(registros="count", inversion="sum").reset_index()
+             .rename(columns={"dimension_detectada": "dimension"}))
+    prior["inversion_total_municipio"] = prior["Municipio"].map(total_municipio)
+    # [SUPUESTO] proporción de la inversión histórica del municipio dirigida a esa dimensión, como
+    #            aproximación de necesidad/vulnerabilidad reconocida cuando no hay dato actual ni regional
+    prior["valor_estimado"] = (prior["inversion"] / prior["inversion_total_municipio"]).clip(0, 1)
+    prior = prior[prior["registros"] >= minimo_registros].reset_index(drop=True)
+    return corr, calidad, prior
 
 
 # ----------------------------------------------------------------------------------------------
@@ -278,7 +311,7 @@ def main():
     evidencia = leer_evidencia(wb, medidas)
     pesos = leer_pesos(wb)
     parametros = leer_parametros(wb)
-    historico, cal_hist = resumir_historico()
+    historico, cal_hist, prior_hist = resumir_historico(parametros.get("minimo_registros_historico", 3))
 
     os.makedirs(SALIDA, exist_ok=True)
     ficha.to_csv(os.path.join(SALIDA, "ficha_larga.csv"), index=False, encoding="utf-8-sig")
@@ -291,6 +324,8 @@ def main():
         json.dump(parametros, fh, ensure_ascii=False, indent=1)
     if historico is not None:
         historico.to_csv(os.path.join(SALIDA, "historico_corredor.csv"), index=False, encoding="utf-8-sig")
+    if prior_hist is not None and len(prior_hist):
+        prior_hist.to_csv(os.path.join(SALIDA, "prior_historico.csv"), index=False, encoding="utf-8-sig")
 
     # ---- resumen en pantalla
     cal = calidad_por_componente(ficha)
@@ -319,7 +354,7 @@ def main():
     print(f"\n5) Parámetros: {parametros}")
 
     if historico is not None:
-        print("\n6) Antecedentes (Excel histórico de medidas de adaptación, 2018–2025) — solo contexto")
+        print("\n6) Antecedentes (Excel histórico de medidas de adaptación, 2018–2025)")
         print(f"   Calidad del archivo: {cal_hist}")
         g = historico.groupby("Municipio")["Valor Inversion"].agg(registros="count", inversion_COP="sum")
         g = g.reindex(MUNICIPIOS).fillna(0)
@@ -327,6 +362,14 @@ def main():
         g = g.rename(columns={"inversion_COP": "inversión histórica (COP millones)"})
         print(g.to_string())
         print("   Nota: pocos registros (Marinilla) indican posible subregistro, NO menor necesidad.")
+        m = parametros.get("minimo_registros_historico", 3)
+        if prior_hist is not None and len(prior_hist):
+            print(f"\n   Celdas de Vulnerabilidad sin dato que el histórico puede predecir (≥{m} registros):")
+            print(prior_hist[["Municipio", "dimension", "registros", "valor_estimado"]]
+                  .assign(valor_estimado=lambda d: d.valor_estimado.round(3)).to_string(index=False))
+        else:
+            print(f"\n   Ningún municipio/dimensión alcanza el mínimo de {m} registros todavía "
+                  f"(sigue usándose el valor de referencia para esas celdas).")
 
     print("\n" + "-" * 78)
     for a in avisos:

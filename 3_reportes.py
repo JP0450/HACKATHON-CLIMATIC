@@ -428,7 +428,8 @@ def main():
     js = dict(
         meta=dict(titulo="Motor de decisión de adaptación — Rionegro · Guarne · Marinilla", presupuesto_M=P,
                   decision_stress=decision_txt, n_simulaciones=int(d["par"]["n_simulaciones"]),
-                  etiquetas=["OFICIAL", "CALCULADO", "DERIVADO", "USUARIO", "SUPUESTO", "INFERENCIA", "PROPUESTO", "NO DISPONIBLE"]),
+                  etiquetas=["OFICIAL", "CALCULADO", "DERIVADO", "USUARIO", "SUPUESTO", "INFERENCIA", "PROPUESTO",
+                             "HISTORICO", "NO DISPONIBLE"]),
         kpis=dict(presupuesto_M=P, asignado_M=total, saldo_M=P - total, n_intervenciones=len(port),
                   por_territorio_M=por_muni.to_dict(), cobertura_datos_VCA=round(base_pct, 3),
                   veredicto_2060=res["veredicto_2060"]),

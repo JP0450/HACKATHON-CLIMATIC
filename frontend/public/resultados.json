@@ -12,6 +12,7 @@
    "SUPUESTO",
    "INFERENCIA",
    "PROPUESTO",
+   "HISTORICO",
    "NO DISPONIBLE"
   ]
  },
@@ -52,7 +53,7 @@
   },
   {
    "hallazgo": "Solo el 17% de los valores de vulnerabilidad y capacidad adaptativa están disponibles.",
-   "implicacion": "La decisión se elige por robustez (3.000 escenarios) y se identifican 16 datos que podrían cambiarla.",
+   "implicacion": "La decisión se elige por robustez (3.000 escenarios) y se identifican 15 datos que podrían cambiarla.",
    "fuente": "1_preparar.py [CALCULADO]"
   }
  ],
@@ -71,7 +72,7 @@
    "localizacion": "Rionegro: Recomienda actualizar zonificación de amenaza urbana y estudiar nuevos núcleos habitacionales (Informe final Rionegro 2012 sec.7) | Guarne: Recomienda actualizar estudio de amenazas urbano y planes de emergencia (Informe final Guarne 2012 sec.6.2; Zonificación Guarne 2014 sec.4.1) | Marinilla: Recomienda dinamizar comités de conocimiento del riesgo y censos en asentamientos (Zonificación Marinilla 2014 sec.3.1-3.2)",
    "actores": "CORNARE (Observatorio, gestión del riesgo) [OFICIAL]; consejos municipales de gestión del riesgo [INFERENCIA]; empresas ACV con información agregada [OFICIAL: Reto]",
    "beneficio_esperado": "Reduce: —. Fortalece: Conocimiento del riesgo: estudios, modelación, protocolos y plataforma. Magnitud: no cuantificable con los datos disponibles (efectividad NO DISPONIBLE).",
-   "explicacion": "Puntaje 0.539 (puesto 9 de 26 alternativas que compiten) · Necesidad 0.50 · Brecha CA 0.44 · Evidencia 0.83 · Cobertura 1.00 · Cobeneficios 0.00 · La medida aparece en el 71% de los 3.000 escenarios simulados; confianza Alta · Si se elimina, el modelo la reemplaza por: M05-MAR, M07-GUA, M07-RIO.",
+   "explicacion": "Puntaje 0.542 (puesto 8 de 26 alternativas que compiten) · Necesidad 0.51 · Brecha CA 0.44 · Evidencia 0.83 · Cobertura 1.00 · Cobeneficios 0.00 · La medida aparece en el 71% de los 3.000 escenarios simulados; confianza Alta · Si se elimina, el modelo la reemplaza por: M05-MAR, M07-GUA, M07-RIO.",
    "cambio_ssp370_2060": "Se mantiene en SSP3-7.0/2060 · Robustez: Se refuerza (riesgo sube a 2060)",
    "indicador_actividad": "# de estudios de riesgo climático elaborados por sector anualmente [RELACIONADO (Excel: Uso intersectorial)]",
    "indicador_resultado": "% de celdas de la ficha V/CA con dato oficial (línea base 17%); nº de dependencias empresa–territorio caracterizadas [PROPUESTO]",
@@ -134,7 +135,7 @@
    "localizacion": "Rionegro: Recomienda mejoramiento de coberturas vegetales (Cuchillas de San José, Galicia); restauración registrada para inundaciones (Informe final Rionegro 2012 sec.6.1; Excel 2023)",
    "actores": "CORNARE (restauración registrada en el PICCA) [OFICIAL: Excel]; alcaldía; comunidades y JAC [INFERENCIA]",
    "beneficio_esperado": "Reduce: Suelos desprotegidos y ecosistemas degradados (cobeneficio en laderas). Fortalece: —. Magnitud: no cuantificable con los datos disponibles (efectividad NO DISPONIBLE).",
-   "explicacion": "Puntaje 0.628 (puesto 1 de 26 alternativas que compiten) · Necesidad 0.75 · Brecha CA 0.39 · Evidencia 1.00 · Cobertura 0.33 · Cobeneficios 0.67 · La medida aparece en el 27% de los 3.000 escenarios simulados; confianza Media · Si se elimina, el modelo la reemplaza por: M05-GUA, M05-MAR.",
+   "explicacion": "Puntaje 0.628 (puesto 1 de 26 alternativas que compiten) · Necesidad 0.75 · Brecha CA 0.39 · Evidencia 1.00 · Cobertura 0.33 · Cobeneficios 0.67 · La medida aparece en el 27% de los 3.000 escenarios simulados; confianza Media · Si se elimina, el modelo la reemplaza por: M05-MAR, M13-COR.",
    "cambio_ssp370_2060": "Sale en el portafolio SSP3-7.0/2060 (se mantiene por robustez frente a hoy y 2060) · Robustez: No evaluable (sin dato 2060)",
    "indicador_actividad": "COP$ invertido en proyectos de restauración. [OFICIAL (Excel) - es indicador de actividad]",
    "indicador_resultado": "Hectáreas restauradas con sobrevivencia a 3 años; nº de movimientos en masa en las zonas intervenidas [PROPUESTO]",
@@ -155,7 +156,7 @@
    "localizacion": "Marinilla: La mayor parte de movimientos en masa relacionados con cultivos limpios y sobrepastoreo; 77% de casos son movimientos en masa (Informe final Marinilla 2012 sec.6)",
    "actores": "Alcaldía (agricultura) [INFERENCIA]; productores; JAC y acueductos rurales [OFICIAL: recomendación Marinilla 2014]; CORNARE",
    "beneficio_esperado": "Reduce: Prácticas agrícolas que degradan el suelo (cultivos limpios, sobrepastoreo). Fortalece: Asistencia técnica a productores. Magnitud: no cuantificable con los datos disponibles (efectividad NO DISPONIBLE).",
-   "explicacion": "Puntaje 0.525 (puesto 10 de 26 alternativas que compiten) · Necesidad 0.50 · Brecha CA 0.25 · Evidencia 1.00 · Cobertura 0.33 · Cobeneficios 0.67 · La medida aparece en el 79% de los 3.000 escenarios simulados; confianza Media · Si se elimina, el modelo la reemplaza por: M07-GUA.",
+   "explicacion": "Puntaje 0.525 (puesto 11 de 26 alternativas que compiten) · Necesidad 0.50 · Brecha CA 0.25 · Evidencia 1.00 · Cobertura 0.33 · Cobeneficios 0.67 · La medida aparece en el 79% de los 3.000 escenarios simulados; confianza Media · Si se elimina, el modelo la reemplaza por: M07-GUA.",
    "cambio_ssp370_2060": "Sale en el portafolio SSP3-7.0/2060 (se mantiene por robustez frente a hoy y 2060) · Robustez: No evaluable (sin dato 2060)",
    "indicador_actividad": "# de actores educados y capacitados en términos de conservación y uso del suelo anualmente [RELACIONADO (Excel: Protección de suelos)]",
    "indicador_resultado": "Hectáreas con prácticas de conservación de suelo; nº de movimientos en masa en las veredas intervenidas [PROPUESTO]",
@@ -296,11 +297,10 @@
    {
     "peso_robustez": 0.45,
     "portafolio": [
+     "M01-RIO",
      "M03-COR",
-     "M07-RIO",
-     "M07-MAR",
-     "M08-GUA",
-     "M08-MAR",
+     "M05-MAR",
+     "M13-COR",
      "M14-COR"
     ],
     "igual_a_referencia": false
@@ -389,7 +389,7 @@
    "en_2060": false,
    "en_robusto": true,
    "frec_datos": 0.174,
-   "frec_pesos": 0.373,
+   "frec_pesos": 0.369,
    "frec_efectividad": 0.41,
    "frec_conjunta": 0.201,
    "confianza": "Media",
@@ -419,7 +419,7 @@
    "en_2060": true,
    "en_robusto": true,
    "frec_datos": 0.901,
-   "frec_pesos": 0.953,
+   "frec_pesos": 0.952,
    "frec_efectividad": 1.0,
    "frec_conjunta": 0.809,
    "confianza": "Alta",
@@ -450,7 +450,7 @@
    "en_robusto": true,
    "frec_datos": 0.346,
    "frec_pesos": 0.614,
-   "frec_efectividad": 0.437,
+   "frec_efectividad": 0.443,
    "frec_conjunta": 0.285,
    "confianza": "Media",
    "robustez_2060": "No evaluable (sin dato 2060)",
@@ -465,7 +465,7 @@
    "territorio": "Corredor",
    "costo_M": 600.0,
    "actua_sobre": "CA",
-   "Necesidad": 0.5,
+   "Necesidad": 0.513,
    "Brecha CA": 0.443,
    "Evidencia": 0.833,
    "Cobertura": 1.0,
@@ -473,14 +473,14 @@
    "Robustez 2060": 0.667,
    "datos_V_CA": 2,
    "elegible": true,
-   "puntaje_ref": 0.5387,
-   "puntaje_2060": 0.5707,
+   "puntaje_ref": 0.5425,
+   "puntaje_2060": 0.5735,
    "en_referencia": true,
    "en_2060": true,
    "en_robusto": true,
    "frec_datos": 0.821,
-   "frec_pesos": 0.921,
-   "frec_efectividad": 0.911,
+   "frec_pesos": 0.927,
+   "frec_efectividad": 0.918,
    "frec_conjunta": 0.712,
    "confianza": "Alta",
    "robustez_2060": "Se refuerza (riesgo sube a 2060)",
@@ -509,8 +509,8 @@
    "en_2060": false,
    "en_robusto": true,
    "frec_datos": 0.374,
-   "frec_pesos": 0.685,
-   "frec_efectividad": 0.729,
+   "frec_pesos": 0.674,
+   "frec_efectividad": 0.732,
    "frec_conjunta": 0.381,
    "confianza": "Media",
    "robustez_2060": "No evaluable (sin dato 2060)",
@@ -539,7 +539,7 @@
    "en_2060": false,
    "en_robusto": false,
    "frec_datos": 0.271,
-   "frec_pesos": 0.17,
+   "frec_pesos": 0.171,
    "frec_efectividad": 0.0,
    "frec_conjunta": 0.273,
    "confianza": "Baja",
@@ -599,8 +599,8 @@
    "en_2060": true,
    "en_robusto": false,
    "frec_datos": 0.266,
-   "frec_pesos": 0.521,
-   "frec_efectividad": 0.271,
+   "frec_pesos": 0.526,
+   "frec_efectividad": 0.268,
    "frec_conjunta": 0.263,
    "confianza": "Baja",
    "robustez_2060": "No evaluable (sin dato 2060)",
@@ -630,7 +630,7 @@
    "en_robusto": false,
    "frec_datos": 0.074,
    "frec_pesos": 0.0,
-   "frec_efectividad": 0.089,
+   "frec_efectividad": 0.082,
    "frec_conjunta": 0.091,
    "confianza": "Baja",
    "robustez_2060": "No evaluable (sin dato 2060)",
@@ -669,6 +669,36 @@
    "estado_indicador": "OFICIAL (Excel) - es indicador de actividad"
   },
   {
+   "alternativa": "M13-COR",
+   "medida": "Fortalecimiento de Sistemas de Alerta Temprana – SAT",
+   "dimension": "Riesgo de desastres",
+   "territorio": "Corredor",
+   "costo_M": 1200.0,
+   "actua_sobre": "CA",
+   "Necesidad": 0.513,
+   "Brecha CA": 0.443,
+   "Evidencia": 0.333,
+   "Cobertura": 1.0,
+   "Cobeneficios": 0.333,
+   "Robustez 2060": 0.667,
+   "datos_V_CA": 2,
+   "elegible": true,
+   "puntaje_ref": 0.5258,
+   "puntaje_2060": 0.561,
+   "en_referencia": false,
+   "en_2060": true,
+   "en_robusto": false,
+   "frec_datos": 0.192,
+   "frec_pesos": 0.366,
+   "frec_efectividad": 0.256,
+   "frec_conjunta": 0.181,
+   "confianza": "Baja",
+   "robustez_2060": "Se refuerza (riesgo sube a 2060)",
+   "cobeneficios": "Infraestructura",
+   "indicador": "NO DISPONIBLE",
+   "estado_indicador": "NO DISPONIBLE"
+  },
+  {
    "alternativa": "M07-RIO",
    "medida": "Protección y reconversión de suelos agrícolas estratégicos",
    "dimension": "Seguridad alimentaria",
@@ -689,8 +719,8 @@
    "en_2060": false,
    "en_robusto": false,
    "frec_datos": 0.341,
-   "frec_pesos": 0.141,
-   "frec_efectividad": 0.408,
+   "frec_pesos": 0.134,
+   "frec_efectividad": 0.404,
    "frec_conjunta": 0.347,
    "confianza": "Media",
    "robustez_2060": "No evaluable (sin dato 2060)",
@@ -719,7 +749,7 @@
    "en_2060": false,
    "en_robusto": false,
    "frec_datos": 0.355,
-   "frec_pesos": 0.102,
+   "frec_pesos": 0.098,
    "frec_efectividad": 0.0,
    "frec_conjunta": 0.36,
    "confianza": "Media",
@@ -727,36 +757,6 @@
    "cobeneficios": "Recurso hídrico; Riesgo de desastres",
    "indicador": "# de actores educados y capacitados en términos de conservación y uso del suelo anualmente",
    "estado_indicador": "RELACIONADO (Excel: Protección de suelos)"
-  },
-  {
-   "alternativa": "M13-COR",
-   "medida": "Fortalecimiento de Sistemas de Alerta Temprana – SAT",
-   "dimension": "Riesgo de desastres",
-   "territorio": "Corredor",
-   "costo_M": 1200.0,
-   "actua_sobre": "CA",
-   "Necesidad": 0.5,
-   "Brecha CA": 0.443,
-   "Evidencia": 0.333,
-   "Cobertura": 1.0,
-   "Cobeneficios": 0.333,
-   "Robustez 2060": 0.667,
-   "datos_V_CA": 2,
-   "elegible": true,
-   "puntaje_ref": 0.522,
-   "puntaje_2060": 0.5582,
-   "en_referencia": false,
-   "en_2060": true,
-   "en_robusto": false,
-   "frec_datos": 0.192,
-   "frec_pesos": 0.347,
-   "frec_efectividad": 0.248,
-   "frec_conjunta": 0.181,
-   "confianza": "Baja",
-   "robustez_2060": "Se refuerza (riesgo sube a 2060)",
-   "cobeneficios": "Infraestructura",
-   "indicador": "NO DISPONIBLE",
-   "estado_indicador": "NO DISPONIBLE"
   },
   {
    "alternativa": "M01-GUA",
@@ -959,8 +959,8 @@
    "en_2060": false,
    "en_robusto": false,
    "frec_datos": 0.284,
-   "frec_pesos": 0.039,
-   "frec_efectividad": 0.408,
+   "frec_pesos": 0.037,
+   "frec_efectividad": 0.404,
    "frec_conjunta": 0.314,
    "confianza": "Media",
    "robustez_2060": "No evaluable (sin dato 2060)",
@@ -989,8 +989,8 @@
    "en_2060": false,
    "en_robusto": false,
    "frec_datos": 0.292,
-   "frec_pesos": 0.039,
-   "frec_efectividad": 0.408,
+   "frec_pesos": 0.037,
+   "frec_efectividad": 0.404,
    "frec_conjunta": 0.325,
    "confianza": "Media",
    "robustez_2060": "No evaluable (sin dato 2060)",
@@ -2667,8 +2667,8 @@
   },
   {
    "celda": "Guarne · Riesgo de desastres · Vulnerabilidad",
-   "valor_caso_base": 0.5,
-   "regla": "valor de referencia (parámetro)"
+   "valor_caso_base": 0.2367586007137318,
+   "regla": "estimado desde histórico (n=3 registros)"
   },
   {
    "celda": "Guarne · Salud · Capacidad adaptativa",
@@ -2972,8 +2972,8 @@
   },
   {
    "celda": "Rionegro · Riesgo de desastres · Vulnerabilidad",
-   "valor_caso_base": 0.5,
-   "regla": "valor de referencia (parámetro)"
+   "valor_caso_base": 0.8015396840445483,
+   "regla": "estimado desde histórico (n=8 registros)"
   },
   {
    "celda": "Rionegro · Salud · Capacidad adaptativa",
@@ -3042,26 +3042,26 @@
    "valor_caso_base": 0.5,
    "regla_caso_base": "valor de referencia (parámetro)",
    "cambia_QUE_si_sube_a": null,
-   "cambia_QUE_si_baja_a": 0.09,
+   "cambia_QUE_si_baja_a": 0.12,
    "cambia_DONDE_si_sube_a": null,
    "cambia_DONDE_si_baja_a": null,
-   "portafolio_resultante": "M03-COR + M05-GUA + M05-MAR + M07-MAR + M14-COR"
+   "portafolio_resultante": "M01-RIO + M03-COR + M05-GUA + M13-COR + M14-COR"
   },
   {
    "celda_vacia": "Guarne · Recurso hídrico · Vulnerabilidad",
    "valor_caso_base": 0.53,
    "regla_caso_base": "promedio regional oficial",
-   "cambia_QUE_si_sube_a": 0.67,
+   "cambia_QUE_si_sube_a": 0.66,
    "cambia_QUE_si_baja_a": null,
    "cambia_DONDE_si_sube_a": null,
    "cambia_DONDE_si_baja_a": null,
-   "portafolio_resultante": "M03-COR + M05-GUA + M05-MAR + M07-MAR + M14-COR"
+   "portafolio_resultante": "M01-RIO + M03-COR + M05-GUA + M13-COR + M14-COR"
   },
   {
    "celda_vacia": "Guarne · Riesgo de desastres · Vulnerabilidad",
-   "valor_caso_base": 0.5,
-   "regla_caso_base": "valor de referencia (parámetro)",
-   "cambia_QUE_si_sube_a": 0.93,
+   "valor_caso_base": 0.2367586007137318,
+   "regla_caso_base": "estimado desde histórico (n=3 registros)",
+   "cambia_QUE_si_sube_a": 0.63,
    "cambia_QUE_si_baja_a": null,
    "cambia_DONDE_si_sube_a": null,
    "cambia_DONDE_si_baja_a": null,
@@ -3092,26 +3092,26 @@
    "valor_caso_base": 0.5,
    "regla_caso_base": "valor de referencia (parámetro)",
    "cambia_QUE_si_sube_a": null,
-   "cambia_QUE_si_baja_a": 0.09,
+   "cambia_QUE_si_baja_a": 0.12,
    "cambia_DONDE_si_sube_a": null,
    "cambia_DONDE_si_baja_a": null,
-   "portafolio_resultante": "M03-COR + M05-RIO + M05-MAR + M07-MAR + M14-COR"
+   "portafolio_resultante": "M01-RIO + M03-COR + M05-MAR + M13-COR + M14-COR"
   },
   {
    "celda_vacia": "Marinilla · Recurso hídrico · Vulnerabilidad",
    "valor_caso_base": 0.53,
    "regla_caso_base": "promedio regional oficial",
-   "cambia_QUE_si_sube_a": 0.67,
+   "cambia_QUE_si_sube_a": 0.66,
    "cambia_QUE_si_baja_a": null,
    "cambia_DONDE_si_sube_a": null,
    "cambia_DONDE_si_baja_a": null,
-   "portafolio_resultante": "M03-COR + M05-RIO + M05-MAR + M07-MAR + M14-COR"
+   "portafolio_resultante": "M01-RIO + M03-COR + M05-MAR + M13-COR + M14-COR"
   },
   {
    "celda_vacia": "Marinilla · Riesgo de desastres · Vulnerabilidad",
    "valor_caso_base": 0.5,
    "regla_caso_base": "valor de referencia (parámetro)",
-   "cambia_QUE_si_sube_a": 0.93,
+   "cambia_QUE_si_sube_a": 0.9,
    "cambia_QUE_si_baja_a": null,
    "cambia_DONDE_si_sube_a": null,
    "cambia_DONDE_si_baja_a": null,
@@ -3142,30 +3142,20 @@
    "valor_caso_base": 0.5,
    "regla_caso_base": "valor de referencia (parámetro)",
    "cambia_QUE_si_sube_a": null,
-   "cambia_QUE_si_baja_a": 0.09,
+   "cambia_QUE_si_baja_a": 0.12,
    "cambia_DONDE_si_sube_a": null,
    "cambia_DONDE_si_baja_a": null,
-   "portafolio_resultante": "M03-COR + M05-RIO + M05-MAR + M07-MAR + M14-COR"
+   "portafolio_resultante": "M01-RIO + M03-COR + M05-RIO + M13-COR + M14-COR"
   },
   {
    "celda_vacia": "Rionegro · Recurso hídrico · Vulnerabilidad",
    "valor_caso_base": 0.53,
    "regla_caso_base": "promedio regional oficial",
-   "cambia_QUE_si_sube_a": 0.67,
+   "cambia_QUE_si_sube_a": 0.66,
    "cambia_QUE_si_baja_a": null,
    "cambia_DONDE_si_sube_a": null,
    "cambia_DONDE_si_baja_a": null,
-   "portafolio_resultante": "M03-COR + M05-RIO + M05-MAR + M07-MAR + M14-COR"
-  },
-  {
-   "celda_vacia": "Rionegro · Riesgo de desastres · Vulnerabilidad",
-   "valor_caso_base": 0.5,
-   "regla_caso_base": "valor de referencia (parámetro)",
-   "cambia_QUE_si_sube_a": 0.93,
-   "cambia_QUE_si_baja_a": null,
-   "cambia_DONDE_si_sube_a": null,
-   "cambia_DONDE_si_baja_a": null,
-   "portafolio_resultante": "M01-RIO + M03-COR + M05-MAR + M13-COR + M14-COR"
+   "portafolio_resultante": "M01-RIO + M03-COR + M05-RIO + M13-COR + M14-COR"
   },
   {
    "celda_vacia": "Rionegro · Seguridad alimentaria · Capacidad adaptativa",
@@ -3254,9 +3244,9 @@
   },
   {
    "caso": "Sin M02-RIO",
-   "portafolio": "M03-COR + M05-GUA + M05-MAR + M07-MAR + M14-COR",
+   "portafolio": "M01-RIO + M03-COR + M05-MAR + M13-COR + M14-COR",
    "n": 5,
-   "costo": 4900.0,
+   "costo": 5000.0,
    "nota": null
   },
   {
@@ -3781,22 +3771,22 @@
    "tipo": "Dato que cambia la decisión",
    "dato": "Guarne · Recurso hídrico · Capacidad adaptativa",
    "disponible": "NO",
-   "por_que_importa": "Resultado si se cruza el umbral: M03-COR + M05-GUA + M05-MAR + M07-MAR + M14-COR",
-   "umbral_que_cambia_la_decision": "cambia QUÉ medidas si ≤ 0.09"
+   "por_que_importa": "Resultado si se cruza el umbral: M01-RIO + M03-COR + M05-GUA + M13-COR + M14-COR",
+   "umbral_que_cambia_la_decision": "cambia QUÉ medidas si ≤ 0.12"
   },
   {
    "tipo": "Dato que cambia la decisión",
    "dato": "Guarne · Recurso hídrico · Vulnerabilidad",
    "disponible": "NO",
-   "por_que_importa": "Resultado si se cruza el umbral: M03-COR + M05-GUA + M05-MAR + M07-MAR + M14-COR",
-   "umbral_que_cambia_la_decision": "cambia QUÉ medidas si ≥ 0.67"
+   "por_que_importa": "Resultado si se cruza el umbral: M01-RIO + M03-COR + M05-GUA + M13-COR + M14-COR",
+   "umbral_que_cambia_la_decision": "cambia QUÉ medidas si ≥ 0.66"
   },
   {
    "tipo": "Dato que cambia la decisión",
    "dato": "Guarne · Riesgo de desastres · Vulnerabilidad",
    "disponible": "NO",
    "por_que_importa": "Resultado si se cruza el umbral: M01-RIO + M03-COR + M05-MAR + M13-COR + M14-COR",
-   "umbral_que_cambia_la_decision": "cambia QUÉ medidas si ≥ 0.93"
+   "umbral_que_cambia_la_decision": "cambia QUÉ medidas si ≥ 0.63"
   },
   {
    "tipo": "Dato que cambia la decisión",
@@ -3816,22 +3806,22 @@
    "tipo": "Dato que cambia la decisión",
    "dato": "Marinilla · Recurso hídrico · Capacidad adaptativa",
    "disponible": "NO",
-   "por_que_importa": "Resultado si se cruza el umbral: M03-COR + M05-RIO + M05-MAR + M07-MAR + M14-COR",
-   "umbral_que_cambia_la_decision": "cambia QUÉ medidas si ≤ 0.09"
+   "por_que_importa": "Resultado si se cruza el umbral: M01-RIO + M03-COR + M05-MAR + M13-COR + M14-COR",
+   "umbral_que_cambia_la_decision": "cambia QUÉ medidas si ≤ 0.12"
   },
   {
    "tipo": "Dato que cambia la decisión",
    "dato": "Marinilla · Recurso hídrico · Vulnerabilidad",
    "disponible": "NO",
-   "por_que_importa": "Resultado si se cruza el umbral: M03-COR + M05-RIO + M05-MAR + M07-MAR + M14-COR",
-   "umbral_que_cambia_la_decision": "cambia QUÉ medidas si ≥ 0.67"
+   "por_que_importa": "Resultado si se cruza el umbral: M01-RIO + M03-COR + M05-MAR + M13-COR + M14-COR",
+   "umbral_que_cambia_la_decision": "cambia QUÉ medidas si ≥ 0.66"
   },
   {
    "tipo": "Dato que cambia la decisión",
    "dato": "Marinilla · Riesgo de desastres · Vulnerabilidad",
    "disponible": "NO",
    "por_que_importa": "Resultado si se cruza el umbral: M01-RIO + M03-COR + M05-MAR + M13-COR + M14-COR",
-   "umbral_que_cambia_la_decision": "cambia QUÉ medidas si ≥ 0.93"
+   "umbral_que_cambia_la_decision": "cambia QUÉ medidas si ≥ 0.90"
   },
   {
    "tipo": "Dato que cambia la decisión",
@@ -3851,22 +3841,15 @@
    "tipo": "Dato que cambia la decisión",
    "dato": "Rionegro · Recurso hídrico · Capacidad adaptativa",
    "disponible": "NO",
-   "por_que_importa": "Resultado si se cruza el umbral: M03-COR + M05-RIO + M05-MAR + M07-MAR + M14-COR",
-   "umbral_que_cambia_la_decision": "cambia QUÉ medidas si ≤ 0.09"
+   "por_que_importa": "Resultado si se cruza el umbral: M01-RIO + M03-COR + M05-RIO + M13-COR + M14-COR",
+   "umbral_que_cambia_la_decision": "cambia QUÉ medidas si ≤ 0.12"
   },
   {
    "tipo": "Dato que cambia la decisión",
    "dato": "Rionegro · Recurso hídrico · Vulnerabilidad",
    "disponible": "NO",
-   "por_que_importa": "Resultado si se cruza el umbral: M03-COR + M05-RIO + M05-MAR + M07-MAR + M14-COR",
-   "umbral_que_cambia_la_decision": "cambia QUÉ medidas si ≥ 0.67"
-  },
-  {
-   "tipo": "Dato que cambia la decisión",
-   "dato": "Rionegro · Riesgo de desastres · Vulnerabilidad",
-   "disponible": "NO",
-   "por_que_importa": "Resultado si se cruza el umbral: M01-RIO + M03-COR + M05-MAR + M13-COR + M14-COR",
-   "umbral_que_cambia_la_decision": "cambia QUÉ medidas si ≥ 0.93"
+   "por_que_importa": "Resultado si se cruza el umbral: M01-RIO + M03-COR + M05-RIO + M13-COR + M14-COR",
+   "umbral_que_cambia_la_decision": "cambia QUÉ medidas si ≥ 0.66"
   },
   {
    "tipo": "Dato que cambia la decisión",

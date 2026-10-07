@@ -304,6 +304,7 @@ h1 span { color: var(--lime); }
 .chip-supuesto, .chip-inferencia { border-color: #6b5a8f; background: #221d2e; color: #c8b8f0; }
 .chip-propuesto, .chip-relacionado { border-color: #4b6a6a; background: #1a2626; color: #a9d6d2; }
 .chip-no-disponible { border-color: #5b5f57; background: #1e211d; color: #b5b9ae; }
+.chip-historico { border-color: #8f3f5f; background: #2e1620; color: #f0a9c8; }
 .leyenda { flex-wrap: wrap; gap: 8px 16px; font-size: 10px; }
 .leyenda > strong { color: #e0e6d7; }
 .leyenda-item { display: inline-flex; align-items: center; gap: 4px; color: var(--text-3); }
@@ -360,6 +361,8 @@ h1 span { color: var(--lime); }
 .cell-usuario { background: #1a2c3d; color: #b3d6f7; }
 .cell-no-disponible, .cell-vacia { background: #1c201b; color: #59614f; }
 .cell-voi { box-shadow: inset 0 0 0 1px #c98500; color: #f0c77a !important; }
+.val-historico { font-style: italic; color: #f0a9c8; }
+.voi-mark { margin-left: 3px; vertical-align: -1px; }
 
 /* barras horizontales de estabilidad (una serie, color de marca) */
 .hbar-list { display: grid; gap: 4px; margin-top: 14px; }

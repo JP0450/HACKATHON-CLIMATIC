@@ -1,17 +1,16 @@
 ﻿celda_vacia,valor_caso_base,regla_caso_base,cambia_QUE_si_sube_a,cambia_QUE_si_baja_a,cambia_DONDE_si_sube_a,cambia_DONDE_si_baja_a,portafolio_resultante
 Guarne · Biodiversidad · Vulnerabilidad,0.55,promedio regional oficial,,,0.79,,M01-RIO + M02-GUA + M03-COR + M07-MAR + M14-COR
-Guarne · Recurso hídrico · Capacidad adaptativa,0.5,valor de referencia (parámetro),,0.09,,,M03-COR + M05-GUA + M05-MAR + M07-MAR + M14-COR
-Guarne · Recurso hídrico · Vulnerabilidad,0.53,promedio regional oficial,0.67,,,,M03-COR + M05-GUA + M05-MAR + M07-MAR + M14-COR
-Guarne · Riesgo de desastres · Vulnerabilidad,0.5,valor de referencia (parámetro),0.93,,,,M01-RIO + M03-COR + M05-MAR + M13-COR + M14-COR
+Guarne · Recurso hídrico · Capacidad adaptativa,0.5,valor de referencia (parámetro),,0.12,,,M01-RIO + M03-COR + M05-GUA + M13-COR + M14-COR
+Guarne · Recurso hídrico · Vulnerabilidad,0.53,promedio regional oficial,0.66,,,,M01-RIO + M03-COR + M05-GUA + M13-COR + M14-COR
+Guarne · Riesgo de desastres · Vulnerabilidad,0.2367586007137318,estimado desde histórico (n=3 registros),0.63,,,,M01-RIO + M03-COR + M05-MAR + M13-COR + M14-COR
 Guarne · Seguridad alimentaria · Capacidad adaptativa,0.5,valor de referencia (parámetro),,0.04,,0.49,M03-COR + M07-GUA + M07-MAR + M08-GUA + M08-MAR + M14-COR
 Guarne · Seguridad alimentaria · Vulnerabilidad,0.5,valor de referencia (parámetro),0.81,,0.51,,M03-COR + M07-GUA + M07-MAR + M08-GUA + M08-MAR + M14-COR
-Marinilla · Recurso hídrico · Capacidad adaptativa,0.5,valor de referencia (parámetro),,0.09,,,M03-COR + M05-RIO + M05-MAR + M07-MAR + M14-COR
-Marinilla · Recurso hídrico · Vulnerabilidad,0.53,promedio regional oficial,0.67,,,,M03-COR + M05-RIO + M05-MAR + M07-MAR + M14-COR
-Marinilla · Riesgo de desastres · Vulnerabilidad,0.5,valor de referencia (parámetro),0.93,,,,M01-RIO + M03-COR + M05-MAR + M13-COR + M14-COR
+Marinilla · Recurso hídrico · Capacidad adaptativa,0.5,valor de referencia (parámetro),,0.12,,,M01-RIO + M03-COR + M05-MAR + M13-COR + M14-COR
+Marinilla · Recurso hídrico · Vulnerabilidad,0.53,promedio regional oficial,0.66,,,,M01-RIO + M03-COR + M05-MAR + M13-COR + M14-COR
+Marinilla · Riesgo de desastres · Vulnerabilidad,0.5,valor de referencia (parámetro),0.9,,,,M01-RIO + M03-COR + M05-MAR + M13-COR + M14-COR
 Marinilla · Seguridad alimentaria · Capacidad adaptativa,0.5,valor de referencia (parámetro),,0.04,0.51,,M01-RIO + M02-RIO + M03-COR + M07-GUA + M14-COR
 Marinilla · Seguridad alimentaria · Vulnerabilidad,0.5,valor de referencia (parámetro),0.81,,,0.49,M03-COR + M07-RIO + M07-MAR + M08-GUA + M08-MAR + M14-COR
-Rionegro · Recurso hídrico · Capacidad adaptativa,0.5,valor de referencia (parámetro),,0.09,,,M03-COR + M05-RIO + M05-MAR + M07-MAR + M14-COR
-Rionegro · Recurso hídrico · Vulnerabilidad,0.53,promedio regional oficial,0.67,,,,M03-COR + M05-RIO + M05-MAR + M07-MAR + M14-COR
-Rionegro · Riesgo de desastres · Vulnerabilidad,0.5,valor de referencia (parámetro),0.93,,,,M01-RIO + M03-COR + M05-MAR + M13-COR + M14-COR
+Rionegro · Recurso hídrico · Capacidad adaptativa,0.5,valor de referencia (parámetro),,0.12,,,M01-RIO + M03-COR + M05-RIO + M13-COR + M14-COR
+Rionegro · Recurso hídrico · Vulnerabilidad,0.53,promedio regional oficial,0.66,,,,M01-RIO + M03-COR + M05-RIO + M13-COR + M14-COR
 Rionegro · Seguridad alimentaria · Capacidad adaptativa,0.5,valor de referencia (parámetro),,,,0.49,M01-RIO + M02-RIO + M03-COR + M07-RIO + M14-COR
 Rionegro · Seguridad alimentaria · Vulnerabilidad,0.5,valor de referencia (parámetro),,,0.51,,M01-RIO + M02-RIO + M03-COR + M07-RIO + M14-COR

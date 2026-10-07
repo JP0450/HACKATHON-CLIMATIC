@@ -23,6 +23,20 @@ const conteo = computed(() => {
   for (const r of props.datos.ficha) c[r.origen] = (c[r.origen] || 0) + 1;
   return c;
 });
+const vaciasPorClave = computed(() => {
+  const m = {};
+  for (const r of props.datos.celdas_vacias || []) m[r.celda] = r;
+  return m;
+});
+// Entre los valores "vacíos" rellenados, solo distinguimos el que viene del histórico
+// (los demás —promedio regional, valor fijo— se siguen mostrando como antes).
+function historicoUsado(clave) {
+  const r = vaciasPorClave.value[clave];
+  return r && r.regla?.startsWith("estimado desde histórico") ? r : null;
+}
+function chipTag(regla) {
+  return regla?.startsWith("estimado desde histórico") ? "HISTORICO" : "SUPUESTO";
+}
 
 function umbrales(r) {
   const p = [];
@@ -36,8 +50,10 @@ function tooltip(clave) {
   const c = celda.value[clave];
   if (!c) return "";
   if (c.origen !== "NO DISPONIBLE") return `${c.origen}: ${fmtNum(c.valor, 3)}${c.fuente ? " · " + c.fuente : ""}`;
+  const h = historicoUsado(clave);
+  const base = h ? `HISTÓRICO · ${fmtNum(h.valor_caso_base, 3)} · ${h.regla}` : "NO DISPONIBLE · probado de 0 a 1";
   const v = voi.value[clave];
-  return v ? `NO DISPONIBLE · probado de 0 a 1 · ${umbrales(v)}` : "NO DISPONIBLE · probado de 0 a 1 · no cambia la decisión";
+  return v ? `${base} · ${umbrales(v)}` : `${base} · no cambia la decisión`;
 }
 const cambiaQue = (r) => r.cambia_QUE_si_sube_a != null || r.cambia_QUE_si_baja_a != null;
 const ordenVoi = computed(() =>
@@ -97,6 +113,10 @@ const ordenVoi = computed(() =>
                 <template v-if="celda[`${m} · ${d} · ${c}`]?.origen !== 'NO DISPONIBLE'">
                   {{ fmtNum(celda[`${m} · ${d} · ${c}`]?.valor, celda[`${m} · ${d} · ${c}`]?.origen === 'CALCULADO' ? 3 : 2) }}
                 </template>
+                <template v-else-if="historicoUsado(`${m} · ${d} · ${c}`)">
+                  <span class="val-historico">{{ fmtNum(historicoUsado(`${m} · ${d} · ${c}`).valor_caso_base, 2) }}</span>
+                  <Crosshair v-if="voi[`${m} · ${d} · ${c}`]" :size="11" class="voi-mark" />
+                </template>
                 <template v-else-if="voi[`${m} · ${d} · ${c}`]"><Crosshair :size="13" /></template>
                 <template v-else>—</template>
               </td>
@@ -118,12 +138,12 @@ const ordenVoi = computed(() =>
     <div class="table-wrap">
       <table class="data-table">
         <thead>
-          <tr><th>Dato faltante</th><th>Valor neutro usado</th><th>Umbral</th><th>Portafolio si se cruza el umbral</th></tr>
+          <tr><th>Dato faltante</th><th>Valor usado mientras tanto</th><th>Umbral</th><th>Portafolio si se cruza el umbral</th></tr>
         </thead>
         <tbody>
           <tr v-for="r in ordenVoi" :key="r.celda_vacia">
             <td><strong>{{ r.celda_vacia }}</strong></td>
-            <td><TextoTrazable :texto="`${fmtNum(r.valor_caso_base)} [SUPUESTO: ${r.regla_caso_base}]`" /></td>
+            <td><TextoTrazable :texto="`${fmtNum(r.valor_caso_base)} [${chipTag(r.regla_caso_base)}: ${r.regla_caso_base}]`" /></td>
             <td :class="{ 'strong-change': cambiaQue(r) }">{{ umbrales(r) }}</td>
             <td class="mono">{{ r.portafolio_resultante }}</td>
           </tr>

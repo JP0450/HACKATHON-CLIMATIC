@@ -4,6 +4,8 @@ PASO 3 · MOTOR DE DECISIÓN  (módulos 5–8 y 15: priorización, optimizador, 
 
 Lee  salidas/preparado/  (lo deja 1_preparar.py) y escribe  salidas/motor/.
 
+  0. Celdas de Vulnerabilidad sin dato ni promedio regional: usan el valor estimado desde el
+     histórico (prior_historico.csv) cuando alcanza el mínimo de registros; si no, el valor fijo.
   1. Puntaje transparente de cada alternativa (medida × municipio o corredor)
   2. Mochila 0/1 exacta: la mejor combinación que cabe en el presupuesto (medidas indivisibles)
   3. Stress test SSP3-7.0/2060: se repite con los pesos del stress test (entra la robustez)
@@ -46,16 +48,20 @@ def cargar():
     med["Cobeneficios (otras dimensiones)"] = med["Cobeneficios (otras dimensiones)"].fillna("")
     par = json.load(open(os.path.join(PREP, "parametros.json"), encoding="utf-8"))
     par["n_simulaciones"] = int(par["n_simulaciones"]); par["semilla"] = int(par["semilla"])
-    return ficha, prom, med, evid, pesos, par
+    ruta_hist = os.path.join(PREP, "prior_historico.csv")
+    prior_hist = rd("prior_historico.csv") if os.path.exists(ruta_hist) else pd.DataFrame(
+        columns=["Municipio", "dimension", "registros", "valor_estimado"])
+    return ficha, prom, med, evid, pesos, par, prior_hist
 
 
 # ==============================================================================================
 # MÓDULO 5 · ALTERNATIVAS Y CRITERIOS
 # ==============================================================================================
-def construir_alternativas(ficha, prom, med, evid, par):
+def construir_alternativas(ficha, prom, med, evid, par, prior_hist):
     """Cada alternativa guarda, para cada criterio, de dónde sale su valor (dato o celda vacía)."""
     val = {(r.municipio, r.dimension, r.componente): (r.valor, r.origen) for r in ficha.itertuples()}
     reg = dict(zip(prom.dimension, prom.v_promedio))
+    hist = {(r.Municipio, r.dimension): (float(r.valor_estimado), int(r.registros)) for r in prior_hist.itertuples()}
     vacias = {}                                     # celda vacía -> valor del caso base y regla usada
 
     def celda(m, d, comp):
@@ -65,6 +71,9 @@ def construir_alternativas(ficha, prom, med, evid, par):
         k = f"{m} · {d} · {comp}"
         if comp == "Vulnerabilidad" and d in reg:
             vacias[k] = (reg[d], "promedio regional oficial")
+        elif comp == "Vulnerabilidad" and (m, d) in hist:
+            valor, n = hist[(m, d)]
+            vacias[k] = (valor, f"estimado desde histórico (n={n} registros)")
         else:
             vacias[k] = (par["valor_vacio_base"], "valor de referencia (parámetro)")
         return ("vacia", k, None)
@@ -146,12 +155,12 @@ def mochila(alts, b, presupuesto, elegibles, min_1_municipal=False, max_interven
 # PROGRAMA PRINCIPAL
 # ==============================================================================================
 def main():
-    ficha, prom, med, evid, pesos, par = cargar()
+    ficha, prom, med, evid, pesos, par, prior_hist = cargar()
     P, alfa0, alinS = par["presupuesto"], par["alfa"], par["alineacion_S"]
     rng = np.random.default_rng(par["semilla"]); N = par["n_simulaciones"]
     os.makedirs(SAL, exist_ok=True)
 
-    alts, vacias = construir_alternativas(ficha, prom, med, evid, par)
+    alts, vacias = construir_alternativas(ficha, prom, med, evid, par, prior_hist)
     eleg = np.array([a["elegible"] for a in alts])
     base_vac = {k: v[0] for k, v in vacias.items()}
     X0 = matriz_criterios(alts, base_vac, alinS)

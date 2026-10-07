@@ -38,6 +38,7 @@ export const ETIQUETAS = {
   DERIVADO: "Construido por el equipo con regla explícita a partir de fuentes",
   USUARIO: "Ingresado por el usuario en la plantilla",
   SUPUESTO: "Decisión metodológica del equipo",
+  HISTORICO: "Estimado a partir del histórico de inversión en adaptación del corredor (no es un dato medido ni un valor neutro)",
   INFERENCIA: "Interpretación del equipo (no literal en la fuente)",
   PROPUESTO: "Indicador sugerido por el equipo",
   RELACIONADO: "Indicador oficial de una medida parecida",

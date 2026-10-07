@@ -6,5 +6,6 @@
  "alfa": 0.5,
  "n_simulaciones": 3000.0,
  "semilla": 7.0,
- "decision_stress": "A"
+ "decision_stress": "A",
+ "minimo_registros_historico": 3
 }
