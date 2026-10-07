@@ -1,0 +1,46 @@
+﻿ID,Medida,Municipio,Evidencia,Qué dice la fuente,Fuente
+M01,Instrumentos de compensación y Pago por Servicios Ambientales – PSA,Rionegro,0.5,PSA registrado asociado a incendios forestales (antecedente de problema),Excel REPORTE MEDIDAS ADAPTACIÓN 2025
+M01,Instrumentos de compensación y Pago por Servicios Ambientales – PSA,Guarne,0.5,Recomendación de preservar bosque y aguas de La Brizuela (POMCA La Brizuela y La Honda),Zonificación cabecera Guarne 2014 sec.4.1
+M01,Instrumentos de compensación y Pago por Servicios Ambientales – PSA,Marinilla,0.0,Sin evidencia documentada en las fuentes,-
+M02,Restauración de ecosistemas estratégicos,Rionegro,1.0,"Recomienda mejoramiento de coberturas vegetales (Cuchillas de San José, Galicia); restauración registrada para inundaciones",Informe final Rionegro 2012 sec.6.1; Excel 2023
+M02,Restauración de ecosistemas estratégicos,Guarne,1.0,Recomienda revegetalización de suelos expuestos y reforestación con especies nativas,Informe final Guarne 2012 sec.6.1; Zonificación Guarne 2014
+M02,Restauración de ecosistemas estratégicos,Marinilla,0.5,Recomienda mantenimiento de reforestaciones ejecutadas,Zonificación cabecera Marinilla 2014 sec.3.2
+M03,Fortalecimiento de sistemas de áreas protegidas,Rionegro,0.0,Sin evidencia documentada en las fuentes,-
+M03,Fortalecimiento de sistemas de áreas protegidas,Guarne,0.5,Preservar bosque y aguas de La Brizuela como eje ambiental (POMCA),Zonificación cabecera Guarne 2014 sec.4.1
+M03,Fortalecimiento de sistemas de áreas protegidas,Marinilla,0.0,Sin evidencia documentada en las fuentes,-
+M04,Uso intersectorial eficiente del recurso hídrico,Rionegro,0.0,Sin evidencia documentada (dependencia hídrica empresarial = brecha declarada por CORNARE),RETO sec.5
+M04,Uso intersectorial eficiente del recurso hídrico,Guarne,0.0,Sin evidencia documentada (dependencia hídrica empresarial = brecha declarada por CORNARE),RETO sec.5
+M04,Uso intersectorial eficiente del recurso hídrico,Marinilla,0.0,Sin evidencia documentada (dependencia hídrica empresarial = brecha declarada por CORNARE),RETO sec.5
+M05,Protección y recuperación de rondas hídricas,Rionegro,1.0,Recomienda continuar recuperación de cauces ocupados; rondas registradas para inundaciones,Informe final Rionegro 2012 sec.7.1; Excel 2023
+M05,Protección y recuperación de rondas hídricas,Guarne,1.0,"Llenos antrópicos en llanuras de La Brizuela y Basto Norte; barrios al borde de afluentes (El Sango, La Cabaña, San Vicente, San Antonio)",Zonificación cabecera Guarne 2014 sec.4.1
+M05,Protección y recuperación de rondas hídricas,Marinilla,1.0,"Inundaciones por invasión de retiros (Q. La Marinilla, Occidente, Oriente, Matadero); barrios Santa Ana, La Ramada, El Manantial",Informe final Marinilla 2012 sec.6; Zonificación Marinilla 2014 sec.3.1
+M06,Protección de cabeceras de cuenca y ecosistemas abastecedores,Rionegro,0.0,Sin evidencia documentada en las fuentes,-
+M06,Protección de cabeceras de cuenca y ecosistemas abastecedores,Guarne,0.5,Recomienda acoger POMCA La Brizuela y La Honda; preservar aguas de La Brizuela,Zonificación cabecera Guarne 2014 sec.4.1
+M06,Protección de cabeceras de cuenca y ecosistemas abastecedores,Marinilla,0.0,Sin evidencia documentada en las fuentes,-
+M07,Protección y reconversión de suelos agrícolas estratégicos,Rionegro,1.0,"Deterioro del suelo por expansión de frontera agrícola (pastos, ganado, cultivos) como causa de movimientos en masa",Informe final Rionegro 2012 sec.6.1
+M07,Protección y reconversión de suelos agrícolas estratégicos,Guarne,1.0,Recomienda ajustar actividades productivas a la capacidad del terreno en zonas de riesgo medio a muy alto,Informe final Guarne 2012 sec.6.1
+M07,Protección y reconversión de suelos agrícolas estratégicos,Marinilla,1.0,La mayor parte de movimientos en masa relacionados con cultivos limpios y sobrepastoreo; 77% de casos son movimientos en masa,Informe final Marinilla 2012 sec.6
+M08,Producción agroecológica y economía rural resiliente,Rionegro,0.0,Sin evidencia documentada en las fuentes,-
+M08,Producción agroecológica y economía rural resiliente,Guarne,0.5,Recomienda capacitación en buenas técnicas de labranza,Informe final Guarne 2012 sec.6.1
+M08,Producción agroecológica y economía rural resiliente,Marinilla,0.5,Malas prácticas agrícolas inductoras de erosión,Informe final Marinilla 2012 sec.6
+M09,Espacios verdes urbanos,Rionegro,0.0,Sin evidencia documentada en las fuentes,-
+M09,Espacios verdes urbanos,Guarne,0.0,Sin evidencia documentada en las fuentes,-
+M09,Espacios verdes urbanos,Marinilla,0.0,Sin evidencia documentada en las fuentes,-
+M10,Sistemas Urbanos de Drenaje Sostenible – SUDS,Rionegro,0.5,Recomienda sistemas de recolección y conducción de aguas lluvias (veredas),Informe final Rionegro 2012 sec.6.1
+M10,Sistemas Urbanos de Drenaje Sostenible – SUDS,Guarne,0.5,Revisión de alcantarillado (barrio San Vicente) y capacidad hidráulica de canalizaciones,Zonificación cabecera Guarne 2014 sec.4.2
+M10,Sistemas Urbanos de Drenaje Sostenible – SUDS,Marinilla,0.5,Revisión de alcantarillado y capacidad hidráulica de canalizaciones urbanas; manejo de escorrentía pluvial,Zonificación cabecera Marinilla 2014 sec.3.2
+M11,Infraestructura resiliente al cambio climático,Rionegro,0.5,Mantenimiento de obras de arte de vías y cunetas,Informe final Rionegro 2012 sec.7.1
+M11,Infraestructura resiliente al cambio climático,Guarne,0.5,Vías mejoradas registradas por movimiento en masa,Excel REPORTE MEDIDAS ADAPTACIÓN 2020
+M11,Infraestructura resiliente al cambio climático,Marinilla,1.0,"Hundimientos en vías veredales sin cunetas; ampliación de obras de paso sobre Q. La Marinilla (La Ramada, La Avenida)",Informe final Marinilla 2012 sec.6; Zonificación Marinilla 2014 sec.3.2
+M12,Fortalecimiento de infraestructura resiliente y servicios públicos,Rionegro,0.0,Sin evidencia documentada en las fuentes,-
+M12,Fortalecimiento de infraestructura resiliente y servicios públicos,Guarne,0.5,Alcantarillado inadecuado barrio San Vicente,Zonificación cabecera Guarne 2014 sec.4.2
+M12,Fortalecimiento de infraestructura resiliente y servicios públicos,Marinilla,0.5,"Afectación a redes de acueducto (3,33% de sitios); revisión de alcantarillado",Informe final Marinilla 2012 sec.6; Zonificación Marinilla 2014
+M13,Fortalecimiento de Sistemas de Alerta Temprana – SAT,Rionegro,0.0,Sin evidencia documentada en las fuentes,-
+M13,Fortalecimiento de Sistemas de Alerta Temprana – SAT,Guarne,1.0,"Recomienda diseño, construcción y operación de sistemas de alerta con estaciones hidrométricas",Informe final Guarne 2012 sec.6.1
+M13,Fortalecimiento de Sistemas de Alerta Temprana – SAT,Marinilla,0.0,Sin evidencia documentada en las fuentes,-
+M14,"Conocimiento y comunicación sobre amenazas, vulnerabilidad y riesgo climático",Rionegro,1.0,Recomienda actualizar zonificación de amenaza urbana y estudiar nuevos núcleos habitacionales,Informe final Rionegro 2012 sec.7
+M14,"Conocimiento y comunicación sobre amenazas, vulnerabilidad y riesgo climático",Guarne,1.0,Recomienda actualizar estudio de amenazas urbano y planes de emergencia,Informe final Guarne 2012 sec.6.2; Zonificación Guarne 2014 sec.4.1
+M14,"Conocimiento y comunicación sobre amenazas, vulnerabilidad y riesgo climático",Marinilla,0.5,Recomienda dinamizar comités de conocimiento del riesgo y censos en asentamientos,Zonificación Marinilla 2014 sec.3.1-3.2
+M15,Sistema de salud y entornos saludables resilientes al clima,Rionegro,0.0,Sin evidencia documentada en las fuentes,-
+M15,Sistema de salud y entornos saludables resilientes al clima,Guarne,0.0,Sin evidencia documentada en las fuentes,-
+M15,Sistema de salud y entornos saludables resilientes al clima,Marinilla,0.0,Sin evidencia documentada en las fuentes,-

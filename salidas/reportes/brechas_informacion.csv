@@ -1,0 +1,28 @@
+﻿tipo,dato,disponible,por_que_importa,umbral_que_cambia_la_decision
+Ficha CORNARE,Vulnerabilidad por municipio × dimensión,2 de 21,Base de los criterios del modelo,Ver filas 'Dato que cambia la decisión'
+Ficha CORNARE,Capacidad adaptativa por municipio × dimensión,5 de 21,Base de los criterios del modelo,Ver filas 'Dato que cambia la decisión'
+Ficha CORNARE,Riesgo SSP3-7.0 2060 por municipio × dimensión,1 de 21,Stress test SSP3-7.0/2060,Ver filas 'Dato que cambia la decisión'
+Ficha CORNARE,Sensibilidad por municipio × dimensión,1 de 21,Contexto (no entra al puntaje),Ver filas 'Dato que cambia la decisión'
+Ficha CORNARE,Amenaza por municipio × dimensión,1 de 21,Contexto (no entra al puntaje),Ver filas 'Dato que cambia la decisión'
+Dato que cambia la decisión,Guarne · Biodiversidad · Vulnerabilidad,NO,Resultado si se cruza el umbral: M01-RIO + M02-GUA + M03-COR + M07-MAR + M14-COR,cambia DÓNDE si ≥ 0.79
+Dato que cambia la decisión,Guarne · Recurso hídrico · Capacidad adaptativa,NO,Resultado si se cruza el umbral: M03-COR + M05-GUA + M05-MAR + M07-MAR + M14-COR,cambia QUÉ medidas si ≤ 0.09
+Dato que cambia la decisión,Guarne · Recurso hídrico · Vulnerabilidad,NO,Resultado si se cruza el umbral: M03-COR + M05-GUA + M05-MAR + M07-MAR + M14-COR,cambia QUÉ medidas si ≥ 0.67
+Dato que cambia la decisión,Guarne · Riesgo de desastres · Vulnerabilidad,NO,Resultado si se cruza el umbral: M01-RIO + M03-COR + M05-MAR + M13-COR + M14-COR,cambia QUÉ medidas si ≥ 0.93
+Dato que cambia la decisión,Guarne · Seguridad alimentaria · Capacidad adaptativa,NO,Resultado si se cruza el umbral: M03-COR + M07-GUA + M07-MAR + M08-GUA + M08-MAR + M14-COR,cambia QUÉ medidas si ≤ 0.04; cambia DÓNDE si ≤ 0.49
+Dato que cambia la decisión,Guarne · Seguridad alimentaria · Vulnerabilidad,NO,Resultado si se cruza el umbral: M03-COR + M07-GUA + M07-MAR + M08-GUA + M08-MAR + M14-COR,cambia QUÉ medidas si ≥ 0.81; cambia DÓNDE si ≥ 0.51
+Dato que cambia la decisión,Marinilla · Recurso hídrico · Capacidad adaptativa,NO,Resultado si se cruza el umbral: M03-COR + M05-RIO + M05-MAR + M07-MAR + M14-COR,cambia QUÉ medidas si ≤ 0.09
+Dato que cambia la decisión,Marinilla · Recurso hídrico · Vulnerabilidad,NO,Resultado si se cruza el umbral: M03-COR + M05-RIO + M05-MAR + M07-MAR + M14-COR,cambia QUÉ medidas si ≥ 0.67
+Dato que cambia la decisión,Marinilla · Riesgo de desastres · Vulnerabilidad,NO,Resultado si se cruza el umbral: M01-RIO + M03-COR + M05-MAR + M13-COR + M14-COR,cambia QUÉ medidas si ≥ 0.93
+Dato que cambia la decisión,Marinilla · Seguridad alimentaria · Capacidad adaptativa,NO,Resultado si se cruza el umbral: M01-RIO + M02-RIO + M03-COR + M07-GUA + M14-COR,cambia QUÉ medidas si ≤ 0.04; cambia DÓNDE si ≥ 0.51
+Dato que cambia la decisión,Marinilla · Seguridad alimentaria · Vulnerabilidad,NO,Resultado si se cruza el umbral: M03-COR + M07-RIO + M07-MAR + M08-GUA + M08-MAR + M14-COR,cambia QUÉ medidas si ≥ 0.81; cambia DÓNDE si ≤ 0.49
+Dato que cambia la decisión,Rionegro · Recurso hídrico · Capacidad adaptativa,NO,Resultado si se cruza el umbral: M03-COR + M05-RIO + M05-MAR + M07-MAR + M14-COR,cambia QUÉ medidas si ≤ 0.09
+Dato que cambia la decisión,Rionegro · Recurso hídrico · Vulnerabilidad,NO,Resultado si se cruza el umbral: M03-COR + M05-RIO + M05-MAR + M07-MAR + M14-COR,cambia QUÉ medidas si ≥ 0.67
+Dato que cambia la decisión,Rionegro · Riesgo de desastres · Vulnerabilidad,NO,Resultado si se cruza el umbral: M01-RIO + M03-COR + M05-MAR + M13-COR + M14-COR,cambia QUÉ medidas si ≥ 0.93
+Dato que cambia la decisión,Rionegro · Seguridad alimentaria · Capacidad adaptativa,NO,Resultado si se cruza el umbral: M01-RIO + M02-RIO + M03-COR + M07-RIO + M14-COR,cambia DÓNDE si ≤ 0.49
+Dato que cambia la decisión,Rionegro · Seguridad alimentaria · Vulnerabilidad,NO,Resultado si se cruza el umbral: M01-RIO + M02-RIO + M03-COR + M07-RIO + M14-COR,cambia DÓNDE si ≥ 0.51
+Dependencias (Reto sec. 5),"Empresa ACV → captación o fuente hídrica, caudal concesionado vs usado",NO,Sin esto no se puede priorizar 'Uso intersectorial eficiente del agua' (M04),—
+Dependencias (Reto sec. 5),"Empresa ACV → vía de acceso crítica, circuito eléctrico, proveedores críticos de la región, trabajadores por municipio",NO,"Sin esto no se puede priorizar infraestructura (M11, M12) ni saber qué interrupción se propaga",—
+Dependencias (Reto sec. 5),"Punto crítico de vía o servicio → población y empresas que dependen, rutas alternas, tiempo tolerable de interrupción",NO,Define dónde una obra de infraestructura protege más,—
+Efectividad,Línea base y medición posterior del indicador de resultado de cada medida,NO,"Permitiría estimar efectividad (hoy α se prueba de 0 a 1) y, a futuro, entrenar un modelo de aprendizaje automático",—
+Salud,Vigilancia de enfermedades climato-sensibles por municipio,NO,La medida de salud (M15) no compite por falta de datos,—
+Registro histórico,Medidas de adaptación de Marinilla (1 registro 2018–2025),Incompleto,Subregistro: no indica menor necesidad,—

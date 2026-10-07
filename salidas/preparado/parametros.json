@@ -1,0 +1,10 @@
+{
+ "presupuesto": 5000.0,
+ "umbral_evidencia": 0.5,
+ "alineacion_S": 0.5,
+ "valor_vacio_base": 0.5,
+ "alfa": 0.5,
+ "n_simulaciones": 3000.0,
+ "semilla": 7.0,
+ "decision_stress": "A"
+}

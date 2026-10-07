@@ -1,0 +1,16 @@
+﻿caso,portafolio,n,costo,nota
+Referencia,M01-RIO + M02-RIO + M03-COR + M07-MAR + M14-COR,5,5000.0,
+"Presupuesto 4,000 M",M01-RIO + M02-RIO + M03-COR + M14-COR,4,4000.0,
+"Presupuesto 4,500 M",M01-RIO + M03-COR + M07-GUA + M07-MAR + M14-COR,5,4500.0,
+"Presupuesto 5,500 M",M01-RIO + M03-COR + M07-RIO + M07-GUA + M07-MAR + M14-COR,6,5500.0,
+"Presupuesto 6,000 M",M01-RIO + M02-RIO + M03-COR + M07-GUA + M07-MAR + M14-COR,6,6000.0,
+Regla del reto: máximo de intervenciones,M03-COR + M07-RIO + M07-MAR + M08-GUA + M08-MAR + M14-COR,6,4900.0,α=0 y prioridad al número de medidas
+Equidad: ≥1 medida municipal en cada municipio,M03-COR + M05-GUA + M05-MAR + M07-RIO + M14-COR,5,4900.0,
+Sin regla de evidencia mínima,M01-RIO + M02-RIO + M03-COR + M07-MAR + M14-COR,5,5000.0,
+Sin M01-RIO,M03-COR + M05-RIO + M05-MAR + M07-MAR + M14-COR,5,4900.0,
+Sin M02-RIO,M03-COR + M05-GUA + M05-MAR + M07-MAR + M14-COR,5,4900.0,
+Sin M03-COR,M05-RIO + M05-MAR + M07-MAR + M08-GUA + M14-COR,5,5000.0,
+Sin M07-MAR,M01-RIO + M02-RIO + M03-COR + M07-GUA + M14-COR,5,5000.0,
+Sin M14-COR,M03-COR + M05-MAR + M07-RIO + M07-GUA + M07-MAR,5,5000.0,
+Efectividad α=0,M03-COR + M07-RIO + M07-MAR + M08-GUA + M08-MAR + M14-COR,6,4900.0,α=0: cada medida vale igual; α=1: beneficio proporcional a la inversión
+Efectividad α=1,M02-RIO + M02-GUA + M03-COR + M05-MAR,4,5000.0,α=0: cada medida vale igual; α=1: beneficio proporcional a la inversión

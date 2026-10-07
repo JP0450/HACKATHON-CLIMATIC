@@ -1,0 +1,4082 @@
+{
+ "meta": {
+  "titulo": "Motor de decisión de adaptación — Rionegro · Guarne · Marinilla",
+  "presupuesto_M": 5000.0,
+  "decision_stress": "A · se mantiene el portafolio robusto (mínimo arrepentimiento frente a hoy y 2060)",
+  "n_simulaciones": 3000,
+  "etiquetas": [
+   "OFICIAL",
+   "CALCULADO",
+   "DERIVADO",
+   "USUARIO",
+   "SUPUESTO",
+   "INFERENCIA",
+   "PROPUESTO",
+   "NO DISPONIBLE"
+  ]
+ },
+ "kpis": {
+  "presupuesto_M": 5000.0,
+  "asignado_M": 5000.0,
+  "saldo_M": 0.0,
+  "n_intervenciones": 5,
+  "por_territorio_M": {
+   "Rionegro": 2700.0,
+   "Guarne": 0.0,
+   "Marinilla": 1000.0,
+   "Corredor": 1300.0
+  },
+  "cobertura_datos_VCA": 0.167,
+  "veredicto_2060": "SE MODIFICA"
+ },
+ "hallazgos": [
+  {
+   "hallazgo": "La vulnerabilidad más alta con dato es Biodiversidad en Rionegro (0,75) y Biodiversidad en Marinilla (0,72).",
+   "implicacion": "Ahí se concentra la necesidad documentada: es donde más se justifica invertir con medidas municipales.",
+   "fuente": "Ficha_dimensiones [OFICIAL]"
+  },
+  {
+   "hallazgo": "Tener capacidad en una dimensión no significa tenerla en todas: Rionegro tiene CA 0,56 en riesgo de desastres pero 0,22 en biodiversidad.",
+   "implicacion": "Las medidas que fortalecen capacidad rinden más donde la brecha es mayor.",
+   "fuente": "Ficha_dimensiones [OFICIAL]"
+  },
+  {
+   "hallazgo": "Las medidas con más respaldo en los estudios CORNARE (evidencia en los tres municipios) son: Protección y recuperación de rondas hídricas; Protección y reconversión de suelos agrícolas estratégicos.",
+   "implicacion": "Respaldo documental ≠ selección automática: 'Protección y recuperación de rondas hídricas' sale en el 58% de los escenarios y no entra en el portafolio; 'Protección y reconversión de suelos agrícolas estratégicos' sale en el 79% de los escenarios y está en el portafolio.",
+   "fuente": "Evidencia (Informes 2012/2014) [DERIVADO]"
+  },
+  {
+   "hallazgo": "Hacia 2060 (SSP3-7.0) el riesgo sube en riesgo de desastres en Rionegro (0,28 → 0,32). Solo 1 de 21 celdas 2060 tienen dato.",
+   "implicacion": "Stress test: el portafolio SE MODIFICA. La decisión robusta frente a hoy y 2060 se mantiene.",
+   "fuente": "Ficha_dimensiones [OFICIAL]; motor"
+  },
+  {
+   "hallazgo": "Solo el 17% de los valores de vulnerabilidad y capacidad adaptativa están disponibles.",
+   "implicacion": "La decisión se elige por robustez (3.000 escenarios) y se identifican 16 datos que podrían cambiarla.",
+   "fuente": "1_preparar.py [CALCULADO]"
+  }
+ ],
+ "portafolio": [
+  {
+   "orden": 1,
+   "alternativa": "M14-COR",
+   "id": "M14",
+   "medida": "Conocimiento y comunicación sobre amenazas, vulnerabilidad y riesgo climático",
+   "dimension": "Riesgo de desastres",
+   "territorio": "Corredor",
+   "costo_M": 600.0,
+   "problema": "Riesgo de desastres — Rionegro: V NO DISPONIBLE, CA 0,56 [OFICIAL]; Guarne: V NO DISPONIBLE, CA NO DISPONIBLE; Marinilla: V NO DISPONIBLE, CA 0,61 [OFICIAL]",
+   "sensibilidad_que_reduce": "—",
+   "capacidad_que_fortalece": "Conocimiento del riesgo: estudios, modelación, protocolos y plataforma",
+   "localizacion": "Rionegro: Recomienda actualizar zonificación de amenaza urbana y estudiar nuevos núcleos habitacionales (Informe final Rionegro 2012 sec.7) | Guarne: Recomienda actualizar estudio de amenazas urbano y planes de emergencia (Informe final Guarne 2012 sec.6.2; Zonificación Guarne 2014 sec.4.1) | Marinilla: Recomienda dinamizar comités de conocimiento del riesgo y censos en asentamientos (Zonificación Marinilla 2014 sec.3.1-3.2)",
+   "actores": "CORNARE (Observatorio, gestión del riesgo) [OFICIAL]; consejos municipales de gestión del riesgo [INFERENCIA]; empresas ACV con información agregada [OFICIAL: Reto]",
+   "beneficio_esperado": "Reduce: —. Fortalece: Conocimiento del riesgo: estudios, modelación, protocolos y plataforma. Magnitud: no cuantificable con los datos disponibles (efectividad NO DISPONIBLE).",
+   "explicacion": "Puntaje 0.539 (puesto 9 de 26 alternativas que compiten) · Necesidad 0.50 · Brecha CA 0.44 · Evidencia 0.83 · Cobertura 1.00 · Cobeneficios 0.00 · La medida aparece en el 71% de los 3.000 escenarios simulados; confianza Alta · Si se elimina, el modelo la reemplaza por: M05-MAR, M07-GUA, M07-RIO.",
+   "cambio_ssp370_2060": "Se mantiene en SSP3-7.0/2060 · Robustez: Se refuerza (riesgo sube a 2060)",
+   "indicador_actividad": "# de estudios de riesgo climático elaborados por sector anualmente [RELACIONADO (Excel: Uso intersectorial)]",
+   "indicador_resultado": "% de celdas de la ficha V/CA con dato oficial (línea base 17%); nº de dependencias empresa–territorio caracterizadas [PROPUESTO]",
+   "confianza": "Alta",
+   "regla_de_orden": "[SUPUESTO] 1º información (M14) → 2º capacidad adaptativa → 3º mixtas → 4º sensibilidad; empate: mayor puntaje"
+  },
+  {
+   "orden": 2,
+   "alternativa": "M03-COR",
+   "id": "M03",
+   "medida": "Fortalecimiento de sistemas de áreas protegidas",
+   "dimension": "Biodiversidad",
+   "territorio": "Corredor",
+   "costo_M": 700.0,
+   "problema": "Biodiversidad — Rionegro: V 0,75 [OFICIAL], CA 0,22 [OFICIAL]; Guarne: V NO DISPONIBLE, CA 0,33 [OFICIAL]; Marinilla: V 0,72 [OFICIAL], CA 0,24 [OFICIAL]",
+   "sensibilidad_que_reduce": "Fragmentación de ecosistemas (conectividad)",
+   "capacidad_que_fortalece": "Gestión, acuerdos y figuras de conservación en el corredor",
+   "localizacion": "Guarne: Preservar bosque y aguas de La Brizuela como eje ambiental (POMCA) (Zonificación cabecera Guarne 2014 sec.4.1)",
+   "actores": "CORNARE como autoridad ambiental [OFICIAL: Reto]; alcaldías (ordenamiento) y propietarios [INFERENCIA]",
+   "beneficio_esperado": "Reduce: Fragmentación de ecosistemas (conectividad). Fortalece: Gestión, acuerdos y figuras de conservación en el corredor. Magnitud: no cuantificable con los datos disponibles (efectividad NO DISPONIBLE).",
+   "explicacion": "Puntaje 0.608 (puesto 2 de 26 alternativas que compiten) · Necesidad 0.67 · Brecha CA 0.74 · Evidencia 0.17 · Cobertura 1.00 · Cobeneficios 0.33 · La medida aparece en el 81% de los 3.000 escenarios simulados; confianza Alta · Si se elimina, el modelo la reemplaza por: M05-MAR, M05-RIO, M08-GUA.",
+   "cambio_ssp370_2060": "Se mantiene en SSP3-7.0/2060 · Robustez: No evaluable (sin dato 2060)",
+   "indicador_actividad": "# de ecosistemas estratégicos con planes de manejo formulados anualmente [RELACIONADO (Excel: Estrategias con estructura ecológica principal)]",
+   "indicador_resultado": "Hectáreas con figura de conservación o acuerdo vigente [PROPUESTO]",
+   "confianza": "Alta",
+   "regla_de_orden": "[SUPUESTO] 1º información (M14) → 2º capacidad adaptativa → 3º mixtas → 4º sensibilidad; empate: mayor puntaje"
+  },
+  {
+   "orden": 3,
+   "alternativa": "M01-RIO",
+   "id": "M01",
+   "medida": "Instrumentos de compensación y Pago por Servicios Ambientales – PSA",
+   "dimension": "Biodiversidad",
+   "territorio": "Rionegro",
+   "costo_M": 1200.0,
+   "problema": "Biodiversidad — Rionegro: V 0,75 [OFICIAL], CA 0,22 [OFICIAL]",
+   "sensibilidad_que_reduce": "Pérdida de cobertura en áreas estratégicas",
+   "capacidad_que_fortalece": "Instrumento económico de conservación con propietarios",
+   "localizacion": "Rionegro: PSA registrado asociado a incendios forestales (antecedente de problema) (Excel REPORTE MEDIDAS ADAPTACIÓN 2025)",
+   "actores": "CORNARE y alcaldía (PSA registrado en el PICCA) [OFICIAL: Excel adaptación]; propietarios rurales [INFERENCIA]",
+   "beneficio_esperado": "Reduce: Pérdida de cobertura en áreas estratégicas. Fortalece: Instrumento económico de conservación con propietarios. Magnitud: no cuantificable con los datos disponibles (efectividad NO DISPONIBLE).",
+   "explicacion": "Puntaje 0.573 (puesto 6 de 26 alternativas que compiten) · Necesidad 0.75 · Brecha CA 0.78 · Evidencia 0.50 · Cobertura 0.33 · Cobeneficios 0.33 · La medida aparece en el 39% de los 3.000 escenarios simulados; confianza Media · Si se elimina, el modelo la reemplaza por: M05-MAR, M05-RIO.",
+   "cambio_ssp370_2060": "Se mantiene en SSP3-7.0/2060 · Robustez: No evaluable (sin dato 2060)",
+   "indicador_actividad": "# de beneficiarios de la estrategia de PSA anuales [OFICIAL (Excel adaptación municipios)]",
+   "indicador_resultado": "Hectáreas conservadas bajo PSA en áreas estratégicas [PROPUESTO]",
+   "confianza": "Media",
+   "regla_de_orden": "[SUPUESTO] 1º información (M14) → 2º capacidad adaptativa → 3º mixtas → 4º sensibilidad; empate: mayor puntaje"
+  },
+  {
+   "orden": 4,
+   "alternativa": "M02-RIO",
+   "id": "M02",
+   "medida": "Restauración de ecosistemas estratégicos",
+   "dimension": "Biodiversidad",
+   "territorio": "Rionegro",
+   "costo_M": 1500.0,
+   "problema": "Biodiversidad — Rionegro: V 0,75 [OFICIAL], CA 0,22 [OFICIAL]",
+   "sensibilidad_que_reduce": "Suelos desprotegidos y ecosistemas degradados (cobeneficio en laderas)",
+   "capacidad_que_fortalece": "—",
+   "localizacion": "Rionegro: Recomienda mejoramiento de coberturas vegetales (Cuchillas de San José, Galicia); restauración registrada para inundaciones (Informe final Rionegro 2012 sec.6.1; Excel 2023)",
+   "actores": "CORNARE (restauración registrada en el PICCA) [OFICIAL: Excel]; alcaldía; comunidades y JAC [INFERENCIA]",
+   "beneficio_esperado": "Reduce: Suelos desprotegidos y ecosistemas degradados (cobeneficio en laderas). Fortalece: —. Magnitud: no cuantificable con los datos disponibles (efectividad NO DISPONIBLE).",
+   "explicacion": "Puntaje 0.628 (puesto 1 de 26 alternativas que compiten) · Necesidad 0.75 · Brecha CA 0.39 · Evidencia 1.00 · Cobertura 0.33 · Cobeneficios 0.67 · La medida aparece en el 27% de los 3.000 escenarios simulados; confianza Media · Si se elimina, el modelo la reemplaza por: M05-GUA, M05-MAR.",
+   "cambio_ssp370_2060": "Sale en el portafolio SSP3-7.0/2060 (se mantiene por robustez frente a hoy y 2060) · Robustez: No evaluable (sin dato 2060)",
+   "indicador_actividad": "COP$ invertido en proyectos de restauración. [OFICIAL (Excel) - es indicador de actividad]",
+   "indicador_resultado": "Hectáreas restauradas con sobrevivencia a 3 años; nº de movimientos en masa en las zonas intervenidas [PROPUESTO]",
+   "confianza": "Media",
+   "regla_de_orden": "[SUPUESTO] 1º información (M14) → 2º capacidad adaptativa → 3º mixtas → 4º sensibilidad; empate: mayor puntaje"
+  },
+  {
+   "orden": 5,
+   "alternativa": "M07-MAR",
+   "id": "M07",
+   "medida": "Protección y reconversión de suelos agrícolas estratégicos",
+   "dimension": "Seguridad alimentaria",
+   "territorio": "Marinilla",
+   "costo_M": 1000.0,
+   "problema": "Seguridad alimentaria — Marinilla: V NO DISPONIBLE, CA NO DISPONIBLE",
+   "sensibilidad_que_reduce": "Prácticas agrícolas que degradan el suelo (cultivos limpios, sobrepastoreo)",
+   "capacidad_que_fortalece": "Asistencia técnica a productores",
+   "localizacion": "Marinilla: La mayor parte de movimientos en masa relacionados con cultivos limpios y sobrepastoreo; 77% de casos son movimientos en masa (Informe final Marinilla 2012 sec.6)",
+   "actores": "Alcaldía (agricultura) [INFERENCIA]; productores; JAC y acueductos rurales [OFICIAL: recomendación Marinilla 2014]; CORNARE",
+   "beneficio_esperado": "Reduce: Prácticas agrícolas que degradan el suelo (cultivos limpios, sobrepastoreo). Fortalece: Asistencia técnica a productores. Magnitud: no cuantificable con los datos disponibles (efectividad NO DISPONIBLE).",
+   "explicacion": "Puntaje 0.525 (puesto 10 de 26 alternativas que compiten) · Necesidad 0.50 · Brecha CA 0.25 · Evidencia 1.00 · Cobertura 0.33 · Cobeneficios 0.67 · La medida aparece en el 79% de los 3.000 escenarios simulados; confianza Media · Si se elimina, el modelo la reemplaza por: M07-GUA.",
+   "cambio_ssp370_2060": "Sale en el portafolio SSP3-7.0/2060 (se mantiene por robustez frente a hoy y 2060) · Robustez: No evaluable (sin dato 2060)",
+   "indicador_actividad": "# de actores educados y capacitados en términos de conservación y uso del suelo anualmente [RELACIONADO (Excel: Protección de suelos)]",
+   "indicador_resultado": "Hectáreas con prácticas de conservación de suelo; nº de movimientos en masa en las veredas intervenidas [PROPUESTO]",
+   "confianza": "Media",
+   "regla_de_orden": "[SUPUESTO] 1º información (M14) → 2º capacidad adaptativa → 3º mixtas → 4º sensibilidad; empate: mayor puntaje"
+  }
+ ],
+ "escenarios": {
+  "referencia": [
+   "M01-RIO",
+   "M02-RIO",
+   "M03-COR",
+   "M07-MAR",
+   "M14-COR"
+  ],
+  "stress_2060": [
+   "M01-RIO",
+   "M03-COR",
+   "M05-MAR",
+   "M13-COR",
+   "M14-COR"
+  ],
+  "robusto": [
+   "M01-RIO",
+   "M02-RIO",
+   "M03-COR",
+   "M07-MAR",
+   "M14-COR"
+  ],
+  "entra_2060": [
+   "M05-MAR",
+   "M13-COR"
+  ],
+  "sale_2060": [
+   "M02-RIO",
+   "M07-MAR"
+  ],
+  "aguante_robustez": [
+   {
+    "peso_robustez": 0.0,
+    "portafolio": [
+     "M01-RIO",
+     "M02-RIO",
+     "M03-COR",
+     "M07-MAR",
+     "M14-COR"
+    ],
+    "igual_a_referencia": true
+   },
+   {
+    "peso_robustez": 0.05,
+    "portafolio": [
+     "M01-RIO",
+     "M02-RIO",
+     "M03-COR",
+     "M07-MAR",
+     "M14-COR"
+    ],
+    "igual_a_referencia": true
+   },
+   {
+    "peso_robustez": 0.1,
+    "portafolio": [
+     "M01-RIO",
+     "M02-RIO",
+     "M03-COR",
+     "M07-MAR",
+     "M14-COR"
+    ],
+    "igual_a_referencia": true
+   },
+   {
+    "peso_robustez": 0.15,
+    "portafolio": [
+     "M01-RIO",
+     "M02-RIO",
+     "M03-COR",
+     "M07-MAR",
+     "M14-COR"
+    ],
+    "igual_a_referencia": true
+   },
+   {
+    "peso_robustez": 0.2,
+    "portafolio": [
+     "M01-RIO",
+     "M03-COR",
+     "M05-MAR",
+     "M13-COR",
+     "M14-COR"
+    ],
+    "igual_a_referencia": false
+   },
+   {
+    "peso_robustez": 0.25,
+    "portafolio": [
+     "M01-RIO",
+     "M03-COR",
+     "M05-MAR",
+     "M13-COR",
+     "M14-COR"
+    ],
+    "igual_a_referencia": false
+   },
+   {
+    "peso_robustez": 0.3,
+    "portafolio": [
+     "M01-RIO",
+     "M03-COR",
+     "M05-MAR",
+     "M13-COR",
+     "M14-COR"
+    ],
+    "igual_a_referencia": false
+   },
+   {
+    "peso_robustez": 0.35,
+    "portafolio": [
+     "M01-RIO",
+     "M03-COR",
+     "M05-MAR",
+     "M13-COR",
+     "M14-COR"
+    ],
+    "igual_a_referencia": false
+   },
+   {
+    "peso_robustez": 0.4,
+    "portafolio": [
+     "M01-RIO",
+     "M03-COR",
+     "M05-MAR",
+     "M13-COR",
+     "M14-COR"
+    ],
+    "igual_a_referencia": false
+   },
+   {
+    "peso_robustez": 0.45,
+    "portafolio": [
+     "M03-COR",
+     "M07-RIO",
+     "M07-MAR",
+     "M08-GUA",
+     "M08-MAR",
+     "M14-COR"
+    ],
+    "igual_a_referencia": false
+   },
+   {
+    "peso_robustez": 0.5,
+    "portafolio": [
+     "M03-COR",
+     "M07-RIO",
+     "M07-MAR",
+     "M08-GUA",
+     "M08-MAR",
+     "M14-COR"
+    ],
+    "igual_a_referencia": false
+   },
+   {
+    "peso_robustez": 0.55,
+    "portafolio": [
+     "M03-COR",
+     "M07-RIO",
+     "M07-MAR",
+     "M08-GUA",
+     "M08-MAR",
+     "M14-COR"
+    ],
+    "igual_a_referencia": false
+   },
+   {
+    "peso_robustez": 0.6,
+    "portafolio": [
+     "M03-COR",
+     "M07-RIO",
+     "M07-MAR",
+     "M08-GUA",
+     "M08-MAR",
+     "M14-COR"
+    ],
+    "igual_a_referencia": false
+   }
+  ],
+  "portafolios_equivalentes": [
+   "M01-RIO + M02-RIO + M03-COR + M07-MAR + M14-COR",
+   "M02-RIO + M03-COR + M07-MAR + M13-COR + M14-COR",
+   "M01-RIO + M02-RIO + M03-COR + M07-GUA + M14-COR",
+   "M02-RIO + M03-COR + M07-GUA + M13-COR + M14-COR",
+   "M01-RIO + M02-RIO + M03-COR + M07-RIO + M14-COR"
+  ]
+ },
+ "frecuencia_por_medida": {
+  "M01": 0.38666666666666666,
+  "M02": 0.2743333333333333,
+  "M03": 0.809,
+  "M04": 0.0,
+  "M05": 0.582,
+  "M06": 0.0033333333333333335,
+  "M07": 0.7913333333333333,
+  "M08": 0.43066666666666664,
+  "M09": 0.0,
+  "M10": 0.025,
+  "M11": 0.008333333333333333,
+  "M12": 0.0013333333333333333,
+  "M13": 0.181,
+  "M14": 0.7116666666666667,
+  "M15": 0.0
+ },
+ "alternativas": [
+  {
+   "alternativa": "M02-RIO",
+   "medida": "Restauración de ecosistemas estratégicos",
+   "dimension": "Biodiversidad",
+   "territorio": "Rionegro",
+   "costo_M": 1500.0,
+   "actua_sobre": "S",
+   "Necesidad": 0.75,
+   "Brecha CA": 0.39,
+   "Evidencia": 1.0,
+   "Cobertura": 0.333,
+   "Cobeneficios": 0.667,
+   "Robustez 2060": 0.5,
+   "datos_V_CA": 2,
+   "elegible": true,
+   "puntaje_ref": 0.628,
+   "puntaje_2060": 0.596,
+   "en_referencia": true,
+   "en_2060": false,
+   "en_robusto": true,
+   "frec_datos": 0.174,
+   "frec_pesos": 0.373,
+   "frec_efectividad": 0.41,
+   "frec_conjunta": 0.201,
+   "confianza": "Media",
+   "robustez_2060": "No evaluable (sin dato 2060)",
+   "cobeneficios": "Recurso hídrico; Riesgo de desastres",
+   "indicador": "COP$ invertido en proyectos de restauración.",
+   "estado_indicador": "OFICIAL (Excel) - es indicador de actividad"
+  },
+  {
+   "alternativa": "M03-COR",
+   "medida": "Fortalecimiento de sistemas de áreas protegidas",
+   "dimension": "Biodiversidad",
+   "territorio": "Corredor",
+   "costo_M": 700.0,
+   "actua_sobre": "CA",
+   "Necesidad": 0.673,
+   "Brecha CA": 0.737,
+   "Evidencia": 0.167,
+   "Cobertura": 1.0,
+   "Cobeneficios": 0.333,
+   "Robustez 2060": 0.5,
+   "datos_V_CA": 5,
+   "elegible": true,
+   "puntaje_ref": 0.6077,
+   "puntaje_2060": 0.5807,
+   "en_referencia": true,
+   "en_2060": true,
+   "en_robusto": true,
+   "frec_datos": 0.901,
+   "frec_pesos": 0.953,
+   "frec_efectividad": 1.0,
+   "frec_conjunta": 0.809,
+   "confianza": "Alta",
+   "robustez_2060": "No evaluable (sin dato 2060)",
+   "cobeneficios": "Recurso hídrico",
+   "indicador": "# de ecosistemas estratégicos con planes de manejo formulados anualmente",
+   "estado_indicador": "RELACIONADO (Excel: Estrategias con estructura ecológica principal)"
+  },
+  {
+   "alternativa": "M01-RIO",
+   "medida": "Instrumentos de compensación y Pago por Servicios Ambientales – PSA",
+   "dimension": "Biodiversidad",
+   "territorio": "Rionegro",
+   "costo_M": 1200.0,
+   "actua_sobre": "S+CA",
+   "Necesidad": 0.75,
+   "Brecha CA": 0.78,
+   "Evidencia": 0.5,
+   "Cobertura": 0.333,
+   "Cobeneficios": 0.333,
+   "Robustez 2060": 0.5,
+   "datos_V_CA": 2,
+   "elegible": true,
+   "puntaje_ref": 0.5727,
+   "puntaje_2060": 0.5545,
+   "en_referencia": true,
+   "en_2060": true,
+   "en_robusto": true,
+   "frec_datos": 0.346,
+   "frec_pesos": 0.614,
+   "frec_efectividad": 0.437,
+   "frec_conjunta": 0.285,
+   "confianza": "Media",
+   "robustez_2060": "No evaluable (sin dato 2060)",
+   "cobeneficios": "Recurso hídrico",
+   "indicador": "# de beneficiarios de la estrategia de PSA anuales",
+   "estado_indicador": "OFICIAL (Excel adaptación municipios)"
+  },
+  {
+   "alternativa": "M14-COR",
+   "medida": "Conocimiento y comunicación sobre amenazas, vulnerabilidad y riesgo climático",
+   "dimension": "Riesgo de desastres",
+   "territorio": "Corredor",
+   "costo_M": 600.0,
+   "actua_sobre": "CA",
+   "Necesidad": 0.5,
+   "Brecha CA": 0.443,
+   "Evidencia": 0.833,
+   "Cobertura": 1.0,
+   "Cobeneficios": 0.0,
+   "Robustez 2060": 0.667,
+   "datos_V_CA": 2,
+   "elegible": true,
+   "puntaje_ref": 0.5387,
+   "puntaje_2060": 0.5707,
+   "en_referencia": true,
+   "en_2060": true,
+   "en_robusto": true,
+   "frec_datos": 0.821,
+   "frec_pesos": 0.921,
+   "frec_efectividad": 0.911,
+   "frec_conjunta": 0.712,
+   "confianza": "Alta",
+   "robustez_2060": "Se refuerza (riesgo sube a 2060)",
+   "cobeneficios": null,
+   "indicador": "# de estudios de riesgo climático elaborados por sector anualmente",
+   "estado_indicador": "RELACIONADO (Excel: Uso intersectorial)"
+  },
+  {
+   "alternativa": "M07-MAR",
+   "medida": "Protección y reconversión de suelos agrícolas estratégicos",
+   "dimension": "Seguridad alimentaria",
+   "territorio": "Marinilla",
+   "costo_M": 1000.0,
+   "actua_sobre": "S",
+   "Necesidad": 0.5,
+   "Brecha CA": 0.25,
+   "Evidencia": 1.0,
+   "Cobertura": 0.333,
+   "Cobeneficios": 0.667,
+   "Robustez 2060": 0.5,
+   "datos_V_CA": 0,
+   "elegible": true,
+   "puntaje_ref": 0.525,
+   "puntaje_2060": 0.5187,
+   "en_referencia": true,
+   "en_2060": false,
+   "en_robusto": true,
+   "frec_datos": 0.374,
+   "frec_pesos": 0.685,
+   "frec_efectividad": 0.729,
+   "frec_conjunta": 0.381,
+   "confianza": "Media",
+   "robustez_2060": "No evaluable (sin dato 2060)",
+   "cobeneficios": "Recurso hídrico; Riesgo de desastres",
+   "indicador": "# de actores educados y capacitados en términos de conservación y uso del suelo anualmente",
+   "estado_indicador": "RELACIONADO (Excel: Protección de suelos)"
+  },
+  {
+   "alternativa": "M05-RIO",
+   "medida": "Protección y recuperación de rondas hídricas",
+   "dimension": "Recurso hídrico",
+   "territorio": "Rionegro",
+   "costo_M": 1300.0,
+   "actua_sobre": "S",
+   "Necesidad": 0.53,
+   "Brecha CA": 0.25,
+   "Evidencia": 1.0,
+   "Cobertura": 0.333,
+   "Cobeneficios": 1.0,
+   "Robustez 2060": 0.5,
+   "datos_V_CA": 0,
+   "elegible": true,
+   "puntaje_ref": 0.5923,
+   "puntaje_2060": 0.5692,
+   "en_referencia": false,
+   "en_2060": false,
+   "en_robusto": false,
+   "frec_datos": 0.271,
+   "frec_pesos": 0.17,
+   "frec_efectividad": 0.0,
+   "frec_conjunta": 0.273,
+   "confianza": "Baja",
+   "robustez_2060": "No evaluable (sin dato 2060)",
+   "cobeneficios": "Biodiversidad; Riesgo de desastres; Hábitat",
+   "indicador": "# de planes de manejo y monitoreo diseñados e implementados.",
+   "estado_indicador": "OFICIAL (Excel)"
+  },
+  {
+   "alternativa": "M05-GUA",
+   "medida": "Protección y recuperación de rondas hídricas",
+   "dimension": "Recurso hídrico",
+   "territorio": "Guarne",
+   "costo_M": 1300.0,
+   "actua_sobre": "S",
+   "Necesidad": 0.53,
+   "Brecha CA": 0.25,
+   "Evidencia": 1.0,
+   "Cobertura": 0.333,
+   "Cobeneficios": 1.0,
+   "Robustez 2060": 0.5,
+   "datos_V_CA": 0,
+   "elegible": true,
+   "puntaje_ref": 0.5923,
+   "puntaje_2060": 0.5692,
+   "en_referencia": false,
+   "en_2060": false,
+   "en_robusto": false,
+   "frec_datos": 0.272,
+   "frec_pesos": 0.012,
+   "frec_efectividad": 0.0,
+   "frec_conjunta": 0.28,
+   "confianza": "Baja",
+   "robustez_2060": "No evaluable (sin dato 2060)",
+   "cobeneficios": "Biodiversidad; Riesgo de desastres; Hábitat",
+   "indicador": "# de planes de manejo y monitoreo diseñados e implementados.",
+   "estado_indicador": "OFICIAL (Excel)"
+  },
+  {
+   "alternativa": "M05-MAR",
+   "medida": "Protección y recuperación de rondas hídricas",
+   "dimension": "Recurso hídrico",
+   "territorio": "Marinilla",
+   "costo_M": 1300.0,
+   "actua_sobre": "S",
+   "Necesidad": 0.53,
+   "Brecha CA": 0.25,
+   "Evidencia": 1.0,
+   "Cobertura": 0.333,
+   "Cobeneficios": 1.0,
+   "Robustez 2060": 0.5,
+   "datos_V_CA": 0,
+   "elegible": true,
+   "puntaje_ref": 0.5923,
+   "puntaje_2060": 0.5692,
+   "en_referencia": false,
+   "en_2060": true,
+   "en_robusto": false,
+   "frec_datos": 0.266,
+   "frec_pesos": 0.521,
+   "frec_efectividad": 0.271,
+   "frec_conjunta": 0.263,
+   "confianza": "Baja",
+   "robustez_2060": "No evaluable (sin dato 2060)",
+   "cobeneficios": "Biodiversidad; Riesgo de desastres; Hábitat",
+   "indicador": "# de planes de manejo y monitoreo diseñados e implementados.",
+   "estado_indicador": "OFICIAL (Excel)"
+  },
+  {
+   "alternativa": "M02-GUA",
+   "medida": "Restauración de ecosistemas estratégicos",
+   "dimension": "Biodiversidad",
+   "territorio": "Guarne",
+   "costo_M": 1500.0,
+   "actua_sobre": "S",
+   "Necesidad": 0.55,
+   "Brecha CA": 0.335,
+   "Evidencia": 1.0,
+   "Cobertura": 0.333,
+   "Cobeneficios": 0.667,
+   "Robustez 2060": 0.5,
+   "datos_V_CA": 1,
+   "elegible": true,
+   "puntaje_ref": 0.557,
+   "puntaje_2060": 0.5427,
+   "en_referencia": false,
+   "en_2060": false,
+   "en_robusto": false,
+   "frec_datos": 0.074,
+   "frec_pesos": 0.0,
+   "frec_efectividad": 0.089,
+   "frec_conjunta": 0.091,
+   "confianza": "Baja",
+   "robustez_2060": "No evaluable (sin dato 2060)",
+   "cobeneficios": "Recurso hídrico; Riesgo de desastres",
+   "indicador": "COP$ invertido en proyectos de restauración.",
+   "estado_indicador": "OFICIAL (Excel) - es indicador de actividad"
+  },
+  {
+   "alternativa": "M02-MAR",
+   "medida": "Restauración de ecosistemas estratégicos",
+   "dimension": "Biodiversidad",
+   "territorio": "Marinilla",
+   "costo_M": 1500.0,
+   "actua_sobre": "S",
+   "Necesidad": 0.72,
+   "Brecha CA": 0.38,
+   "Evidencia": 0.5,
+   "Cobertura": 0.333,
+   "Cobeneficios": 0.667,
+   "Robustez 2060": 0.5,
+   "datos_V_CA": 2,
+   "elegible": true,
+   "puntaje_ref": 0.542,
+   "puntaje_2060": 0.5315,
+   "en_referencia": false,
+   "en_2060": false,
+   "en_robusto": false,
+   "frec_datos": 0.012,
+   "frec_pesos": 0.0,
+   "frec_efectividad": 0.0,
+   "frec_conjunta": 0.026,
+   "confianza": "Media",
+   "robustez_2060": "No evaluable (sin dato 2060)",
+   "cobeneficios": "Recurso hídrico; Riesgo de desastres",
+   "indicador": "COP$ invertido en proyectos de restauración.",
+   "estado_indicador": "OFICIAL (Excel) - es indicador de actividad"
+  },
+  {
+   "alternativa": "M07-RIO",
+   "medida": "Protección y reconversión de suelos agrícolas estratégicos",
+   "dimension": "Seguridad alimentaria",
+   "territorio": "Rionegro",
+   "costo_M": 1000.0,
+   "actua_sobre": "S",
+   "Necesidad": 0.5,
+   "Brecha CA": 0.25,
+   "Evidencia": 1.0,
+   "Cobertura": 0.333,
+   "Cobeneficios": 0.667,
+   "Robustez 2060": 0.5,
+   "datos_V_CA": 0,
+   "elegible": true,
+   "puntaje_ref": 0.525,
+   "puntaje_2060": 0.5187,
+   "en_referencia": false,
+   "en_2060": false,
+   "en_robusto": false,
+   "frec_datos": 0.341,
+   "frec_pesos": 0.141,
+   "frec_efectividad": 0.408,
+   "frec_conjunta": 0.347,
+   "confianza": "Media",
+   "robustez_2060": "No evaluable (sin dato 2060)",
+   "cobeneficios": "Recurso hídrico; Riesgo de desastres",
+   "indicador": "# de actores educados y capacitados en términos de conservación y uso del suelo anualmente",
+   "estado_indicador": "RELACIONADO (Excel: Protección de suelos)"
+  },
+  {
+   "alternativa": "M07-GUA",
+   "medida": "Protección y reconversión de suelos agrícolas estratégicos",
+   "dimension": "Seguridad alimentaria",
+   "territorio": "Guarne",
+   "costo_M": 1000.0,
+   "actua_sobre": "S",
+   "Necesidad": 0.5,
+   "Brecha CA": 0.25,
+   "Evidencia": 1.0,
+   "Cobertura": 0.333,
+   "Cobeneficios": 0.667,
+   "Robustez 2060": 0.5,
+   "datos_V_CA": 0,
+   "elegible": true,
+   "puntaje_ref": 0.525,
+   "puntaje_2060": 0.5187,
+   "en_referencia": false,
+   "en_2060": false,
+   "en_robusto": false,
+   "frec_datos": 0.355,
+   "frec_pesos": 0.102,
+   "frec_efectividad": 0.0,
+   "frec_conjunta": 0.36,
+   "confianza": "Media",
+   "robustez_2060": "No evaluable (sin dato 2060)",
+   "cobeneficios": "Recurso hídrico; Riesgo de desastres",
+   "indicador": "# de actores educados y capacitados en términos de conservación y uso del suelo anualmente",
+   "estado_indicador": "RELACIONADO (Excel: Protección de suelos)"
+  },
+  {
+   "alternativa": "M13-COR",
+   "medida": "Fortalecimiento de Sistemas de Alerta Temprana – SAT",
+   "dimension": "Riesgo de desastres",
+   "territorio": "Corredor",
+   "costo_M": 1200.0,
+   "actua_sobre": "CA",
+   "Necesidad": 0.5,
+   "Brecha CA": 0.443,
+   "Evidencia": 0.333,
+   "Cobertura": 1.0,
+   "Cobeneficios": 0.333,
+   "Robustez 2060": 0.667,
+   "datos_V_CA": 2,
+   "elegible": true,
+   "puntaje_ref": 0.522,
+   "puntaje_2060": 0.5582,
+   "en_referencia": false,
+   "en_2060": true,
+   "en_robusto": false,
+   "frec_datos": 0.192,
+   "frec_pesos": 0.347,
+   "frec_efectividad": 0.248,
+   "frec_conjunta": 0.181,
+   "confianza": "Baja",
+   "robustez_2060": "Se refuerza (riesgo sube a 2060)",
+   "cobeneficios": "Infraestructura",
+   "indicador": "NO DISPONIBLE",
+   "estado_indicador": "NO DISPONIBLE"
+  },
+  {
+   "alternativa": "M01-GUA",
+   "medida": "Instrumentos de compensación y Pago por Servicios Ambientales – PSA",
+   "dimension": "Biodiversidad",
+   "territorio": "Guarne",
+   "costo_M": 1200.0,
+   "actua_sobre": "S+CA",
+   "Necesidad": 0.55,
+   "Brecha CA": 0.67,
+   "Evidencia": 0.5,
+   "Cobertura": 0.333,
+   "Cobeneficios": 0.333,
+   "Robustez 2060": 0.5,
+   "datos_V_CA": 1,
+   "elegible": true,
+   "puntaje_ref": 0.4907,
+   "puntaje_2060": 0.493,
+   "en_referencia": false,
+   "en_2060": false,
+   "en_robusto": false,
+   "frec_datos": 0.13,
+   "frec_pesos": 0.01,
+   "frec_efectividad": 0.0,
+   "frec_conjunta": 0.095,
+   "confianza": "Baja",
+   "robustez_2060": "No evaluable (sin dato 2060)",
+   "cobeneficios": "Recurso hídrico",
+   "indicador": "# de beneficiarios de la estrategia de PSA anuales",
+   "estado_indicador": "OFICIAL (Excel adaptación municipios)"
+  },
+  {
+   "alternativa": "M01-MAR",
+   "medida": "Instrumentos de compensación y Pago por Servicios Ambientales – PSA",
+   "dimension": "Biodiversidad",
+   "territorio": "Marinilla",
+   "costo_M": 1200.0,
+   "actua_sobre": "S+CA",
+   "Necesidad": 0.72,
+   "Brecha CA": 0.76,
+   "Evidencia": 0.0,
+   "Cobertura": 0.333,
+   "Cobeneficios": 0.333,
+   "Robustez 2060": 0.5,
+   "datos_V_CA": 2,
+   "elegible": true,
+   "puntaje_ref": 0.4847,
+   "puntaje_2060": 0.4885,
+   "en_referencia": false,
+   "en_2060": false,
+   "en_robusto": false,
+   "frec_datos": 0.052,
+   "frec_pesos": 0.1,
+   "frec_efectividad": 0.0,
+   "frec_conjunta": 0.064,
+   "confianza": "Media",
+   "robustez_2060": "No evaluable (sin dato 2060)",
+   "cobeneficios": "Recurso hídrico",
+   "indicador": "# de beneficiarios de la estrategia de PSA anuales",
+   "estado_indicador": "OFICIAL (Excel adaptación municipios)"
+  },
+  {
+   "alternativa": "M11-MAR",
+   "medida": "Infraestructura resiliente al cambio climático",
+   "dimension": "Infraestructura",
+   "territorio": "Marinilla",
+   "costo_M": 2500.0,
+   "actua_sobre": "S",
+   "Necesidad": 0.5,
+   "Brecha CA": 0.25,
+   "Evidencia": 1.0,
+   "Cobertura": 0.333,
+   "Cobeneficios": 0.333,
+   "Robustez 2060": 0.5,
+   "datos_V_CA": 0,
+   "elegible": true,
+   "puntaje_ref": 0.4667,
+   "puntaje_2060": 0.475,
+   "en_referencia": false,
+   "en_2060": false,
+   "en_robusto": false,
+   "frec_datos": 0.0,
+   "frec_pesos": 0.0,
+   "frec_efectividad": 0.0,
+   "frec_conjunta": 0.006,
+   "confianza": "Baja",
+   "robustez_2060": "No evaluable (sin dato 2060)",
+   "cobeneficios": "Riesgo de desastres",
+   "indicador": "Cambio en población urbana localizada en zonas de amenaza.",
+   "estado_indicador": "RELACIONADO (Excel: Construcciones resistentes) - indicador de resultado"
+  },
+  {
+   "alternativa": "M10-RIO",
+   "medida": "Sistemas Urbanos de Drenaje Sostenible – SUDS",
+   "dimension": "Hábitat",
+   "territorio": "Rionegro",
+   "costo_M": 1800.0,
+   "actua_sobre": "S",
+   "Necesidad": 0.5,
+   "Brecha CA": 0.25,
+   "Evidencia": 0.5,
+   "Cobertura": 0.333,
+   "Cobeneficios": 0.667,
+   "Robustez 2060": 0.5,
+   "datos_V_CA": 0,
+   "elegible": true,
+   "puntaje_ref": 0.45,
+   "puntaje_2060": 0.4625,
+   "en_referencia": false,
+   "en_2060": false,
+   "en_robusto": false,
+   "frec_datos": 0.0,
+   "frec_pesos": 0.0,
+   "frec_efectividad": 0.0,
+   "frec_conjunta": 0.008,
+   "confianza": "Baja",
+   "robustez_2060": "No evaluable (sin dato 2060)",
+   "cobeneficios": "Riesgo de desastres; Recurso hídrico",
+   "indicador": "# de municipios donde se implementa la medida.",
+   "estado_indicador": "OFICIAL (Excel) - indicador de actividad"
+  },
+  {
+   "alternativa": "M10-GUA",
+   "medida": "Sistemas Urbanos de Drenaje Sostenible – SUDS",
+   "dimension": "Hábitat",
+   "territorio": "Guarne",
+   "costo_M": 1800.0,
+   "actua_sobre": "S",
+   "Necesidad": 0.5,
+   "Brecha CA": 0.25,
+   "Evidencia": 0.5,
+   "Cobertura": 0.333,
+   "Cobeneficios": 0.667,
+   "Robustez 2060": 0.5,
+   "datos_V_CA": 0,
+   "elegible": true,
+   "puntaje_ref": 0.45,
+   "puntaje_2060": 0.4625,
+   "en_referencia": false,
+   "en_2060": false,
+   "en_robusto": false,
+   "frec_datos": 0.0,
+   "frec_pesos": 0.0,
+   "frec_efectividad": 0.0,
+   "frec_conjunta": 0.011,
+   "confianza": "Baja",
+   "robustez_2060": "No evaluable (sin dato 2060)",
+   "cobeneficios": "Riesgo de desastres; Recurso hídrico",
+   "indicador": "# de municipios donde se implementa la medida.",
+   "estado_indicador": "OFICIAL (Excel) - indicador de actividad"
+  },
+  {
+   "alternativa": "M10-MAR",
+   "medida": "Sistemas Urbanos de Drenaje Sostenible – SUDS",
+   "dimension": "Hábitat",
+   "territorio": "Marinilla",
+   "costo_M": 1800.0,
+   "actua_sobre": "S",
+   "Necesidad": 0.5,
+   "Brecha CA": 0.25,
+   "Evidencia": 0.5,
+   "Cobertura": 0.333,
+   "Cobeneficios": 0.667,
+   "Robustez 2060": 0.5,
+   "datos_V_CA": 0,
+   "elegible": true,
+   "puntaje_ref": 0.45,
+   "puntaje_2060": 0.4625,
+   "en_referencia": false,
+   "en_2060": false,
+   "en_robusto": false,
+   "frec_datos": 0.0,
+   "frec_pesos": 0.0,
+   "frec_efectividad": 0.0,
+   "frec_conjunta": 0.006,
+   "confianza": "Baja",
+   "robustez_2060": "No evaluable (sin dato 2060)",
+   "cobeneficios": "Riesgo de desastres; Recurso hídrico",
+   "indicador": "# de municipios donde se implementa la medida.",
+   "estado_indicador": "OFICIAL (Excel) - indicador de actividad"
+  },
+  {
+   "alternativa": "M08-GUA",
+   "medida": "Producción agroecológica y economía rural resiliente",
+   "dimension": "Seguridad alimentaria",
+   "territorio": "Guarne",
+   "costo_M": 800.0,
+   "actua_sobre": "S+CA",
+   "Necesidad": 0.5,
+   "Brecha CA": 0.5,
+   "Evidencia": 0.5,
+   "Cobertura": 0.333,
+   "Cobeneficios": 0.333,
+   "Robustez 2060": 0.5,
+   "datos_V_CA": 0,
+   "elegible": true,
+   "puntaje_ref": 0.4417,
+   "puntaje_2060": 0.4562,
+   "en_referencia": false,
+   "en_2060": false,
+   "en_robusto": false,
+   "frec_datos": 0.284,
+   "frec_pesos": 0.039,
+   "frec_efectividad": 0.408,
+   "frec_conjunta": 0.314,
+   "confianza": "Media",
+   "robustez_2060": "No evaluable (sin dato 2060)",
+   "cobeneficios": "Recurso hídrico",
+   "indicador": "# de familias beneficiadas",
+   "estado_indicador": "OFICIAL (Excel)"
+  },
+  {
+   "alternativa": "M08-MAR",
+   "medida": "Producción agroecológica y economía rural resiliente",
+   "dimension": "Seguridad alimentaria",
+   "territorio": "Marinilla",
+   "costo_M": 800.0,
+   "actua_sobre": "S+CA",
+   "Necesidad": 0.5,
+   "Brecha CA": 0.5,
+   "Evidencia": 0.5,
+   "Cobertura": 0.333,
+   "Cobeneficios": 0.333,
+   "Robustez 2060": 0.5,
+   "datos_V_CA": 0,
+   "elegible": true,
+   "puntaje_ref": 0.4417,
+   "puntaje_2060": 0.4562,
+   "en_referencia": false,
+   "en_2060": false,
+   "en_robusto": false,
+   "frec_datos": 0.292,
+   "frec_pesos": 0.039,
+   "frec_efectividad": 0.408,
+   "frec_conjunta": 0.325,
+   "confianza": "Media",
+   "robustez_2060": "No evaluable (sin dato 2060)",
+   "cobeneficios": "Recurso hídrico",
+   "indicador": "# de familias beneficiadas",
+   "estado_indicador": "OFICIAL (Excel)"
+  },
+  {
+   "alternativa": "M09-RIO",
+   "medida": "Espacios verdes urbanos",
+   "dimension": "Hábitat",
+   "territorio": "Rionegro",
+   "costo_M": 1000.0,
+   "actua_sobre": "S",
+   "Necesidad": 0.5,
+   "Brecha CA": 0.25,
+   "Evidencia": 0.0,
+   "Cobertura": 0.333,
+   "Cobeneficios": 1.0,
+   "Robustez 2060": 0.5,
+   "datos_V_CA": 0,
+   "elegible": false,
+   "puntaje_ref": 0.4333,
+   "puntaje_2060": 0.45,
+   "en_referencia": false,
+   "en_2060": false,
+   "en_robusto": false,
+   "frec_datos": 0.0,
+   "frec_pesos": 0.0,
+   "frec_efectividad": 0.0,
+   "frec_conjunta": 0.0,
+   "confianza": "Baja",
+   "robustez_2060": "No evaluable (sin dato 2060)",
+   "cobeneficios": "Salud; Recurso hídrico; Biodiversidad",
+   "indicador": "NO DISPONIBLE",
+   "estado_indicador": "NO DISPONIBLE"
+  },
+  {
+   "alternativa": "M09-GUA",
+   "medida": "Espacios verdes urbanos",
+   "dimension": "Hábitat",
+   "territorio": "Guarne",
+   "costo_M": 1000.0,
+   "actua_sobre": "S",
+   "Necesidad": 0.5,
+   "Brecha CA": 0.25,
+   "Evidencia": 0.0,
+   "Cobertura": 0.333,
+   "Cobeneficios": 1.0,
+   "Robustez 2060": 0.5,
+   "datos_V_CA": 0,
+   "elegible": false,
+   "puntaje_ref": 0.4333,
+   "puntaje_2060": 0.45,
+   "en_referencia": false,
+   "en_2060": false,
+   "en_robusto": false,
+   "frec_datos": 0.0,
+   "frec_pesos": 0.0,
+   "frec_efectividad": 0.0,
+   "frec_conjunta": 0.0,
+   "confianza": "Baja",
+   "robustez_2060": "No evaluable (sin dato 2060)",
+   "cobeneficios": "Salud; Recurso hídrico; Biodiversidad",
+   "indicador": "NO DISPONIBLE",
+   "estado_indicador": "NO DISPONIBLE"
+  },
+  {
+   "alternativa": "M09-MAR",
+   "medida": "Espacios verdes urbanos",
+   "dimension": "Hábitat",
+   "territorio": "Marinilla",
+   "costo_M": 1000.0,
+   "actua_sobre": "S",
+   "Necesidad": 0.5,
+   "Brecha CA": 0.25,
+   "Evidencia": 0.0,
+   "Cobertura": 0.333,
+   "Cobeneficios": 1.0,
+   "Robustez 2060": 0.5,
+   "datos_V_CA": 0,
+   "elegible": false,
+   "puntaje_ref": 0.4333,
+   "puntaje_2060": 0.45,
+   "en_referencia": false,
+   "en_2060": false,
+   "en_robusto": false,
+   "frec_datos": 0.0,
+   "frec_pesos": 0.0,
+   "frec_efectividad": 0.0,
+   "frec_conjunta": 0.0,
+   "confianza": "Baja",
+   "robustez_2060": "No evaluable (sin dato 2060)",
+   "cobeneficios": "Salud; Recurso hídrico; Biodiversidad",
+   "indicador": "NO DISPONIBLE",
+   "estado_indicador": "NO DISPONIBLE"
+  },
+  {
+   "alternativa": "M06-GUA",
+   "medida": "Protección de cabeceras de cuenca y ecosistemas abastecedores",
+   "dimension": "Recurso hídrico",
+   "territorio": "Guarne",
+   "costo_M": 1600.0,
+   "actua_sobre": "S",
+   "Necesidad": 0.53,
+   "Brecha CA": 0.25,
+   "Evidencia": 0.5,
+   "Cobertura": 0.333,
+   "Cobeneficios": 0.333,
+   "Robustez 2060": 0.5,
+   "datos_V_CA": 0,
+   "elegible": true,
+   "puntaje_ref": 0.4007,
+   "puntaje_2060": 0.4255,
+   "en_referencia": false,
+   "en_2060": false,
+   "en_robusto": false,
+   "frec_datos": 0.001,
+   "frec_pesos": 0.0,
+   "frec_efectividad": 0.0,
+   "frec_conjunta": 0.003,
+   "confianza": "Baja",
+   "robustez_2060": "No evaluable (sin dato 2060)",
+   "cobeneficios": "Biodiversidad",
+   "indicador": "NO DISPONIBLE",
+   "estado_indicador": "NO DISPONIBLE"
+  },
+  {
+   "alternativa": "M11-RIO",
+   "medida": "Infraestructura resiliente al cambio climático",
+   "dimension": "Infraestructura",
+   "territorio": "Rionegro",
+   "costo_M": 2500.0,
+   "actua_sobre": "S",
+   "Necesidad": 0.5,
+   "Brecha CA": 0.25,
+   "Evidencia": 0.5,
+   "Cobertura": 0.333,
+   "Cobeneficios": 0.333,
+   "Robustez 2060": 0.5,
+   "datos_V_CA": 0,
+   "elegible": true,
+   "puntaje_ref": 0.3917,
+   "puntaje_2060": 0.4187,
+   "en_referencia": false,
+   "en_2060": false,
+   "en_robusto": false,
+   "frec_datos": 0.0,
+   "frec_pesos": 0.0,
+   "frec_efectividad": 0.0,
+   "frec_conjunta": 0.001,
+   "confianza": "Baja",
+   "robustez_2060": "No evaluable (sin dato 2060)",
+   "cobeneficios": "Riesgo de desastres",
+   "indicador": "Cambio en población urbana localizada en zonas de amenaza.",
+   "estado_indicador": "RELACIONADO (Excel: Construcciones resistentes) - indicador de resultado"
+  },
+  {
+   "alternativa": "M11-GUA",
+   "medida": "Infraestructura resiliente al cambio climático",
+   "dimension": "Infraestructura",
+   "territorio": "Guarne",
+   "costo_M": 2500.0,
+   "actua_sobre": "S",
+   "Necesidad": 0.5,
+   "Brecha CA": 0.25,
+   "Evidencia": 0.5,
+   "Cobertura": 0.333,
+   "Cobeneficios": 0.333,
+   "Robustez 2060": 0.5,
+   "datos_V_CA": 0,
+   "elegible": true,
+   "puntaje_ref": 0.3917,
+   "puntaje_2060": 0.4187,
+   "en_referencia": false,
+   "en_2060": false,
+   "en_robusto": false,
+   "frec_datos": 0.0,
+   "frec_pesos": 0.0,
+   "frec_efectividad": 0.0,
+   "frec_conjunta": 0.001,
+   "confianza": "Baja",
+   "robustez_2060": "No evaluable (sin dato 2060)",
+   "cobeneficios": "Riesgo de desastres",
+   "indicador": "Cambio en población urbana localizada en zonas de amenaza.",
+   "estado_indicador": "RELACIONADO (Excel: Construcciones resistentes) - indicador de resultado"
+  },
+  {
+   "alternativa": "M12-GUA",
+   "medida": "Fortalecimiento de infraestructura resiliente y servicios públicos",
+   "dimension": "Infraestructura",
+   "territorio": "Guarne",
+   "costo_M": 2000.0,
+   "actua_sobre": "S",
+   "Necesidad": 0.5,
+   "Brecha CA": 0.25,
+   "Evidencia": 0.5,
+   "Cobertura": 0.333,
+   "Cobeneficios": 0.333,
+   "Robustez 2060": 0.5,
+   "datos_V_CA": 0,
+   "elegible": true,
+   "puntaje_ref": 0.3917,
+   "puntaje_2060": 0.4187,
+   "en_referencia": false,
+   "en_2060": false,
+   "en_robusto": false,
+   "frec_datos": 0.0,
+   "frec_pesos": 0.0,
+   "frec_efectividad": 0.0,
+   "frec_conjunta": 0.001,
+   "confianza": "Baja",
+   "robustez_2060": "No evaluable (sin dato 2060)",
+   "cobeneficios": "Riesgo de desastres",
+   "indicador": "NO DISPONIBLE",
+   "estado_indicador": "NO DISPONIBLE"
+  },
+  {
+   "alternativa": "M12-MAR",
+   "medida": "Fortalecimiento de infraestructura resiliente y servicios públicos",
+   "dimension": "Infraestructura",
+   "territorio": "Marinilla",
+   "costo_M": 2000.0,
+   "actua_sobre": "S",
+   "Necesidad": 0.5,
+   "Brecha CA": 0.25,
+   "Evidencia": 0.5,
+   "Cobertura": 0.333,
+   "Cobeneficios": 0.333,
+   "Robustez 2060": 0.5,
+   "datos_V_CA": 0,
+   "elegible": true,
+   "puntaje_ref": 0.3917,
+   "puntaje_2060": 0.4187,
+   "en_referencia": false,
+   "en_2060": false,
+   "en_robusto": false,
+   "frec_datos": 0.0,
+   "frec_pesos": 0.0,
+   "frec_efectividad": 0.0,
+   "frec_conjunta": 0.001,
+   "confianza": "Baja",
+   "robustez_2060": "No evaluable (sin dato 2060)",
+   "cobeneficios": "Riesgo de desastres",
+   "indicador": "NO DISPONIBLE",
+   "estado_indicador": "NO DISPONIBLE"
+  },
+  {
+   "alternativa": "M08-RIO",
+   "medida": "Producción agroecológica y economía rural resiliente",
+   "dimension": "Seguridad alimentaria",
+   "territorio": "Rionegro",
+   "costo_M": 800.0,
+   "actua_sobre": "S+CA",
+   "Necesidad": 0.5,
+   "Brecha CA": 0.5,
+   "Evidencia": 0.0,
+   "Cobertura": 0.333,
+   "Cobeneficios": 0.333,
+   "Robustez 2060": 0.5,
+   "datos_V_CA": 0,
+   "elegible": false,
+   "puntaje_ref": 0.3667,
+   "puntaje_2060": 0.4,
+   "en_referencia": false,
+   "en_2060": false,
+   "en_robusto": false,
+   "frec_datos": 0.0,
+   "frec_pesos": 0.0,
+   "frec_efectividad": 0.0,
+   "frec_conjunta": 0.0,
+   "confianza": "Baja",
+   "robustez_2060": "No evaluable (sin dato 2060)",
+   "cobeneficios": "Recurso hídrico",
+   "indicador": "# de familias beneficiadas",
+   "estado_indicador": "OFICIAL (Excel)"
+  },
+  {
+   "alternativa": "M06-RIO",
+   "medida": "Protección de cabeceras de cuenca y ecosistemas abastecedores",
+   "dimension": "Recurso hídrico",
+   "territorio": "Rionegro",
+   "costo_M": 1600.0,
+   "actua_sobre": "S",
+   "Necesidad": 0.53,
+   "Brecha CA": 0.25,
+   "Evidencia": 0.0,
+   "Cobertura": 0.333,
+   "Cobeneficios": 0.333,
+   "Robustez 2060": 0.5,
+   "datos_V_CA": 0,
+   "elegible": false,
+   "puntaje_ref": 0.3257,
+   "puntaje_2060": 0.3692,
+   "en_referencia": false,
+   "en_2060": false,
+   "en_robusto": false,
+   "frec_datos": 0.0,
+   "frec_pesos": 0.0,
+   "frec_efectividad": 0.0,
+   "frec_conjunta": 0.0,
+   "confianza": "Baja",
+   "robustez_2060": "No evaluable (sin dato 2060)",
+   "cobeneficios": "Biodiversidad",
+   "indicador": "NO DISPONIBLE",
+   "estado_indicador": "NO DISPONIBLE"
+  },
+  {
+   "alternativa": "M06-MAR",
+   "medida": "Protección de cabeceras de cuenca y ecosistemas abastecedores",
+   "dimension": "Recurso hídrico",
+   "territorio": "Marinilla",
+   "costo_M": 1600.0,
+   "actua_sobre": "S",
+   "Necesidad": 0.53,
+   "Brecha CA": 0.25,
+   "Evidencia": 0.0,
+   "Cobertura": 0.333,
+   "Cobeneficios": 0.333,
+   "Robustez 2060": 0.5,
+   "datos_V_CA": 0,
+   "elegible": false,
+   "puntaje_ref": 0.3257,
+   "puntaje_2060": 0.3692,
+   "en_referencia": false,
+   "en_2060": false,
+   "en_robusto": false,
+   "frec_datos": 0.0,
+   "frec_pesos": 0.0,
+   "frec_efectividad": 0.0,
+   "frec_conjunta": 0.0,
+   "confianza": "Baja",
+   "robustez_2060": "No evaluable (sin dato 2060)",
+   "cobeneficios": "Biodiversidad",
+   "indicador": "NO DISPONIBLE",
+   "estado_indicador": "NO DISPONIBLE"
+  },
+  {
+   "alternativa": "M04-RIO",
+   "medida": "Uso intersectorial eficiente del recurso hídrico",
+   "dimension": "Recurso hídrico",
+   "territorio": "Rionegro",
+   "costo_M": 900.0,
+   "actua_sobre": "S+CA",
+   "Necesidad": 0.53,
+   "Brecha CA": 0.5,
+   "Evidencia": 0.0,
+   "Cobertura": 0.333,
+   "Cobeneficios": 0.0,
+   "Robustez 2060": 0.5,
+   "datos_V_CA": 0,
+   "elegible": false,
+   "puntaje_ref": 0.3173,
+   "puntaje_2060": 0.363,
+   "en_referencia": false,
+   "en_2060": false,
+   "en_robusto": false,
+   "frec_datos": 0.0,
+   "frec_pesos": 0.0,
+   "frec_efectividad": 0.0,
+   "frec_conjunta": 0.0,
+   "confianza": "Baja",
+   "robustez_2060": "No evaluable (sin dato 2060)",
+   "cobeneficios": null,
+   "indicador": "# de empresas de sectores productivos priorizados que aumentan su eficiencia en el uso del agua.",
+   "estado_indicador": "OFICIAL (Excel)"
+  },
+  {
+   "alternativa": "M04-GUA",
+   "medida": "Uso intersectorial eficiente del recurso hídrico",
+   "dimension": "Recurso hídrico",
+   "territorio": "Guarne",
+   "costo_M": 900.0,
+   "actua_sobre": "S+CA",
+   "Necesidad": 0.53,
+   "Brecha CA": 0.5,
+   "Evidencia": 0.0,
+   "Cobertura": 0.333,
+   "Cobeneficios": 0.0,
+   "Robustez 2060": 0.5,
+   "datos_V_CA": 0,
+   "elegible": false,
+   "puntaje_ref": 0.3173,
+   "puntaje_2060": 0.363,
+   "en_referencia": false,
+   "en_2060": false,
+   "en_robusto": false,
+   "frec_datos": 0.0,
+   "frec_pesos": 0.0,
+   "frec_efectividad": 0.0,
+   "frec_conjunta": 0.0,
+   "confianza": "Baja",
+   "robustez_2060": "No evaluable (sin dato 2060)",
+   "cobeneficios": null,
+   "indicador": "# de empresas de sectores productivos priorizados que aumentan su eficiencia en el uso del agua.",
+   "estado_indicador": "OFICIAL (Excel)"
+  },
+  {
+   "alternativa": "M04-MAR",
+   "medida": "Uso intersectorial eficiente del recurso hídrico",
+   "dimension": "Recurso hídrico",
+   "territorio": "Marinilla",
+   "costo_M": 900.0,
+   "actua_sobre": "S+CA",
+   "Necesidad": 0.53,
+   "Brecha CA": 0.5,
+   "Evidencia": 0.0,
+   "Cobertura": 0.333,
+   "Cobeneficios": 0.0,
+   "Robustez 2060": 0.5,
+   "datos_V_CA": 0,
+   "elegible": false,
+   "puntaje_ref": 0.3173,
+   "puntaje_2060": 0.363,
+   "en_referencia": false,
+   "en_2060": false,
+   "en_robusto": false,
+   "frec_datos": 0.0,
+   "frec_pesos": 0.0,
+   "frec_efectividad": 0.0,
+   "frec_conjunta": 0.0,
+   "confianza": "Baja",
+   "robustez_2060": "No evaluable (sin dato 2060)",
+   "cobeneficios": null,
+   "indicador": "# de empresas de sectores productivos priorizados que aumentan su eficiencia en el uso del agua.",
+   "estado_indicador": "OFICIAL (Excel)"
+  },
+  {
+   "alternativa": "M12-RIO",
+   "medida": "Fortalecimiento de infraestructura resiliente y servicios públicos",
+   "dimension": "Infraestructura",
+   "territorio": "Rionegro",
+   "costo_M": 2000.0,
+   "actua_sobre": "S",
+   "Necesidad": 0.5,
+   "Brecha CA": 0.25,
+   "Evidencia": 0.0,
+   "Cobertura": 0.333,
+   "Cobeneficios": 0.333,
+   "Robustez 2060": 0.5,
+   "datos_V_CA": 0,
+   "elegible": false,
+   "puntaje_ref": 0.3167,
+   "puntaje_2060": 0.3625,
+   "en_referencia": false,
+   "en_2060": false,
+   "en_robusto": false,
+   "frec_datos": 0.0,
+   "frec_pesos": 0.0,
+   "frec_efectividad": 0.0,
+   "frec_conjunta": 0.0,
+   "confianza": "Baja",
+   "robustez_2060": "No evaluable (sin dato 2060)",
+   "cobeneficios": "Riesgo de desastres",
+   "indicador": "NO DISPONIBLE",
+   "estado_indicador": "NO DISPONIBLE"
+  },
+  {
+   "alternativa": "M15-RIO",
+   "medida": "Sistema de salud y entornos saludables resilientes al clima",
+   "dimension": "Salud",
+   "territorio": "Rionegro",
+   "costo_M": 800.0,
+   "actua_sobre": "CA",
+   "Necesidad": 0.5,
+   "Brecha CA": 0.5,
+   "Evidencia": 0.0,
+   "Cobertura": 0.333,
+   "Cobeneficios": 0.0,
+   "Robustez 2060": 0.5,
+   "datos_V_CA": 0,
+   "elegible": false,
+   "puntaje_ref": 0.3083,
+   "puntaje_2060": 0.3562,
+   "en_referencia": false,
+   "en_2060": false,
+   "en_robusto": false,
+   "frec_datos": 0.0,
+   "frec_pesos": 0.0,
+   "frec_efectividad": 0.0,
+   "frec_conjunta": 0.0,
+   "confianza": "Baja",
+   "robustez_2060": "No evaluable (sin dato 2060)",
+   "cobeneficios": null,
+   "indicador": "NO DISPONIBLE",
+   "estado_indicador": "NO DISPONIBLE"
+  },
+  {
+   "alternativa": "M15-GUA",
+   "medida": "Sistema de salud y entornos saludables resilientes al clima",
+   "dimension": "Salud",
+   "territorio": "Guarne",
+   "costo_M": 800.0,
+   "actua_sobre": "CA",
+   "Necesidad": 0.5,
+   "Brecha CA": 0.5,
+   "Evidencia": 0.0,
+   "Cobertura": 0.333,
+   "Cobeneficios": 0.0,
+   "Robustez 2060": 0.5,
+   "datos_V_CA": 0,
+   "elegible": false,
+   "puntaje_ref": 0.3083,
+   "puntaje_2060": 0.3562,
+   "en_referencia": false,
+   "en_2060": false,
+   "en_robusto": false,
+   "frec_datos": 0.0,
+   "frec_pesos": 0.0,
+   "frec_efectividad": 0.0,
+   "frec_conjunta": 0.0,
+   "confianza": "Baja",
+   "robustez_2060": "No evaluable (sin dato 2060)",
+   "cobeneficios": null,
+   "indicador": "NO DISPONIBLE",
+   "estado_indicador": "NO DISPONIBLE"
+  },
+  {
+   "alternativa": "M15-MAR",
+   "medida": "Sistema de salud y entornos saludables resilientes al clima",
+   "dimension": "Salud",
+   "territorio": "Marinilla",
+   "costo_M": 800.0,
+   "actua_sobre": "CA",
+   "Necesidad": 0.5,
+   "Brecha CA": 0.5,
+   "Evidencia": 0.0,
+   "Cobertura": 0.333,
+   "Cobeneficios": 0.0,
+   "Robustez 2060": 0.5,
+   "datos_V_CA": 0,
+   "elegible": false,
+   "puntaje_ref": 0.3083,
+   "puntaje_2060": 0.3562,
+   "en_referencia": false,
+   "en_2060": false,
+   "en_robusto": false,
+   "frec_datos": 0.0,
+   "frec_pesos": 0.0,
+   "frec_efectividad": 0.0,
+   "frec_conjunta": 0.0,
+   "confianza": "Baja",
+   "robustez_2060": "No evaluable (sin dato 2060)",
+   "cobeneficios": null,
+   "indicador": "NO DISPONIBLE",
+   "estado_indicador": "NO DISPONIBLE"
+  }
+ ],
+ "ficha": [
+  {
+   "municipio": "Rionegro",
+   "dimension": "Biodiversidad",
+   "componente": "Amenaza",
+   "valor": null,
+   "origen": "NO DISPONIBLE",
+   "fuente": null
+  },
+  {
+   "municipio": "Rionegro",
+   "dimension": "Biodiversidad",
+   "componente": "Sensibilidad",
+   "valor": null,
+   "origen": "NO DISPONIBLE",
+   "fuente": null
+  },
+  {
+   "municipio": "Rionegro",
+   "dimension": "Biodiversidad",
+   "componente": "Capacidad adaptativa",
+   "valor": 0.22,
+   "origen": "OFICIAL",
+   "fuente": "Reto CORNARE (RETO_CLIMATE_WEEK_HACKATHON_1.pdf), sec. 2. Categoría: Muy baja."
+  },
+  {
+   "municipio": "Rionegro",
+   "dimension": "Biodiversidad",
+   "componente": "Vulnerabilidad",
+   "valor": 0.75,
+   "origen": "OFICIAL",
+   "fuente": "Reto CORNARE (RETO_CLIMATE_WEEK_HACKATHON_1.pdf), sec. 2. Categoría: Muy alta."
+  },
+  {
+   "municipio": "Rionegro",
+   "dimension": "Biodiversidad",
+   "componente": "Riesgo hoy",
+   "valor": null,
+   "origen": "NO DISPONIBLE",
+   "fuente": null
+  },
+  {
+   "municipio": "Rionegro",
+   "dimension": "Biodiversidad",
+   "componente": "Riesgo SSP3-7.0 2060",
+   "valor": null,
+   "origen": "NO DISPONIBLE",
+   "fuente": null
+  },
+  {
+   "municipio": "Rionegro",
+   "dimension": "Recurso hídrico",
+   "componente": "Amenaza",
+   "valor": null,
+   "origen": "NO DISPONIBLE",
+   "fuente": null
+  },
+  {
+   "municipio": "Rionegro",
+   "dimension": "Recurso hídrico",
+   "componente": "Sensibilidad",
+   "valor": null,
+   "origen": "NO DISPONIBLE",
+   "fuente": null
+  },
+  {
+   "municipio": "Rionegro",
+   "dimension": "Recurso hídrico",
+   "componente": "Capacidad adaptativa",
+   "valor": null,
+   "origen": "NO DISPONIBLE",
+   "fuente": null
+  },
+  {
+   "municipio": "Rionegro",
+   "dimension": "Recurso hídrico",
+   "componente": "Vulnerabilidad",
+   "valor": null,
+   "origen": "NO DISPONIBLE",
+   "fuente": null
+  },
+  {
+   "municipio": "Rionegro",
+   "dimension": "Recurso hídrico",
+   "componente": "Riesgo hoy",
+   "valor": null,
+   "origen": "NO DISPONIBLE",
+   "fuente": null
+  },
+  {
+   "municipio": "Rionegro",
+   "dimension": "Recurso hídrico",
+   "componente": "Riesgo SSP3-7.0 2060",
+   "valor": null,
+   "origen": "NO DISPONIBLE",
+   "fuente": null
+  },
+  {
+   "municipio": "Rionegro",
+   "dimension": "Seguridad alimentaria",
+   "componente": "Amenaza",
+   "valor": null,
+   "origen": "NO DISPONIBLE",
+   "fuente": null
+  },
+  {
+   "municipio": "Rionegro",
+   "dimension": "Seguridad alimentaria",
+   "componente": "Sensibilidad",
+   "valor": null,
+   "origen": "NO DISPONIBLE",
+   "fuente": null
+  },
+  {
+   "municipio": "Rionegro",
+   "dimension": "Seguridad alimentaria",
+   "componente": "Capacidad adaptativa",
+   "valor": null,
+   "origen": "NO DISPONIBLE",
+   "fuente": null
+  },
+  {
+   "municipio": "Rionegro",
+   "dimension": "Seguridad alimentaria",
+   "componente": "Vulnerabilidad",
+   "valor": null,
+   "origen": "NO DISPONIBLE",
+   "fuente": null
+  },
+  {
+   "municipio": "Rionegro",
+   "dimension": "Seguridad alimentaria",
+   "componente": "Riesgo hoy",
+   "valor": null,
+   "origen": "NO DISPONIBLE",
+   "fuente": null
+  },
+  {
+   "municipio": "Rionegro",
+   "dimension": "Seguridad alimentaria",
+   "componente": "Riesgo SSP3-7.0 2060",
+   "valor": null,
+   "origen": "NO DISPONIBLE",
+   "fuente": null
+  },
+  {
+   "municipio": "Rionegro",
+   "dimension": "Hábitat",
+   "componente": "Amenaza",
+   "valor": null,
+   "origen": "NO DISPONIBLE",
+   "fuente": null
+  },
+  {
+   "municipio": "Rionegro",
+   "dimension": "Hábitat",
+   "componente": "Sensibilidad",
+   "valor": null,
+   "origen": "NO DISPONIBLE",
+   "fuente": null
+  },
+  {
+   "municipio": "Rionegro",
+   "dimension": "Hábitat",
+   "componente": "Capacidad adaptativa",
+   "valor": null,
+   "origen": "NO DISPONIBLE",
+   "fuente": null
+  },
+  {
+   "municipio": "Rionegro",
+   "dimension": "Hábitat",
+   "componente": "Vulnerabilidad",
+   "valor": null,
+   "origen": "NO DISPONIBLE",
+   "fuente": null
+  },
+  {
+   "municipio": "Rionegro",
+   "dimension": "Hábitat",
+   "componente": "Riesgo hoy",
+   "valor": null,
+   "origen": "NO DISPONIBLE",
+   "fuente": null
+  },
+  {
+   "municipio": "Rionegro",
+   "dimension": "Hábitat",
+   "componente": "Riesgo SSP3-7.0 2060",
+   "valor": null,
+   "origen": "NO DISPONIBLE",
+   "fuente": null
+  },
+  {
+   "municipio": "Rionegro",
+   "dimension": "Infraestructura",
+   "componente": "Amenaza",
+   "valor": null,
+   "origen": "NO DISPONIBLE",
+   "fuente": null
+  },
+  {
+   "municipio": "Rionegro",
+   "dimension": "Infraestructura",
+   "componente": "Sensibilidad",
+   "valor": null,
+   "origen": "NO DISPONIBLE",
+   "fuente": null
+  },
+  {
+   "municipio": "Rionegro",
+   "dimension": "Infraestructura",
+   "componente": "Capacidad adaptativa",
+   "valor": null,
+   "origen": "NO DISPONIBLE",
+   "fuente": null
+  },
+  {
+   "municipio": "Rionegro",
+   "dimension": "Infraestructura",
+   "componente": "Vulnerabilidad",
+   "valor": null,
+   "origen": "NO DISPONIBLE",
+   "fuente": null
+  },
+  {
+   "municipio": "Rionegro",
+   "dimension": "Infraestructura",
+   "componente": "Riesgo hoy",
+   "valor": null,
+   "origen": "NO DISPONIBLE",
+   "fuente": null
+  },
+  {
+   "municipio": "Rionegro",
+   "dimension": "Infraestructura",
+   "componente": "Riesgo SSP3-7.0 2060",
+   "valor": null,
+   "origen": "NO DISPONIBLE",
+   "fuente": null
+  },
+  {
+   "municipio": "Rionegro",
+   "dimension": "Riesgo de desastres",
+   "componente": "Amenaza",
+   "valor": null,
+   "origen": "NO DISPONIBLE",
+   "fuente": null
+  },
+  {
+   "municipio": "Rionegro",
+   "dimension": "Riesgo de desastres",
+   "componente": "Sensibilidad",
+   "valor": 0.4,
+   "origen": "OFICIAL",
+   "fuente": "Reto CORNARE (RETO_CLIMATE_WEEK_HACKATHON_1.pdf), sec. 2. Categoría: la mayor sensibilidad de esta dimensión en la regional."
+  },
+  {
+   "municipio": "Rionegro",
+   "dimension": "Riesgo de desastres",
+   "componente": "Capacidad adaptativa",
+   "valor": 0.56,
+   "origen": "OFICIAL",
+   "fuente": "Reto CORNARE (RETO_CLIMATE_WEEK_HACKATHON_1.pdf), sec. 2. Categoría: relativamente favorable."
+  },
+  {
+   "municipio": "Rionegro",
+   "dimension": "Riesgo de desastres",
+   "componente": "Vulnerabilidad",
+   "valor": null,
+   "origen": "NO DISPONIBLE",
+   "fuente": null
+  },
+  {
+   "municipio": "Rionegro",
+   "dimension": "Riesgo de desastres",
+   "componente": "Riesgo hoy",
+   "valor": 0.28,
+   "origen": "OFICIAL",
+   "fuente": "Reto CORNARE (RETO_CLIMATE_WEEK_HACKATHON_1.pdf), sec. 2. Categoría: Bajo."
+  },
+  {
+   "municipio": "Rionegro",
+   "dimension": "Riesgo de desastres",
+   "componente": "Riesgo SSP3-7.0 2060",
+   "valor": 0.32,
+   "origen": "OFICIAL",
+   "fuente": "Reto CORNARE (RETO_CLIMATE_WEEK_HACKATHON_1.pdf), sec. 2. Categoría: Medio."
+  },
+  {
+   "municipio": "Rionegro",
+   "dimension": "Salud",
+   "componente": "Amenaza",
+   "valor": null,
+   "origen": "NO DISPONIBLE",
+   "fuente": null
+  },
+  {
+   "municipio": "Rionegro",
+   "dimension": "Salud",
+   "componente": "Sensibilidad",
+   "valor": null,
+   "origen": "NO DISPONIBLE",
+   "fuente": null
+  },
+  {
+   "municipio": "Rionegro",
+   "dimension": "Salud",
+   "componente": "Capacidad adaptativa",
+   "valor": null,
+   "origen": "NO DISPONIBLE",
+   "fuente": null
+  },
+  {
+   "municipio": "Rionegro",
+   "dimension": "Salud",
+   "componente": "Vulnerabilidad",
+   "valor": null,
+   "origen": "NO DISPONIBLE",
+   "fuente": null
+  },
+  {
+   "municipio": "Rionegro",
+   "dimension": "Salud",
+   "componente": "Riesgo hoy",
+   "valor": null,
+   "origen": "NO DISPONIBLE",
+   "fuente": null
+  },
+  {
+   "municipio": "Rionegro",
+   "dimension": "Salud",
+   "componente": "Riesgo SSP3-7.0 2060",
+   "valor": null,
+   "origen": "NO DISPONIBLE",
+   "fuente": null
+  },
+  {
+   "municipio": "Guarne",
+   "dimension": "Biodiversidad",
+   "componente": "Amenaza",
+   "valor": null,
+   "origen": "NO DISPONIBLE",
+   "fuente": null
+  },
+  {
+   "municipio": "Guarne",
+   "dimension": "Biodiversidad",
+   "componente": "Sensibilidad",
+   "valor": null,
+   "origen": "NO DISPONIBLE",
+   "fuente": null
+  },
+  {
+   "municipio": "Guarne",
+   "dimension": "Biodiversidad",
+   "componente": "Capacidad adaptativa",
+   "valor": 0.33,
+   "origen": "OFICIAL",
+   "fuente": "Reto CORNARE (RETO_CLIMATE_WEEK_HACKATHON_1.pdf), sec. 2. Categoría: Baja."
+  },
+  {
+   "municipio": "Guarne",
+   "dimension": "Biodiversidad",
+   "componente": "Vulnerabilidad",
+   "valor": null,
+   "origen": "NO DISPONIBLE",
+   "fuente": null
+  },
+  {
+   "municipio": "Guarne",
+   "dimension": "Biodiversidad",
+   "componente": "Riesgo hoy",
+   "valor": null,
+   "origen": "NO DISPONIBLE",
+   "fuente": null
+  },
+  {
+   "municipio": "Guarne",
+   "dimension": "Biodiversidad",
+   "componente": "Riesgo SSP3-7.0 2060",
+   "valor": null,
+   "origen": "NO DISPONIBLE",
+   "fuente": null
+  },
+  {
+   "municipio": "Guarne",
+   "dimension": "Recurso hídrico",
+   "componente": "Amenaza",
+   "valor": null,
+   "origen": "NO DISPONIBLE",
+   "fuente": null
+  },
+  {
+   "municipio": "Guarne",
+   "dimension": "Recurso hídrico",
+   "componente": "Sensibilidad",
+   "valor": null,
+   "origen": "NO DISPONIBLE",
+   "fuente": null
+  },
+  {
+   "municipio": "Guarne",
+   "dimension": "Recurso hídrico",
+   "componente": "Capacidad adaptativa",
+   "valor": null,
+   "origen": "NO DISPONIBLE",
+   "fuente": null
+  },
+  {
+   "municipio": "Guarne",
+   "dimension": "Recurso hídrico",
+   "componente": "Vulnerabilidad",
+   "valor": null,
+   "origen": "NO DISPONIBLE",
+   "fuente": null
+  },
+  {
+   "municipio": "Guarne",
+   "dimension": "Recurso hídrico",
+   "componente": "Riesgo hoy",
+   "valor": null,
+   "origen": "NO DISPONIBLE",
+   "fuente": null
+  },
+  {
+   "municipio": "Guarne",
+   "dimension": "Recurso hídrico",
+   "componente": "Riesgo SSP3-7.0 2060",
+   "valor": null,
+   "origen": "NO DISPONIBLE",
+   "fuente": null
+  },
+  {
+   "municipio": "Guarne",
+   "dimension": "Seguridad alimentaria",
+   "componente": "Amenaza",
+   "valor": null,
+   "origen": "NO DISPONIBLE",
+   "fuente": null
+  },
+  {
+   "municipio": "Guarne",
+   "dimension": "Seguridad alimentaria",
+   "componente": "Sensibilidad",
+   "valor": null,
+   "origen": "NO DISPONIBLE",
+   "fuente": null
+  },
+  {
+   "municipio": "Guarne",
+   "dimension": "Seguridad alimentaria",
+   "componente": "Capacidad adaptativa",
+   "valor": null,
+   "origen": "NO DISPONIBLE",
+   "fuente": null
+  },
+  {
+   "municipio": "Guarne",
+   "dimension": "Seguridad alimentaria",
+   "componente": "Vulnerabilidad",
+   "valor": null,
+   "origen": "NO DISPONIBLE",
+   "fuente": null
+  },
+  {
+   "municipio": "Guarne",
+   "dimension": "Seguridad alimentaria",
+   "componente": "Riesgo hoy",
+   "valor": null,
+   "origen": "NO DISPONIBLE",
+   "fuente": null
+  },
+  {
+   "municipio": "Guarne",
+   "dimension": "Seguridad alimentaria",
+   "componente": "Riesgo SSP3-7.0 2060",
+   "valor": null,
+   "origen": "NO DISPONIBLE",
+   "fuente": null
+  },
+  {
+   "municipio": "Guarne",
+   "dimension": "Hábitat",
+   "componente": "Amenaza",
+   "valor": null,
+   "origen": "NO DISPONIBLE",
+   "fuente": null
+  },
+  {
+   "municipio": "Guarne",
+   "dimension": "Hábitat",
+   "componente": "Sensibilidad",
+   "valor": null,
+   "origen": "NO DISPONIBLE",
+   "fuente": null
+  },
+  {
+   "municipio": "Guarne",
+   "dimension": "Hábitat",
+   "componente": "Capacidad adaptativa",
+   "valor": null,
+   "origen": "NO DISPONIBLE",
+   "fuente": null
+  },
+  {
+   "municipio": "Guarne",
+   "dimension": "Hábitat",
+   "componente": "Vulnerabilidad",
+   "valor": null,
+   "origen": "NO DISPONIBLE",
+   "fuente": null
+  },
+  {
+   "municipio": "Guarne",
+   "dimension": "Hábitat",
+   "componente": "Riesgo hoy",
+   "valor": null,
+   "origen": "NO DISPONIBLE",
+   "fuente": null
+  },
+  {
+   "municipio": "Guarne",
+   "dimension": "Hábitat",
+   "componente": "Riesgo SSP3-7.0 2060",
+   "valor": null,
+   "origen": "NO DISPONIBLE",
+   "fuente": null
+  },
+  {
+   "municipio": "Guarne",
+   "dimension": "Infraestructura",
+   "componente": "Amenaza",
+   "valor": null,
+   "origen": "NO DISPONIBLE",
+   "fuente": null
+  },
+  {
+   "municipio": "Guarne",
+   "dimension": "Infraestructura",
+   "componente": "Sensibilidad",
+   "valor": null,
+   "origen": "NO DISPONIBLE",
+   "fuente": null
+  },
+  {
+   "municipio": "Guarne",
+   "dimension": "Infraestructura",
+   "componente": "Capacidad adaptativa",
+   "valor": null,
+   "origen": "NO DISPONIBLE",
+   "fuente": null
+  },
+  {
+   "municipio": "Guarne",
+   "dimension": "Infraestructura",
+   "componente": "Vulnerabilidad",
+   "valor": null,
+   "origen": "NO DISPONIBLE",
+   "fuente": null
+  },
+  {
+   "municipio": "Guarne",
+   "dimension": "Infraestructura",
+   "componente": "Riesgo hoy",
+   "valor": null,
+   "origen": "NO DISPONIBLE",
+   "fuente": null
+  },
+  {
+   "municipio": "Guarne",
+   "dimension": "Infraestructura",
+   "componente": "Riesgo SSP3-7.0 2060",
+   "valor": null,
+   "origen": "NO DISPONIBLE",
+   "fuente": null
+  },
+  {
+   "municipio": "Guarne",
+   "dimension": "Riesgo de desastres",
+   "componente": "Amenaza",
+   "valor": null,
+   "origen": "NO DISPONIBLE",
+   "fuente": null
+  },
+  {
+   "municipio": "Guarne",
+   "dimension": "Riesgo de desastres",
+   "componente": "Sensibilidad",
+   "valor": null,
+   "origen": "NO DISPONIBLE",
+   "fuente": null
+  },
+  {
+   "municipio": "Guarne",
+   "dimension": "Riesgo de desastres",
+   "componente": "Capacidad adaptativa",
+   "valor": null,
+   "origen": "NO DISPONIBLE",
+   "fuente": null
+  },
+  {
+   "municipio": "Guarne",
+   "dimension": "Riesgo de desastres",
+   "componente": "Vulnerabilidad",
+   "valor": null,
+   "origen": "NO DISPONIBLE",
+   "fuente": null
+  },
+  {
+   "municipio": "Guarne",
+   "dimension": "Riesgo de desastres",
+   "componente": "Riesgo hoy",
+   "valor": null,
+   "origen": "NO DISPONIBLE",
+   "fuente": null
+  },
+  {
+   "municipio": "Guarne",
+   "dimension": "Riesgo de desastres",
+   "componente": "Riesgo SSP3-7.0 2060",
+   "valor": null,
+   "origen": "NO DISPONIBLE",
+   "fuente": null
+  },
+  {
+   "municipio": "Guarne",
+   "dimension": "Salud",
+   "componente": "Amenaza",
+   "valor": null,
+   "origen": "NO DISPONIBLE",
+   "fuente": null
+  },
+  {
+   "municipio": "Guarne",
+   "dimension": "Salud",
+   "componente": "Sensibilidad",
+   "valor": null,
+   "origen": "NO DISPONIBLE",
+   "fuente": null
+  },
+  {
+   "municipio": "Guarne",
+   "dimension": "Salud",
+   "componente": "Capacidad adaptativa",
+   "valor": null,
+   "origen": "NO DISPONIBLE",
+   "fuente": null
+  },
+  {
+   "municipio": "Guarne",
+   "dimension": "Salud",
+   "componente": "Vulnerabilidad",
+   "valor": null,
+   "origen": "NO DISPONIBLE",
+   "fuente": null
+  },
+  {
+   "municipio": "Guarne",
+   "dimension": "Salud",
+   "componente": "Riesgo hoy",
+   "valor": null,
+   "origen": "NO DISPONIBLE",
+   "fuente": null
+  },
+  {
+   "municipio": "Guarne",
+   "dimension": "Salud",
+   "componente": "Riesgo SSP3-7.0 2060",
+   "valor": null,
+   "origen": "NO DISPONIBLE",
+   "fuente": null
+  },
+  {
+   "municipio": "Marinilla",
+   "dimension": "Biodiversidad",
+   "componente": "Amenaza",
+   "valor": null,
+   "origen": "NO DISPONIBLE",
+   "fuente": null
+  },
+  {
+   "municipio": "Marinilla",
+   "dimension": "Biodiversidad",
+   "componente": "Sensibilidad",
+   "valor": null,
+   "origen": "NO DISPONIBLE",
+   "fuente": null
+  },
+  {
+   "municipio": "Marinilla",
+   "dimension": "Biodiversidad",
+   "componente": "Capacidad adaptativa",
+   "valor": 0.24,
+   "origen": "OFICIAL",
+   "fuente": "Reto CORNARE (RETO_CLIMATE_WEEK_HACKATHON_1.pdf), sec. 2. Categoría: Muy baja."
+  },
+  {
+   "municipio": "Marinilla",
+   "dimension": "Biodiversidad",
+   "componente": "Vulnerabilidad",
+   "valor": 0.72,
+   "origen": "OFICIAL",
+   "fuente": "Reto CORNARE (RETO_CLIMATE_WEEK_HACKATHON_1.pdf), sec. 2. Categoría: Muy alta."
+  },
+  {
+   "municipio": "Marinilla",
+   "dimension": "Biodiversidad",
+   "componente": "Riesgo hoy",
+   "valor": null,
+   "origen": "NO DISPONIBLE",
+   "fuente": null
+  },
+  {
+   "municipio": "Marinilla",
+   "dimension": "Biodiversidad",
+   "componente": "Riesgo SSP3-7.0 2060",
+   "valor": null,
+   "origen": "NO DISPONIBLE",
+   "fuente": null
+  },
+  {
+   "municipio": "Marinilla",
+   "dimension": "Recurso hídrico",
+   "componente": "Amenaza",
+   "valor": null,
+   "origen": "NO DISPONIBLE",
+   "fuente": null
+  },
+  {
+   "municipio": "Marinilla",
+   "dimension": "Recurso hídrico",
+   "componente": "Sensibilidad",
+   "valor": null,
+   "origen": "NO DISPONIBLE",
+   "fuente": null
+  },
+  {
+   "municipio": "Marinilla",
+   "dimension": "Recurso hídrico",
+   "componente": "Capacidad adaptativa",
+   "valor": null,
+   "origen": "NO DISPONIBLE",
+   "fuente": null
+  },
+  {
+   "municipio": "Marinilla",
+   "dimension": "Recurso hídrico",
+   "componente": "Vulnerabilidad",
+   "valor": null,
+   "origen": "NO DISPONIBLE",
+   "fuente": null
+  },
+  {
+   "municipio": "Marinilla",
+   "dimension": "Recurso hídrico",
+   "componente": "Riesgo hoy",
+   "valor": null,
+   "origen": "NO DISPONIBLE",
+   "fuente": null
+  },
+  {
+   "municipio": "Marinilla",
+   "dimension": "Recurso hídrico",
+   "componente": "Riesgo SSP3-7.0 2060",
+   "valor": null,
+   "origen": "NO DISPONIBLE",
+   "fuente": null
+  },
+  {
+   "municipio": "Marinilla",
+   "dimension": "Seguridad alimentaria",
+   "componente": "Amenaza",
+   "valor": null,
+   "origen": "NO DISPONIBLE",
+   "fuente": null
+  },
+  {
+   "municipio": "Marinilla",
+   "dimension": "Seguridad alimentaria",
+   "componente": "Sensibilidad",
+   "valor": null,
+   "origen": "NO DISPONIBLE",
+   "fuente": null
+  },
+  {
+   "municipio": "Marinilla",
+   "dimension": "Seguridad alimentaria",
+   "componente": "Capacidad adaptativa",
+   "valor": null,
+   "origen": "NO DISPONIBLE",
+   "fuente": null
+  },
+  {
+   "municipio": "Marinilla",
+   "dimension": "Seguridad alimentaria",
+   "componente": "Vulnerabilidad",
+   "valor": null,
+   "origen": "NO DISPONIBLE",
+   "fuente": null
+  },
+  {
+   "municipio": "Marinilla",
+   "dimension": "Seguridad alimentaria",
+   "componente": "Riesgo hoy",
+   "valor": null,
+   "origen": "NO DISPONIBLE",
+   "fuente": null
+  },
+  {
+   "municipio": "Marinilla",
+   "dimension": "Seguridad alimentaria",
+   "componente": "Riesgo SSP3-7.0 2060",
+   "valor": null,
+   "origen": "NO DISPONIBLE",
+   "fuente": null
+  },
+  {
+   "municipio": "Marinilla",
+   "dimension": "Hábitat",
+   "componente": "Amenaza",
+   "valor": null,
+   "origen": "NO DISPONIBLE",
+   "fuente": null
+  },
+  {
+   "municipio": "Marinilla",
+   "dimension": "Hábitat",
+   "componente": "Sensibilidad",
+   "valor": null,
+   "origen": "NO DISPONIBLE",
+   "fuente": null
+  },
+  {
+   "municipio": "Marinilla",
+   "dimension": "Hábitat",
+   "componente": "Capacidad adaptativa",
+   "valor": null,
+   "origen": "NO DISPONIBLE",
+   "fuente": null
+  },
+  {
+   "municipio": "Marinilla",
+   "dimension": "Hábitat",
+   "componente": "Vulnerabilidad",
+   "valor": null,
+   "origen": "NO DISPONIBLE",
+   "fuente": null
+  },
+  {
+   "municipio": "Marinilla",
+   "dimension": "Hábitat",
+   "componente": "Riesgo hoy",
+   "valor": null,
+   "origen": "NO DISPONIBLE",
+   "fuente": null
+  },
+  {
+   "municipio": "Marinilla",
+   "dimension": "Hábitat",
+   "componente": "Riesgo SSP3-7.0 2060",
+   "valor": null,
+   "origen": "NO DISPONIBLE",
+   "fuente": null
+  },
+  {
+   "municipio": "Marinilla",
+   "dimension": "Infraestructura",
+   "componente": "Amenaza",
+   "valor": null,
+   "origen": "NO DISPONIBLE",
+   "fuente": null
+  },
+  {
+   "municipio": "Marinilla",
+   "dimension": "Infraestructura",
+   "componente": "Sensibilidad",
+   "valor": null,
+   "origen": "NO DISPONIBLE",
+   "fuente": null
+  },
+  {
+   "municipio": "Marinilla",
+   "dimension": "Infraestructura",
+   "componente": "Capacidad adaptativa",
+   "valor": null,
+   "origen": "NO DISPONIBLE",
+   "fuente": null
+  },
+  {
+   "municipio": "Marinilla",
+   "dimension": "Infraestructura",
+   "componente": "Vulnerabilidad",
+   "valor": null,
+   "origen": "NO DISPONIBLE",
+   "fuente": null
+  },
+  {
+   "municipio": "Marinilla",
+   "dimension": "Infraestructura",
+   "componente": "Riesgo hoy",
+   "valor": null,
+   "origen": "NO DISPONIBLE",
+   "fuente": null
+  },
+  {
+   "municipio": "Marinilla",
+   "dimension": "Infraestructura",
+   "componente": "Riesgo SSP3-7.0 2060",
+   "valor": null,
+   "origen": "NO DISPONIBLE",
+   "fuente": null
+  },
+  {
+   "municipio": "Marinilla",
+   "dimension": "Riesgo de desastres",
+   "componente": "Amenaza",
+   "valor": 0.695,
+   "origen": "CALCULADO",
+   "fuente": "punto medio del rango oficial 0,66–0,73 (Alta). Reto CORNARE (RETO_CLIMATE_WEEK_HACKATHON_1.pdf), sec. 2."
+  },
+  {
+   "municipio": "Marinilla",
+   "dimension": "Riesgo de desastres",
+   "componente": "Sensibilidad",
+   "valor": null,
+   "origen": "NO DISPONIBLE",
+   "fuente": null
+  },
+  {
+   "municipio": "Marinilla",
+   "dimension": "Riesgo de desastres",
+   "componente": "Capacidad adaptativa",
+   "valor": 0.61,
+   "origen": "OFICIAL",
+   "fuente": "Reto CORNARE (RETO_CLIMATE_WEEK_HACKATHON_1.pdf), sec. 2. Categoría: relativamente favorable."
+  },
+  {
+   "municipio": "Marinilla",
+   "dimension": "Riesgo de desastres",
+   "componente": "Vulnerabilidad",
+   "valor": null,
+   "origen": "NO DISPONIBLE",
+   "fuente": null
+  },
+  {
+   "municipio": "Marinilla",
+   "dimension": "Riesgo de desastres",
+   "componente": "Riesgo hoy",
+   "valor": null,
+   "origen": "NO DISPONIBLE",
+   "fuente": null
+  },
+  {
+   "municipio": "Marinilla",
+   "dimension": "Riesgo de desastres",
+   "componente": "Riesgo SSP3-7.0 2060",
+   "valor": null,
+   "origen": "NO DISPONIBLE",
+   "fuente": null
+  },
+  {
+   "municipio": "Marinilla",
+   "dimension": "Salud",
+   "componente": "Amenaza",
+   "valor": null,
+   "origen": "NO DISPONIBLE",
+   "fuente": null
+  },
+  {
+   "municipio": "Marinilla",
+   "dimension": "Salud",
+   "componente": "Sensibilidad",
+   "valor": null,
+   "origen": "NO DISPONIBLE",
+   "fuente": null
+  },
+  {
+   "municipio": "Marinilla",
+   "dimension": "Salud",
+   "componente": "Capacidad adaptativa",
+   "valor": null,
+   "origen": "NO DISPONIBLE",
+   "fuente": null
+  },
+  {
+   "municipio": "Marinilla",
+   "dimension": "Salud",
+   "componente": "Vulnerabilidad",
+   "valor": null,
+   "origen": "NO DISPONIBLE",
+   "fuente": null
+  },
+  {
+   "municipio": "Marinilla",
+   "dimension": "Salud",
+   "componente": "Riesgo hoy",
+   "valor": null,
+   "origen": "NO DISPONIBLE",
+   "fuente": null
+  },
+  {
+   "municipio": "Marinilla",
+   "dimension": "Salud",
+   "componente": "Riesgo SSP3-7.0 2060",
+   "valor": null,
+   "origen": "NO DISPONIBLE",
+   "fuente": null
+  }
+ ],
+ "celdas_vacias": [
+  {
+   "celda": "Guarne · Biodiversidad · Riesgo SSP3-7.0 2060",
+   "valor_caso_base": 0.5,
+   "regla": "valor de referencia (parámetro)"
+  },
+  {
+   "celda": "Guarne · Biodiversidad · Riesgo hoy",
+   "valor_caso_base": 0.5,
+   "regla": "valor de referencia (parámetro)"
+  },
+  {
+   "celda": "Guarne · Biodiversidad · Robustez 2060",
+   "valor_caso_base": 0.5,
+   "regla": "valor de referencia (parámetro)"
+  },
+  {
+   "celda": "Guarne · Biodiversidad · Vulnerabilidad",
+   "valor_caso_base": 0.55,
+   "regla": "promedio regional oficial"
+  },
+  {
+   "celda": "Guarne · Hábitat · Capacidad adaptativa",
+   "valor_caso_base": 0.5,
+   "regla": "valor de referencia (parámetro)"
+  },
+  {
+   "celda": "Guarne · Hábitat · Riesgo SSP3-7.0 2060",
+   "valor_caso_base": 0.5,
+   "regla": "valor de referencia (parámetro)"
+  },
+  {
+   "celda": "Guarne · Hábitat · Riesgo hoy",
+   "valor_caso_base": 0.5,
+   "regla": "valor de referencia (parámetro)"
+  },
+  {
+   "celda": "Guarne · Hábitat · Robustez 2060",
+   "valor_caso_base": 0.5,
+   "regla": "valor de referencia (parámetro)"
+  },
+  {
+   "celda": "Guarne · Hábitat · Vulnerabilidad",
+   "valor_caso_base": 0.5,
+   "regla": "valor de referencia (parámetro)"
+  },
+  {
+   "celda": "Guarne · Infraestructura · Capacidad adaptativa",
+   "valor_caso_base": 0.5,
+   "regla": "valor de referencia (parámetro)"
+  },
+  {
+   "celda": "Guarne · Infraestructura · Riesgo SSP3-7.0 2060",
+   "valor_caso_base": 0.5,
+   "regla": "valor de referencia (parámetro)"
+  },
+  {
+   "celda": "Guarne · Infraestructura · Riesgo hoy",
+   "valor_caso_base": 0.5,
+   "regla": "valor de referencia (parámetro)"
+  },
+  {
+   "celda": "Guarne · Infraestructura · Robustez 2060",
+   "valor_caso_base": 0.5,
+   "regla": "valor de referencia (parámetro)"
+  },
+  {
+   "celda": "Guarne · Infraestructura · Vulnerabilidad",
+   "valor_caso_base": 0.5,
+   "regla": "valor de referencia (parámetro)"
+  },
+  {
+   "celda": "Guarne · Recurso hídrico · Capacidad adaptativa",
+   "valor_caso_base": 0.5,
+   "regla": "valor de referencia (parámetro)"
+  },
+  {
+   "celda": "Guarne · Recurso hídrico · Riesgo SSP3-7.0 2060",
+   "valor_caso_base": 0.5,
+   "regla": "valor de referencia (parámetro)"
+  },
+  {
+   "celda": "Guarne · Recurso hídrico · Riesgo hoy",
+   "valor_caso_base": 0.5,
+   "regla": "valor de referencia (parámetro)"
+  },
+  {
+   "celda": "Guarne · Recurso hídrico · Robustez 2060",
+   "valor_caso_base": 0.5,
+   "regla": "valor de referencia (parámetro)"
+  },
+  {
+   "celda": "Guarne · Recurso hídrico · Vulnerabilidad",
+   "valor_caso_base": 0.53,
+   "regla": "promedio regional oficial"
+  },
+  {
+   "celda": "Guarne · Riesgo de desastres · Capacidad adaptativa",
+   "valor_caso_base": 0.5,
+   "regla": "valor de referencia (parámetro)"
+  },
+  {
+   "celda": "Guarne · Riesgo de desastres · Riesgo SSP3-7.0 2060",
+   "valor_caso_base": 0.5,
+   "regla": "valor de referencia (parámetro)"
+  },
+  {
+   "celda": "Guarne · Riesgo de desastres · Riesgo hoy",
+   "valor_caso_base": 0.5,
+   "regla": "valor de referencia (parámetro)"
+  },
+  {
+   "celda": "Guarne · Riesgo de desastres · Robustez 2060",
+   "valor_caso_base": 0.5,
+   "regla": "valor de referencia (parámetro)"
+  },
+  {
+   "celda": "Guarne · Riesgo de desastres · Vulnerabilidad",
+   "valor_caso_base": 0.5,
+   "regla": "valor de referencia (parámetro)"
+  },
+  {
+   "celda": "Guarne · Salud · Capacidad adaptativa",
+   "valor_caso_base": 0.5,
+   "regla": "valor de referencia (parámetro)"
+  },
+  {
+   "celda": "Guarne · Salud · Riesgo SSP3-7.0 2060",
+   "valor_caso_base": 0.5,
+   "regla": "valor de referencia (parámetro)"
+  },
+  {
+   "celda": "Guarne · Salud · Riesgo hoy",
+   "valor_caso_base": 0.5,
+   "regla": "valor de referencia (parámetro)"
+  },
+  {
+   "celda": "Guarne · Salud · Robustez 2060",
+   "valor_caso_base": 0.5,
+   "regla": "valor de referencia (parámetro)"
+  },
+  {
+   "celda": "Guarne · Salud · Vulnerabilidad",
+   "valor_caso_base": 0.5,
+   "regla": "valor de referencia (parámetro)"
+  },
+  {
+   "celda": "Guarne · Seguridad alimentaria · Capacidad adaptativa",
+   "valor_caso_base": 0.5,
+   "regla": "valor de referencia (parámetro)"
+  },
+  {
+   "celda": "Guarne · Seguridad alimentaria · Riesgo SSP3-7.0 2060",
+   "valor_caso_base": 0.5,
+   "regla": "valor de referencia (parámetro)"
+  },
+  {
+   "celda": "Guarne · Seguridad alimentaria · Riesgo hoy",
+   "valor_caso_base": 0.5,
+   "regla": "valor de referencia (parámetro)"
+  },
+  {
+   "celda": "Guarne · Seguridad alimentaria · Robustez 2060",
+   "valor_caso_base": 0.5,
+   "regla": "valor de referencia (parámetro)"
+  },
+  {
+   "celda": "Guarne · Seguridad alimentaria · Vulnerabilidad",
+   "valor_caso_base": 0.5,
+   "regla": "valor de referencia (parámetro)"
+  },
+  {
+   "celda": "Marinilla · Biodiversidad · Riesgo SSP3-7.0 2060",
+   "valor_caso_base": 0.5,
+   "regla": "valor de referencia (parámetro)"
+  },
+  {
+   "celda": "Marinilla · Biodiversidad · Riesgo hoy",
+   "valor_caso_base": 0.5,
+   "regla": "valor de referencia (parámetro)"
+  },
+  {
+   "celda": "Marinilla · Biodiversidad · Robustez 2060",
+   "valor_caso_base": 0.5,
+   "regla": "valor de referencia (parámetro)"
+  },
+  {
+   "celda": "Marinilla · Hábitat · Capacidad adaptativa",
+   "valor_caso_base": 0.5,
+   "regla": "valor de referencia (parámetro)"
+  },
+  {
+   "celda": "Marinilla · Hábitat · Riesgo SSP3-7.0 2060",
+   "valor_caso_base": 0.5,
+   "regla": "valor de referencia (parámetro)"
+  },
+  {
+   "celda": "Marinilla · Hábitat · Riesgo hoy",
+   "valor_caso_base": 0.5,
+   "regla": "valor de referencia (parámetro)"
+  },
+  {
+   "celda": "Marinilla · Hábitat · Robustez 2060",
+   "valor_caso_base": 0.5,
+   "regla": "valor de referencia (parámetro)"
+  },
+  {
+   "celda": "Marinilla · Hábitat · Vulnerabilidad",
+   "valor_caso_base": 0.5,
+   "regla": "valor de referencia (parámetro)"
+  },
+  {
+   "celda": "Marinilla · Infraestructura · Capacidad adaptativa",
+   "valor_caso_base": 0.5,
+   "regla": "valor de referencia (parámetro)"
+  },
+  {
+   "celda": "Marinilla · Infraestructura · Riesgo SSP3-7.0 2060",
+   "valor_caso_base": 0.5,
+   "regla": "valor de referencia (parámetro)"
+  },
+  {
+   "celda": "Marinilla · Infraestructura · Riesgo hoy",
+   "valor_caso_base": 0.5,
+   "regla": "valor de referencia (parámetro)"
+  },
+  {
+   "celda": "Marinilla · Infraestructura · Robustez 2060",
+   "valor_caso_base": 0.5,
+   "regla": "valor de referencia (parámetro)"
+  },
+  {
+   "celda": "Marinilla · Infraestructura · Vulnerabilidad",
+   "valor_caso_base": 0.5,
+   "regla": "valor de referencia (parámetro)"
+  },
+  {
+   "celda": "Marinilla · Recurso hídrico · Capacidad adaptativa",
+   "valor_caso_base": 0.5,
+   "regla": "valor de referencia (parámetro)"
+  },
+  {
+   "celda": "Marinilla · Recurso hídrico · Riesgo SSP3-7.0 2060",
+   "valor_caso_base": 0.5,
+   "regla": "valor de referencia (parámetro)"
+  },
+  {
+   "celda": "Marinilla · Recurso hídrico · Riesgo hoy",
+   "valor_caso_base": 0.5,
+   "regla": "valor de referencia (parámetro)"
+  },
+  {
+   "celda": "Marinilla · Recurso hídrico · Robustez 2060",
+   "valor_caso_base": 0.5,
+   "regla": "valor de referencia (parámetro)"
+  },
+  {
+   "celda": "Marinilla · Recurso hídrico · Vulnerabilidad",
+   "valor_caso_base": 0.53,
+   "regla": "promedio regional oficial"
+  },
+  {
+   "celda": "Marinilla · Riesgo de desastres · Riesgo SSP3-7.0 2060",
+   "valor_caso_base": 0.5,
+   "regla": "valor de referencia (parámetro)"
+  },
+  {
+   "celda": "Marinilla · Riesgo de desastres · Riesgo hoy",
+   "valor_caso_base": 0.5,
+   "regla": "valor de referencia (parámetro)"
+  },
+  {
+   "celda": "Marinilla · Riesgo de desastres · Robustez 2060",
+   "valor_caso_base": 0.5,
+   "regla": "valor de referencia (parámetro)"
+  },
+  {
+   "celda": "Marinilla · Riesgo de desastres · Vulnerabilidad",
+   "valor_caso_base": 0.5,
+   "regla": "valor de referencia (parámetro)"
+  },
+  {
+   "celda": "Marinilla · Salud · Capacidad adaptativa",
+   "valor_caso_base": 0.5,
+   "regla": "valor de referencia (parámetro)"
+  },
+  {
+   "celda": "Marinilla · Salud · Riesgo SSP3-7.0 2060",
+   "valor_caso_base": 0.5,
+   "regla": "valor de referencia (parámetro)"
+  },
+  {
+   "celda": "Marinilla · Salud · Riesgo hoy",
+   "valor_caso_base": 0.5,
+   "regla": "valor de referencia (parámetro)"
+  },
+  {
+   "celda": "Marinilla · Salud · Robustez 2060",
+   "valor_caso_base": 0.5,
+   "regla": "valor de referencia (parámetro)"
+  },
+  {
+   "celda": "Marinilla · Salud · Vulnerabilidad",
+   "valor_caso_base": 0.5,
+   "regla": "valor de referencia (parámetro)"
+  },
+  {
+   "celda": "Marinilla · Seguridad alimentaria · Capacidad adaptativa",
+   "valor_caso_base": 0.5,
+   "regla": "valor de referencia (parámetro)"
+  },
+  {
+   "celda": "Marinilla · Seguridad alimentaria · Riesgo SSP3-7.0 2060",
+   "valor_caso_base": 0.5,
+   "regla": "valor de referencia (parámetro)"
+  },
+  {
+   "celda": "Marinilla · Seguridad alimentaria · Riesgo hoy",
+   "valor_caso_base": 0.5,
+   "regla": "valor de referencia (parámetro)"
+  },
+  {
+   "celda": "Marinilla · Seguridad alimentaria · Robustez 2060",
+   "valor_caso_base": 0.5,
+   "regla": "valor de referencia (parámetro)"
+  },
+  {
+   "celda": "Marinilla · Seguridad alimentaria · Vulnerabilidad",
+   "valor_caso_base": 0.5,
+   "regla": "valor de referencia (parámetro)"
+  },
+  {
+   "celda": "Rionegro · Biodiversidad · Riesgo SSP3-7.0 2060",
+   "valor_caso_base": 0.5,
+   "regla": "valor de referencia (parámetro)"
+  },
+  {
+   "celda": "Rionegro · Biodiversidad · Riesgo hoy",
+   "valor_caso_base": 0.5,
+   "regla": "valor de referencia (parámetro)"
+  },
+  {
+   "celda": "Rionegro · Biodiversidad · Robustez 2060",
+   "valor_caso_base": 0.5,
+   "regla": "valor de referencia (parámetro)"
+  },
+  {
+   "celda": "Rionegro · Hábitat · Capacidad adaptativa",
+   "valor_caso_base": 0.5,
+   "regla": "valor de referencia (parámetro)"
+  },
+  {
+   "celda": "Rionegro · Hábitat · Riesgo SSP3-7.0 2060",
+   "valor_caso_base": 0.5,
+   "regla": "valor de referencia (parámetro)"
+  },
+  {
+   "celda": "Rionegro · Hábitat · Riesgo hoy",
+   "valor_caso_base": 0.5,
+   "regla": "valor de referencia (parámetro)"
+  },
+  {
+   "celda": "Rionegro · Hábitat · Robustez 2060",
+   "valor_caso_base": 0.5,
+   "regla": "valor de referencia (parámetro)"
+  },
+  {
+   "celda": "Rionegro · Hábitat · Vulnerabilidad",
+   "valor_caso_base": 0.5,
+   "regla": "valor de referencia (parámetro)"
+  },
+  {
+   "celda": "Rionegro · Infraestructura · Capacidad adaptativa",
+   "valor_caso_base": 0.5,
+   "regla": "valor de referencia (parámetro)"
+  },
+  {
+   "celda": "Rionegro · Infraestructura · Riesgo SSP3-7.0 2060",
+   "valor_caso_base": 0.5,
+   "regla": "valor de referencia (parámetro)"
+  },
+  {
+   "celda": "Rionegro · Infraestructura · Riesgo hoy",
+   "valor_caso_base": 0.5,
+   "regla": "valor de referencia (parámetro)"
+  },
+  {
+   "celda": "Rionegro · Infraestructura · Robustez 2060",
+   "valor_caso_base": 0.5,
+   "regla": "valor de referencia (parámetro)"
+  },
+  {
+   "celda": "Rionegro · Infraestructura · Vulnerabilidad",
+   "valor_caso_base": 0.5,
+   "regla": "valor de referencia (parámetro)"
+  },
+  {
+   "celda": "Rionegro · Recurso hídrico · Capacidad adaptativa",
+   "valor_caso_base": 0.5,
+   "regla": "valor de referencia (parámetro)"
+  },
+  {
+   "celda": "Rionegro · Recurso hídrico · Riesgo SSP3-7.0 2060",
+   "valor_caso_base": 0.5,
+   "regla": "valor de referencia (parámetro)"
+  },
+  {
+   "celda": "Rionegro · Recurso hídrico · Riesgo hoy",
+   "valor_caso_base": 0.5,
+   "regla": "valor de referencia (parámetro)"
+  },
+  {
+   "celda": "Rionegro · Recurso hídrico · Robustez 2060",
+   "valor_caso_base": 0.5,
+   "regla": "valor de referencia (parámetro)"
+  },
+  {
+   "celda": "Rionegro · Recurso hídrico · Vulnerabilidad",
+   "valor_caso_base": 0.53,
+   "regla": "promedio regional oficial"
+  },
+  {
+   "celda": "Rionegro · Riesgo de desastres · Vulnerabilidad",
+   "valor_caso_base": 0.5,
+   "regla": "valor de referencia (parámetro)"
+  },
+  {
+   "celda": "Rionegro · Salud · Capacidad adaptativa",
+   "valor_caso_base": 0.5,
+   "regla": "valor de referencia (parámetro)"
+  },
+  {
+   "celda": "Rionegro · Salud · Riesgo SSP3-7.0 2060",
+   "valor_caso_base": 0.5,
+   "regla": "valor de referencia (parámetro)"
+  },
+  {
+   "celda": "Rionegro · Salud · Riesgo hoy",
+   "valor_caso_base": 0.5,
+   "regla": "valor de referencia (parámetro)"
+  },
+  {
+   "celda": "Rionegro · Salud · Robustez 2060",
+   "valor_caso_base": 0.5,
+   "regla": "valor de referencia (parámetro)"
+  },
+  {
+   "celda": "Rionegro · Salud · Vulnerabilidad",
+   "valor_caso_base": 0.5,
+   "regla": "valor de referencia (parámetro)"
+  },
+  {
+   "celda": "Rionegro · Seguridad alimentaria · Capacidad adaptativa",
+   "valor_caso_base": 0.5,
+   "regla": "valor de referencia (parámetro)"
+  },
+  {
+   "celda": "Rionegro · Seguridad alimentaria · Riesgo SSP3-7.0 2060",
+   "valor_caso_base": 0.5,
+   "regla": "valor de referencia (parámetro)"
+  },
+  {
+   "celda": "Rionegro · Seguridad alimentaria · Riesgo hoy",
+   "valor_caso_base": 0.5,
+   "regla": "valor de referencia (parámetro)"
+  },
+  {
+   "celda": "Rionegro · Seguridad alimentaria · Robustez 2060",
+   "valor_caso_base": 0.5,
+   "regla": "valor de referencia (parámetro)"
+  },
+  {
+   "celda": "Rionegro · Seguridad alimentaria · Vulnerabilidad",
+   "valor_caso_base": 0.5,
+   "regla": "valor de referencia (parámetro)"
+  }
+ ],
+ "datos_que_cambian_la_decision": [
+  {
+   "celda_vacia": "Guarne · Biodiversidad · Vulnerabilidad",
+   "valor_caso_base": 0.55,
+   "regla_caso_base": "promedio regional oficial",
+   "cambia_QUE_si_sube_a": null,
+   "cambia_QUE_si_baja_a": null,
+   "cambia_DONDE_si_sube_a": 0.79,
+   "cambia_DONDE_si_baja_a": null,
+   "portafolio_resultante": "M01-RIO + M02-GUA + M03-COR + M07-MAR + M14-COR"
+  },
+  {
+   "celda_vacia": "Guarne · Recurso hídrico · Capacidad adaptativa",
+   "valor_caso_base": 0.5,
+   "regla_caso_base": "valor de referencia (parámetro)",
+   "cambia_QUE_si_sube_a": null,
+   "cambia_QUE_si_baja_a": 0.09,
+   "cambia_DONDE_si_sube_a": null,
+   "cambia_DONDE_si_baja_a": null,
+   "portafolio_resultante": "M03-COR + M05-GUA + M05-MAR + M07-MAR + M14-COR"
+  },
+  {
+   "celda_vacia": "Guarne · Recurso hídrico · Vulnerabilidad",
+   "valor_caso_base": 0.53,
+   "regla_caso_base": "promedio regional oficial",
+   "cambia_QUE_si_sube_a": 0.67,
+   "cambia_QUE_si_baja_a": null,
+   "cambia_DONDE_si_sube_a": null,
+   "cambia_DONDE_si_baja_a": null,
+   "portafolio_resultante": "M03-COR + M05-GUA + M05-MAR + M07-MAR + M14-COR"
+  },
+  {
+   "celda_vacia": "Guarne · Riesgo de desastres · Vulnerabilidad",
+   "valor_caso_base": 0.5,
+   "regla_caso_base": "valor de referencia (parámetro)",
+   "cambia_QUE_si_sube_a": 0.93,
+   "cambia_QUE_si_baja_a": null,
+   "cambia_DONDE_si_sube_a": null,
+   "cambia_DONDE_si_baja_a": null,
+   "portafolio_resultante": "M01-RIO + M03-COR + M05-MAR + M13-COR + M14-COR"
+  },
+  {
+   "celda_vacia": "Guarne · Seguridad alimentaria · Capacidad adaptativa",
+   "valor_caso_base": 0.5,
+   "regla_caso_base": "valor de referencia (parámetro)",
+   "cambia_QUE_si_sube_a": null,
+   "cambia_QUE_si_baja_a": 0.04,
+   "cambia_DONDE_si_sube_a": null,
+   "cambia_DONDE_si_baja_a": 0.49,
+   "portafolio_resultante": "M03-COR + M07-GUA + M07-MAR + M08-GUA + M08-MAR + M14-COR"
+  },
+  {
+   "celda_vacia": "Guarne · Seguridad alimentaria · Vulnerabilidad",
+   "valor_caso_base": 0.5,
+   "regla_caso_base": "valor de referencia (parámetro)",
+   "cambia_QUE_si_sube_a": 0.81,
+   "cambia_QUE_si_baja_a": null,
+   "cambia_DONDE_si_sube_a": 0.51,
+   "cambia_DONDE_si_baja_a": null,
+   "portafolio_resultante": "M03-COR + M07-GUA + M07-MAR + M08-GUA + M08-MAR + M14-COR"
+  },
+  {
+   "celda_vacia": "Marinilla · Recurso hídrico · Capacidad adaptativa",
+   "valor_caso_base": 0.5,
+   "regla_caso_base": "valor de referencia (parámetro)",
+   "cambia_QUE_si_sube_a": null,
+   "cambia_QUE_si_baja_a": 0.09,
+   "cambia_DONDE_si_sube_a": null,
+   "cambia_DONDE_si_baja_a": null,
+   "portafolio_resultante": "M03-COR + M05-RIO + M05-MAR + M07-MAR + M14-COR"
+  },
+  {
+   "celda_vacia": "Marinilla · Recurso hídrico · Vulnerabilidad",
+   "valor_caso_base": 0.53,
+   "regla_caso_base": "promedio regional oficial",
+   "cambia_QUE_si_sube_a": 0.67,
+   "cambia_QUE_si_baja_a": null,
+   "cambia_DONDE_si_sube_a": null,
+   "cambia_DONDE_si_baja_a": null,
+   "portafolio_resultante": "M03-COR + M05-RIO + M05-MAR + M07-MAR + M14-COR"
+  },
+  {
+   "celda_vacia": "Marinilla · Riesgo de desastres · Vulnerabilidad",
+   "valor_caso_base": 0.5,
+   "regla_caso_base": "valor de referencia (parámetro)",
+   "cambia_QUE_si_sube_a": 0.93,
+   "cambia_QUE_si_baja_a": null,
+   "cambia_DONDE_si_sube_a": null,
+   "cambia_DONDE_si_baja_a": null,
+   "portafolio_resultante": "M01-RIO + M03-COR + M05-MAR + M13-COR + M14-COR"
+  },
+  {
+   "celda_vacia": "Marinilla · Seguridad alimentaria · Capacidad adaptativa",
+   "valor_caso_base": 0.5,
+   "regla_caso_base": "valor de referencia (parámetro)",
+   "cambia_QUE_si_sube_a": null,
+   "cambia_QUE_si_baja_a": 0.04,
+   "cambia_DONDE_si_sube_a": 0.51,
+   "cambia_DONDE_si_baja_a": null,
+   "portafolio_resultante": "M01-RIO + M02-RIO + M03-COR + M07-GUA + M14-COR"
+  },
+  {
+   "celda_vacia": "Marinilla · Seguridad alimentaria · Vulnerabilidad",
+   "valor_caso_base": 0.5,
+   "regla_caso_base": "valor de referencia (parámetro)",
+   "cambia_QUE_si_sube_a": 0.81,
+   "cambia_QUE_si_baja_a": null,
+   "cambia_DONDE_si_sube_a": null,
+   "cambia_DONDE_si_baja_a": 0.49,
+   "portafolio_resultante": "M03-COR + M07-RIO + M07-MAR + M08-GUA + M08-MAR + M14-COR"
+  },
+  {
+   "celda_vacia": "Rionegro · Recurso hídrico · Capacidad adaptativa",
+   "valor_caso_base": 0.5,
+   "regla_caso_base": "valor de referencia (parámetro)",
+   "cambia_QUE_si_sube_a": null,
+   "cambia_QUE_si_baja_a": 0.09,
+   "cambia_DONDE_si_sube_a": null,
+   "cambia_DONDE_si_baja_a": null,
+   "portafolio_resultante": "M03-COR + M05-RIO + M05-MAR + M07-MAR + M14-COR"
+  },
+  {
+   "celda_vacia": "Rionegro · Recurso hídrico · Vulnerabilidad",
+   "valor_caso_base": 0.53,
+   "regla_caso_base": "promedio regional oficial",
+   "cambia_QUE_si_sube_a": 0.67,
+   "cambia_QUE_si_baja_a": null,
+   "cambia_DONDE_si_sube_a": null,
+   "cambia_DONDE_si_baja_a": null,
+   "portafolio_resultante": "M03-COR + M05-RIO + M05-MAR + M07-MAR + M14-COR"
+  },
+  {
+   "celda_vacia": "Rionegro · Riesgo de desastres · Vulnerabilidad",
+   "valor_caso_base": 0.5,
+   "regla_caso_base": "valor de referencia (parámetro)",
+   "cambia_QUE_si_sube_a": 0.93,
+   "cambia_QUE_si_baja_a": null,
+   "cambia_DONDE_si_sube_a": null,
+   "cambia_DONDE_si_baja_a": null,
+   "portafolio_resultante": "M01-RIO + M03-COR + M05-MAR + M13-COR + M14-COR"
+  },
+  {
+   "celda_vacia": "Rionegro · Seguridad alimentaria · Capacidad adaptativa",
+   "valor_caso_base": 0.5,
+   "regla_caso_base": "valor de referencia (parámetro)",
+   "cambia_QUE_si_sube_a": null,
+   "cambia_QUE_si_baja_a": null,
+   "cambia_DONDE_si_sube_a": null,
+   "cambia_DONDE_si_baja_a": 0.49,
+   "portafolio_resultante": "M01-RIO + M02-RIO + M03-COR + M07-RIO + M14-COR"
+  },
+  {
+   "celda_vacia": "Rionegro · Seguridad alimentaria · Vulnerabilidad",
+   "valor_caso_base": 0.5,
+   "regla_caso_base": "valor de referencia (parámetro)",
+   "cambia_QUE_si_sube_a": null,
+   "cambia_QUE_si_baja_a": null,
+   "cambia_DONDE_si_sube_a": 0.51,
+   "cambia_DONDE_si_baja_a": null,
+   "portafolio_resultante": "M01-RIO + M02-RIO + M03-COR + M07-RIO + M14-COR"
+  }
+ ],
+ "contrafactuales": [
+  {
+   "caso": "Referencia",
+   "portafolio": "M01-RIO + M02-RIO + M03-COR + M07-MAR + M14-COR",
+   "n": 5,
+   "costo": 5000.0,
+   "nota": null
+  },
+  {
+   "caso": "Presupuesto 4,000 M",
+   "portafolio": "M01-RIO + M02-RIO + M03-COR + M14-COR",
+   "n": 4,
+   "costo": 4000.0,
+   "nota": null
+  },
+  {
+   "caso": "Presupuesto 4,500 M",
+   "portafolio": "M01-RIO + M03-COR + M07-GUA + M07-MAR + M14-COR",
+   "n": 5,
+   "costo": 4500.0,
+   "nota": null
+  },
+  {
+   "caso": "Presupuesto 5,500 M",
+   "portafolio": "M01-RIO + M03-COR + M07-RIO + M07-GUA + M07-MAR + M14-COR",
+   "n": 6,
+   "costo": 5500.0,
+   "nota": null
+  },
+  {
+   "caso": "Presupuesto 6,000 M",
+   "portafolio": "M01-RIO + M02-RIO + M03-COR + M07-GUA + M07-MAR + M14-COR",
+   "n": 6,
+   "costo": 6000.0,
+   "nota": null
+  },
+  {
+   "caso": "Regla del reto: máximo de intervenciones",
+   "portafolio": "M03-COR + M07-RIO + M07-MAR + M08-GUA + M08-MAR + M14-COR",
+   "n": 6,
+   "costo": 4900.0,
+   "nota": "α=0 y prioridad al número de medidas"
+  },
+  {
+   "caso": "Equidad: ≥1 medida municipal en cada municipio",
+   "portafolio": "M03-COR + M05-GUA + M05-MAR + M07-RIO + M14-COR",
+   "n": 5,
+   "costo": 4900.0,
+   "nota": null
+  },
+  {
+   "caso": "Sin regla de evidencia mínima",
+   "portafolio": "M01-RIO + M02-RIO + M03-COR + M07-MAR + M14-COR",
+   "n": 5,
+   "costo": 5000.0,
+   "nota": null
+  },
+  {
+   "caso": "Sin M01-RIO",
+   "portafolio": "M03-COR + M05-RIO + M05-MAR + M07-MAR + M14-COR",
+   "n": 5,
+   "costo": 4900.0,
+   "nota": null
+  },
+  {
+   "caso": "Sin M02-RIO",
+   "portafolio": "M03-COR + M05-GUA + M05-MAR + M07-MAR + M14-COR",
+   "n": 5,
+   "costo": 4900.0,
+   "nota": null
+  },
+  {
+   "caso": "Sin M03-COR",
+   "portafolio": "M05-RIO + M05-MAR + M07-MAR + M08-GUA + M14-COR",
+   "n": 5,
+   "costo": 5000.0,
+   "nota": null
+  },
+  {
+   "caso": "Sin M07-MAR",
+   "portafolio": "M01-RIO + M02-RIO + M03-COR + M07-GUA + M14-COR",
+   "n": 5,
+   "costo": 5000.0,
+   "nota": null
+  },
+  {
+   "caso": "Sin M14-COR",
+   "portafolio": "M03-COR + M05-MAR + M07-RIO + M07-GUA + M07-MAR",
+   "n": 5,
+   "costo": 5000.0,
+   "nota": null
+  },
+  {
+   "caso": "Efectividad α=0",
+   "portafolio": "M03-COR + M07-RIO + M07-MAR + M08-GUA + M08-MAR + M14-COR",
+   "n": 6,
+   "costo": 4900.0,
+   "nota": "α=0: cada medida vale igual; α=1: beneficio proporcional a la inversión"
+  },
+  {
+   "caso": "Efectividad α=1",
+   "portafolio": "M02-RIO + M02-GUA + M03-COR + M05-MAR",
+   "n": 4,
+   "costo": 5000.0,
+   "nota": "α=0: cada medida vale igual; α=1: beneficio proporcional a la inversión"
+  }
+ ],
+ "regret_top": [
+  {
+   "portafolio": "M01-RIO + M02-RIO + M03-COR + M07-GUA + M14-COR",
+   "n": 5,
+   "costo": 5000.0,
+   "regret_medio": 0.0996880386760651,
+   "regret_p90": 0.1765527776131287,
+   "regret_max": 0.3914877052924185,
+   "pct_casi_optimo": 0.566,
+   "veces_optimo": 0.0143333333333333,
+   "desempate": 0
+  },
+  {
+   "portafolio": "M01-RIO + M02-RIO + M03-COR + M07-MAR + M14-COR",
+   "n": 5,
+   "costo": 5000.0,
+   "regret_medio": 0.0990799550943916,
+   "regret_p90": 0.1800960242317532,
+   "regret_max": 0.3877386909755808,
+   "pct_casi_optimo": 0.567,
+   "veces_optimo": 0.0173333333333333,
+   "desempate": 1
+  },
+  {
+   "portafolio": "M02-RIO + M03-COR + M07-MAR + M13-COR + M14-COR",
+   "n": 5,
+   "costo": 5000.0,
+   "regret_medio": 0.1070126035120262,
+   "regret_p90": 0.1818905143423979,
+   "regret_max": 0.3840748789063702,
+   "pct_casi_optimo": 0.4893333333333333,
+   "veces_optimo": 0.0093333333333333,
+   "desempate": 1
+  },
+  {
+   "portafolio": "M02-RIO + M03-COR + M07-GUA + M13-COR + M14-COR",
+   "n": 5,
+   "costo": 5000.0,
+   "regret_medio": 0.1076206870936997,
+   "regret_p90": 0.1822052797777927,
+   "regret_max": 0.3870400429531891,
+   "pct_casi_optimo": 0.4813333333333333,
+   "veces_optimo": 0.0053333333333333,
+   "desempate": 0
+  },
+  {
+   "portafolio": "M01-RIO + M02-RIO + M03-COR + M07-RIO + M14-COR",
+   "n": 5,
+   "costo": 5000.0,
+   "regret_medio": 0.0994003090043852,
+   "regret_p90": 0.1861654610677563,
+   "regret_max": 0.4192018854662759,
+   "pct_casi_optimo": 0.5546666666666666,
+   "veces_optimo": 0.0333333333333333,
+   "desempate": 0
+  },
+  {
+   "portafolio": "M02-RIO + M03-COR + M07-RIO + M13-COR + M14-COR",
+   "n": 5,
+   "costo": 5000.0,
+   "regret_medio": 0.1073329574220197,
+   "regret_p90": 0.1893620459438338,
+   "regret_max": 0.3783888012350931,
+   "pct_casi_optimo": 0.495,
+   "veces_optimo": 0.014,
+   "desempate": 0
+  },
+  {
+   "portafolio": "M01-RIO + M03-COR + M05-RIO + M13-COR + M14-COR",
+   "n": 5,
+   "costo": 5000.0,
+   "regret_medio": 0.1084545808970778,
+   "regret_p90": 0.1945741825081123,
+   "regret_max": 0.37943431867419,
+   "pct_casi_optimo": 0.4876666666666667,
+   "veces_optimo": 0.0193333333333333,
+   "desempate": 0
+  },
+  {
+   "portafolio": "M01-RIO + M03-COR + M05-MAR + M13-COR + M14-COR",
+   "n": 5,
+   "costo": 5000.0,
+   "regret_medio": 0.1088049123798607,
+   "regret_p90": 0.1958566992602402,
+   "regret_max": 0.3163619356051713,
+   "pct_casi_optimo": 0.4896666666666666,
+   "veces_optimo": 0.0183333333333333,
+   "desempate": 1
+  },
+  {
+   "portafolio": "M01-RIO + M03-COR + M05-GUA + M13-COR + M14-COR",
+   "n": 5,
+   "costo": 5000.0,
+   "regret_medio": 0.1080559145980842,
+   "regret_p90": 0.1970006512702823,
+   "regret_max": 0.3428568114131954,
+   "pct_casi_optimo": 0.4803333333333333,
+   "veces_optimo": 0.0206666666666666,
+   "desempate": 0
+  },
+  {
+   "portafolio": "M02-RIO + M03-COR + M05-RIO + M08-MAR + M14-COR",
+   "n": 5,
+   "costo": 4900.0,
+   "regret_medio": 0.1251544857225984,
+   "regret_p90": 0.1999613794765772,
+   "regret_max": 0.4194521484269422,
+   "pct_casi_optimo": 0.3636666666666667,
+   "veces_optimo": 0.0003333333333333,
+   "desempate": 0
+  }
+ ],
+ "riesgo_residual": [
+  {
+   "municipio": "Rionegro",
+   "dimension": "Biodiversidad",
+   "situacion_inicial": "Capacidad adaptativa 0,22 [OFICIAL]; Vulnerabilidad 0,75 [OFICIAL]",
+   "medidas_directas": "M01-RIO, M02-RIO",
+   "medidas_corredor": "M03-COR",
+   "medidas_por_cobeneficio": "",
+   "estado_intervencion": "Atendido con medida municipal directa",
+   "gravedad_conocida": "Vulnerabilidad alta documentada",
+   "reduccion_esperada": "No cuantificable con los datos disponibles",
+   "problemas_documentados_sin_medida": "—",
+   "prioridad_residual": "BAJA"
+  },
+  {
+   "municipio": "Rionegro",
+   "dimension": "Recurso hídrico",
+   "situacion_inicial": "NO DISPONIBLE",
+   "medidas_directas": "",
+   "medidas_corredor": "",
+   "medidas_por_cobeneficio": "M03-COR, M01-RIO, M02-RIO",
+   "estado_intervencion": "Parcial: solo cobeneficio de otra medida",
+   "gravedad_conocida": "DESCONOCIDA (sin datos: no se puede afirmar que sea baja)",
+   "reduccion_esperada": "No cuantificable con los datos disponibles",
+   "problemas_documentados_sin_medida": "M05 (evidencia 1,00): Recomienda continuar recuperación de cauces ocupados; rondas registradas para inundaciones",
+   "prioridad_residual": "ALTA"
+  },
+  {
+   "municipio": "Rionegro",
+   "dimension": "Seguridad alimentaria",
+   "situacion_inicial": "NO DISPONIBLE",
+   "medidas_directas": "",
+   "medidas_corredor": "",
+   "medidas_por_cobeneficio": "",
+   "estado_intervencion": "Sin atender",
+   "gravedad_conocida": "DESCONOCIDA (sin datos: no se puede afirmar que sea baja)",
+   "reduccion_esperada": "No cuantificable con los datos disponibles",
+   "problemas_documentados_sin_medida": "M07 (evidencia 1,00): Deterioro del suelo por expansión de frontera agrícola (pastos, ganado, cultivos) como causa de movimientos en masa",
+   "prioridad_residual": "ALTA"
+  },
+  {
+   "municipio": "Rionegro",
+   "dimension": "Hábitat",
+   "situacion_inicial": "NO DISPONIBLE",
+   "medidas_directas": "",
+   "medidas_corredor": "",
+   "medidas_por_cobeneficio": "",
+   "estado_intervencion": "Sin atender",
+   "gravedad_conocida": "DESCONOCIDA (sin datos: no se puede afirmar que sea baja)",
+   "reduccion_esperada": "No cuantificable con los datos disponibles",
+   "problemas_documentados_sin_medida": "M10 (evidencia 0,50): Recomienda sistemas de recolección y conducción de aguas lluvias (veredas)",
+   "prioridad_residual": "MEDIA"
+  },
+  {
+   "municipio": "Rionegro",
+   "dimension": "Infraestructura",
+   "situacion_inicial": "NO DISPONIBLE",
+   "medidas_directas": "",
+   "medidas_corredor": "",
+   "medidas_por_cobeneficio": "",
+   "estado_intervencion": "Sin atender",
+   "gravedad_conocida": "DESCONOCIDA (sin datos: no se puede afirmar que sea baja)",
+   "reduccion_esperada": "No cuantificable con los datos disponibles",
+   "problemas_documentados_sin_medida": "M11 (evidencia 0,50): Mantenimiento de obras de arte de vías y cunetas",
+   "prioridad_residual": "MEDIA"
+  },
+  {
+   "municipio": "Rionegro",
+   "dimension": "Riesgo de desastres",
+   "situacion_inicial": "Sensibilidad 0,40 [OFICIAL]; Capacidad adaptativa 0,56 [OFICIAL]; Riesgo hoy 0,28 [OFICIAL]; Riesgo SSP3-7.0 2060 0,32 [OFICIAL]",
+   "medidas_directas": "",
+   "medidas_corredor": "M14-COR",
+   "medidas_por_cobeneficio": "M02-RIO",
+   "estado_intervencion": "Parcial: solo medida de corredor",
+   "gravedad_conocida": "Sin vulnerabilidad alta documentada",
+   "reduccion_esperada": "No cuantificable con los datos disponibles",
+   "problemas_documentados_sin_medida": "—",
+   "prioridad_residual": "MEDIA"
+  },
+  {
+   "municipio": "Rionegro",
+   "dimension": "Salud",
+   "situacion_inicial": "NO DISPONIBLE",
+   "medidas_directas": "",
+   "medidas_corredor": "",
+   "medidas_por_cobeneficio": "",
+   "estado_intervencion": "Sin atender",
+   "gravedad_conocida": "DESCONOCIDA (sin datos: no se puede afirmar que sea baja)",
+   "reduccion_esperada": "No cuantificable con los datos disponibles",
+   "problemas_documentados_sin_medida": "—",
+   "prioridad_residual": "DESCONOCIDA"
+  },
+  {
+   "municipio": "Guarne",
+   "dimension": "Biodiversidad",
+   "situacion_inicial": "Capacidad adaptativa 0,33 [OFICIAL]",
+   "medidas_directas": "",
+   "medidas_corredor": "M03-COR",
+   "medidas_por_cobeneficio": "",
+   "estado_intervencion": "Parcial: solo medida de corredor",
+   "gravedad_conocida": "Sin vulnerabilidad alta documentada",
+   "reduccion_esperada": "No cuantificable con los datos disponibles",
+   "problemas_documentados_sin_medida": "M01 (evidencia 0,50): Recomendación de preservar bosque y aguas de La Brizuela (POMCA La Brizuela y La Honda) | M02 (evidencia 1,00): Recomienda revegetalización de suelos expuestos y reforestación con especies nativas",
+   "prioridad_residual": "ALTA"
+  },
+  {
+   "municipio": "Guarne",
+   "dimension": "Recurso hídrico",
+   "situacion_inicial": "NO DISPONIBLE",
+   "medidas_directas": "",
+   "medidas_corredor": "",
+   "medidas_por_cobeneficio": "M03-COR",
+   "estado_intervencion": "Parcial: solo cobeneficio de otra medida",
+   "gravedad_conocida": "DESCONOCIDA (sin datos: no se puede afirmar que sea baja)",
+   "reduccion_esperada": "No cuantificable con los datos disponibles",
+   "problemas_documentados_sin_medida": "M05 (evidencia 1,00): Llenos antrópicos en llanuras de La Brizuela y Basto Norte; barrios al borde de afluentes (El Sango, La Cabaña, San Vicente, San Antonio) | M06 (evidencia 0,50): Recomienda acoger POMCA La Brizuela y La Honda; preservar aguas de La Brizuela",
+   "prioridad_residual": "ALTA"
+  },
+  {
+   "municipio": "Guarne",
+   "dimension": "Seguridad alimentaria",
+   "situacion_inicial": "NO DISPONIBLE",
+   "medidas_directas": "",
+   "medidas_corredor": "",
+   "medidas_por_cobeneficio": "",
+   "estado_intervencion": "Sin atender",
+   "gravedad_conocida": "DESCONOCIDA (sin datos: no se puede afirmar que sea baja)",
+   "reduccion_esperada": "No cuantificable con los datos disponibles",
+   "problemas_documentados_sin_medida": "M07 (evidencia 1,00): Recomienda ajustar actividades productivas a la capacidad del terreno en zonas de riesgo medio a muy alto | M08 (evidencia 0,50): Recomienda capacitación en buenas técnicas de labranza",
+   "prioridad_residual": "ALTA"
+  },
+  {
+   "municipio": "Guarne",
+   "dimension": "Hábitat",
+   "situacion_inicial": "NO DISPONIBLE",
+   "medidas_directas": "",
+   "medidas_corredor": "",
+   "medidas_por_cobeneficio": "",
+   "estado_intervencion": "Sin atender",
+   "gravedad_conocida": "DESCONOCIDA (sin datos: no se puede afirmar que sea baja)",
+   "reduccion_esperada": "No cuantificable con los datos disponibles",
+   "problemas_documentados_sin_medida": "M10 (evidencia 0,50): Revisión de alcantarillado (barrio San Vicente) y capacidad hidráulica de canalizaciones",
+   "prioridad_residual": "MEDIA"
+  },
+  {
+   "municipio": "Guarne",
+   "dimension": "Infraestructura",
+   "situacion_inicial": "NO DISPONIBLE",
+   "medidas_directas": "",
+   "medidas_corredor": "",
+   "medidas_por_cobeneficio": "",
+   "estado_intervencion": "Sin atender",
+   "gravedad_conocida": "DESCONOCIDA (sin datos: no se puede afirmar que sea baja)",
+   "reduccion_esperada": "No cuantificable con los datos disponibles",
+   "problemas_documentados_sin_medida": "M11 (evidencia 0,50): Vías mejoradas registradas por movimiento en masa | M12 (evidencia 0,50): Alcantarillado inadecuado barrio San Vicente",
+   "prioridad_residual": "MEDIA"
+  },
+  {
+   "municipio": "Guarne",
+   "dimension": "Riesgo de desastres",
+   "situacion_inicial": "NO DISPONIBLE",
+   "medidas_directas": "",
+   "medidas_corredor": "M14-COR",
+   "medidas_por_cobeneficio": "",
+   "estado_intervencion": "Parcial: solo medida de corredor",
+   "gravedad_conocida": "DESCONOCIDA (sin datos: no se puede afirmar que sea baja)",
+   "reduccion_esperada": "No cuantificable con los datos disponibles",
+   "problemas_documentados_sin_medida": "M13 (evidencia 1,00): Recomienda diseño, construcción y operación de sistemas de alerta con estaciones hidrométricas",
+   "prioridad_residual": "ALTA"
+  },
+  {
+   "municipio": "Guarne",
+   "dimension": "Salud",
+   "situacion_inicial": "NO DISPONIBLE",
+   "medidas_directas": "",
+   "medidas_corredor": "",
+   "medidas_por_cobeneficio": "",
+   "estado_intervencion": "Sin atender",
+   "gravedad_conocida": "DESCONOCIDA (sin datos: no se puede afirmar que sea baja)",
+   "reduccion_esperada": "No cuantificable con los datos disponibles",
+   "problemas_documentados_sin_medida": "—",
+   "prioridad_residual": "DESCONOCIDA"
+  },
+  {
+   "municipio": "Marinilla",
+   "dimension": "Biodiversidad",
+   "situacion_inicial": "Capacidad adaptativa 0,24 [OFICIAL]; Vulnerabilidad 0,72 [OFICIAL]",
+   "medidas_directas": "",
+   "medidas_corredor": "M03-COR",
+   "medidas_por_cobeneficio": "",
+   "estado_intervencion": "Parcial: solo medida de corredor",
+   "gravedad_conocida": "Vulnerabilidad alta documentada",
+   "reduccion_esperada": "No cuantificable con los datos disponibles",
+   "problemas_documentados_sin_medida": "M02 (evidencia 0,50): Recomienda mantenimiento de reforestaciones ejecutadas",
+   "prioridad_residual": "ALTA"
+  },
+  {
+   "municipio": "Marinilla",
+   "dimension": "Recurso hídrico",
+   "situacion_inicial": "NO DISPONIBLE",
+   "medidas_directas": "",
+   "medidas_corredor": "",
+   "medidas_por_cobeneficio": "M03-COR, M07-MAR",
+   "estado_intervencion": "Parcial: solo cobeneficio de otra medida",
+   "gravedad_conocida": "DESCONOCIDA (sin datos: no se puede afirmar que sea baja)",
+   "reduccion_esperada": "No cuantificable con los datos disponibles",
+   "problemas_documentados_sin_medida": "M05 (evidencia 1,00): Inundaciones por invasión de retiros (Q. La Marinilla, Occidente, Oriente, Matadero); barrios Santa Ana, La Ramada, El Manantial",
+   "prioridad_residual": "ALTA"
+  },
+  {
+   "municipio": "Marinilla",
+   "dimension": "Seguridad alimentaria",
+   "situacion_inicial": "NO DISPONIBLE",
+   "medidas_directas": "M07-MAR",
+   "medidas_corredor": "",
+   "medidas_por_cobeneficio": "",
+   "estado_intervencion": "Atendido con medida municipal directa",
+   "gravedad_conocida": "DESCONOCIDA (sin datos: no se puede afirmar que sea baja)",
+   "reduccion_esperada": "No cuantificable con los datos disponibles",
+   "problemas_documentados_sin_medida": "M08 (evidencia 0,50): Malas prácticas agrícolas inductoras de erosión",
+   "prioridad_residual": "BAJA"
+  },
+  {
+   "municipio": "Marinilla",
+   "dimension": "Hábitat",
+   "situacion_inicial": "NO DISPONIBLE",
+   "medidas_directas": "",
+   "medidas_corredor": "",
+   "medidas_por_cobeneficio": "",
+   "estado_intervencion": "Sin atender",
+   "gravedad_conocida": "DESCONOCIDA (sin datos: no se puede afirmar que sea baja)",
+   "reduccion_esperada": "No cuantificable con los datos disponibles",
+   "problemas_documentados_sin_medida": "M10 (evidencia 0,50): Revisión de alcantarillado y capacidad hidráulica de canalizaciones urbanas; manejo de escorrentía pluvial",
+   "prioridad_residual": "MEDIA"
+  },
+  {
+   "municipio": "Marinilla",
+   "dimension": "Infraestructura",
+   "situacion_inicial": "NO DISPONIBLE",
+   "medidas_directas": "",
+   "medidas_corredor": "",
+   "medidas_por_cobeneficio": "",
+   "estado_intervencion": "Sin atender",
+   "gravedad_conocida": "DESCONOCIDA (sin datos: no se puede afirmar que sea baja)",
+   "reduccion_esperada": "No cuantificable con los datos disponibles",
+   "problemas_documentados_sin_medida": "M11 (evidencia 1,00): Hundimientos en vías veredales sin cunetas; ampliación de obras de paso sobre Q. La Marinilla (La Ramada, La Avenida) | M12 (evidencia 0,50): Afectación a redes de acueducto (3,33% de sitios); revisión de alcantarillado",
+   "prioridad_residual": "ALTA"
+  },
+  {
+   "municipio": "Marinilla",
+   "dimension": "Riesgo de desastres",
+   "situacion_inicial": "Amenaza 0,69 [CALCULADO]; Capacidad adaptativa 0,61 [OFICIAL]",
+   "medidas_directas": "",
+   "medidas_corredor": "M14-COR",
+   "medidas_por_cobeneficio": "M07-MAR",
+   "estado_intervencion": "Parcial: solo medida de corredor",
+   "gravedad_conocida": "Sin vulnerabilidad alta documentada",
+   "reduccion_esperada": "No cuantificable con los datos disponibles",
+   "problemas_documentados_sin_medida": "—",
+   "prioridad_residual": "MEDIA"
+  },
+  {
+   "municipio": "Marinilla",
+   "dimension": "Salud",
+   "situacion_inicial": "NO DISPONIBLE",
+   "medidas_directas": "",
+   "medidas_corredor": "",
+   "medidas_por_cobeneficio": "",
+   "estado_intervencion": "Sin atender",
+   "gravedad_conocida": "DESCONOCIDA (sin datos: no se puede afirmar que sea baja)",
+   "reduccion_esperada": "No cuantificable con los datos disponibles",
+   "problemas_documentados_sin_medida": "—",
+   "prioridad_residual": "DESCONOCIDA"
+  }
+ ],
+ "seguimiento_mea": [
+  {
+   "orden": 1,
+   "alternativa": "M14-COR",
+   "medida": "Conocimiento y comunicación sobre amenazas, vulnerabilidad y riesgo climático",
+   "actividad_que_se_hizo": "# de estudios de riesgo climático elaborados por sector anualmente [RELACIONADO (Excel: Uso intersectorial)]",
+   "resultado_que_cambio": "% de celdas de la ficha V/CA con dato oficial (línea base 17%); nº de dependencias empresa–territorio caracterizadas [PROPUESTO]",
+   "vulnerabilidad_se_redujo": "Índices CORNARE de Riesgo de desastres — línea base: Rionegro: V NO DISPONIBLE · CA 0,56; Guarne: V NO DISPONIBLE · CA NO DISPONIBLE; Marinilla: V NO DISPONIBLE · CA 0,61",
+   "periodicidad": "Actividad y resultado: anual [los indicadores del Excel se reportan anualmente]; índices V/CA: en cada actualización del estudio CORNARE",
+   "responsable_reporte": "CORNARE (Observatorio, gestión del riesgo) [OFICIAL]"
+  },
+  {
+   "orden": 2,
+   "alternativa": "M03-COR",
+   "medida": "Fortalecimiento de sistemas de áreas protegidas",
+   "actividad_que_se_hizo": "# de ecosistemas estratégicos con planes de manejo formulados anualmente [RELACIONADO (Excel: Estrategias con estructura ecológica principal)]",
+   "resultado_que_cambio": "Hectáreas con figura de conservación o acuerdo vigente [PROPUESTO]",
+   "vulnerabilidad_se_redujo": "Índices CORNARE de Biodiversidad — línea base: Rionegro: V 0,75 · CA 0,22; Guarne: V NO DISPONIBLE · CA 0,33; Marinilla: V 0,72 · CA 0,24",
+   "periodicidad": "Actividad y resultado: anual [los indicadores del Excel se reportan anualmente]; índices V/CA: en cada actualización del estudio CORNARE",
+   "responsable_reporte": "CORNARE como autoridad ambiental [OFICIAL: Reto]"
+  },
+  {
+   "orden": 3,
+   "alternativa": "M01-RIO",
+   "medida": "Instrumentos de compensación y Pago por Servicios Ambientales – PSA",
+   "actividad_que_se_hizo": "# de beneficiarios de la estrategia de PSA anuales [OFICIAL (Excel adaptación municipios)]",
+   "resultado_que_cambio": "Hectáreas conservadas bajo PSA en áreas estratégicas [PROPUESTO]",
+   "vulnerabilidad_se_redujo": "Índices CORNARE de Biodiversidad — línea base: Rionegro: V 0,75 · CA 0,22",
+   "periodicidad": "Actividad y resultado: anual [los indicadores del Excel se reportan anualmente]; índices V/CA: en cada actualización del estudio CORNARE",
+   "responsable_reporte": "CORNARE y alcaldía (PSA registrado en el PICCA) [OFICIAL: Excel adaptación]"
+  },
+  {
+   "orden": 4,
+   "alternativa": "M02-RIO",
+   "medida": "Restauración de ecosistemas estratégicos",
+   "actividad_que_se_hizo": "COP$ invertido en proyectos de restauración. [OFICIAL (Excel) - es indicador de actividad]",
+   "resultado_que_cambio": "Hectáreas restauradas con sobrevivencia a 3 años; nº de movimientos en masa en las zonas intervenidas [PROPUESTO]",
+   "vulnerabilidad_se_redujo": "Índices CORNARE de Biodiversidad — línea base: Rionegro: V 0,75 · CA 0,22",
+   "periodicidad": "Actividad y resultado: anual [los indicadores del Excel se reportan anualmente]; índices V/CA: en cada actualización del estudio CORNARE",
+   "responsable_reporte": "CORNARE (restauración registrada en el PICCA) [OFICIAL: Excel]"
+  },
+  {
+   "orden": 5,
+   "alternativa": "M07-MAR",
+   "medida": "Protección y reconversión de suelos agrícolas estratégicos",
+   "actividad_que_se_hizo": "# de actores educados y capacitados en términos de conservación y uso del suelo anualmente [RELACIONADO (Excel: Protección de suelos)]",
+   "resultado_que_cambio": "Hectáreas con prácticas de conservación de suelo; nº de movimientos en masa en las veredas intervenidas [PROPUESTO]",
+   "vulnerabilidad_se_redujo": "Índices CORNARE de Seguridad alimentaria — línea base: Marinilla: V NO DISPONIBLE · CA NO DISPONIBLE",
+   "periodicidad": "Actividad y resultado: anual [los indicadores del Excel se reportan anualmente]; índices V/CA: en cada actualización del estudio CORNARE",
+   "responsable_reporte": "Alcaldía (agricultura) [INFERENCIA]"
+  }
+ ],
+ "brechas": [
+  {
+   "tipo": "Ficha CORNARE",
+   "dato": "Vulnerabilidad por municipio × dimensión",
+   "disponible": "2 de 21",
+   "por_que_importa": "Base de los criterios del modelo",
+   "umbral_que_cambia_la_decision": "Ver filas 'Dato que cambia la decisión'"
+  },
+  {
+   "tipo": "Ficha CORNARE",
+   "dato": "Capacidad adaptativa por municipio × dimensión",
+   "disponible": "5 de 21",
+   "por_que_importa": "Base de los criterios del modelo",
+   "umbral_que_cambia_la_decision": "Ver filas 'Dato que cambia la decisión'"
+  },
+  {
+   "tipo": "Ficha CORNARE",
+   "dato": "Riesgo SSP3-7.0 2060 por municipio × dimensión",
+   "disponible": "1 de 21",
+   "por_que_importa": "Stress test SSP3-7.0/2060",
+   "umbral_que_cambia_la_decision": "Ver filas 'Dato que cambia la decisión'"
+  },
+  {
+   "tipo": "Ficha CORNARE",
+   "dato": "Sensibilidad por municipio × dimensión",
+   "disponible": "1 de 21",
+   "por_que_importa": "Contexto (no entra al puntaje)",
+   "umbral_que_cambia_la_decision": "Ver filas 'Dato que cambia la decisión'"
+  },
+  {
+   "tipo": "Ficha CORNARE",
+   "dato": "Amenaza por municipio × dimensión",
+   "disponible": "1 de 21",
+   "por_que_importa": "Contexto (no entra al puntaje)",
+   "umbral_que_cambia_la_decision": "Ver filas 'Dato que cambia la decisión'"
+  },
+  {
+   "tipo": "Dato que cambia la decisión",
+   "dato": "Guarne · Biodiversidad · Vulnerabilidad",
+   "disponible": "NO",
+   "por_que_importa": "Resultado si se cruza el umbral: M01-RIO + M02-GUA + M03-COR + M07-MAR + M14-COR",
+   "umbral_que_cambia_la_decision": "cambia DÓNDE si ≥ 0.79"
+  },
+  {
+   "tipo": "Dato que cambia la decisión",
+   "dato": "Guarne · Recurso hídrico · Capacidad adaptativa",
+   "disponible": "NO",
+   "por_que_importa": "Resultado si se cruza el umbral: M03-COR + M05-GUA + M05-MAR + M07-MAR + M14-COR",
+   "umbral_que_cambia_la_decision": "cambia QUÉ medidas si ≤ 0.09"
+  },
+  {
+   "tipo": "Dato que cambia la decisión",
+   "dato": "Guarne · Recurso hídrico · Vulnerabilidad",
+   "disponible": "NO",
+   "por_que_importa": "Resultado si se cruza el umbral: M03-COR + M05-GUA + M05-MAR + M07-MAR + M14-COR",
+   "umbral_que_cambia_la_decision": "cambia QUÉ medidas si ≥ 0.67"
+  },
+  {
+   "tipo": "Dato que cambia la decisión",
+   "dato": "Guarne · Riesgo de desastres · Vulnerabilidad",
+   "disponible": "NO",
+   "por_que_importa": "Resultado si se cruza el umbral: M01-RIO + M03-COR + M05-MAR + M13-COR + M14-COR",
+   "umbral_que_cambia_la_decision": "cambia QUÉ medidas si ≥ 0.93"
+  },
+  {
+   "tipo": "Dato que cambia la decisión",
+   "dato": "Guarne · Seguridad alimentaria · Capacidad adaptativa",
+   "disponible": "NO",
+   "por_que_importa": "Resultado si se cruza el umbral: M03-COR + M07-GUA + M07-MAR + M08-GUA + M08-MAR + M14-COR",
+   "umbral_que_cambia_la_decision": "cambia QUÉ medidas si ≤ 0.04; cambia DÓNDE si ≤ 0.49"
+  },
+  {
+   "tipo": "Dato que cambia la decisión",
+   "dato": "Guarne · Seguridad alimentaria · Vulnerabilidad",
+   "disponible": "NO",
+   "por_que_importa": "Resultado si se cruza el umbral: M03-COR + M07-GUA + M07-MAR + M08-GUA + M08-MAR + M14-COR",
+   "umbral_que_cambia_la_decision": "cambia QUÉ medidas si ≥ 0.81; cambia DÓNDE si ≥ 0.51"
+  },
+  {
+   "tipo": "Dato que cambia la decisión",
+   "dato": "Marinilla · Recurso hídrico · Capacidad adaptativa",
+   "disponible": "NO",
+   "por_que_importa": "Resultado si se cruza el umbral: M03-COR + M05-RIO + M05-MAR + M07-MAR + M14-COR",
+   "umbral_que_cambia_la_decision": "cambia QUÉ medidas si ≤ 0.09"
+  },
+  {
+   "tipo": "Dato que cambia la decisión",
+   "dato": "Marinilla · Recurso hídrico · Vulnerabilidad",
+   "disponible": "NO",
+   "por_que_importa": "Resultado si se cruza el umbral: M03-COR + M05-RIO + M05-MAR + M07-MAR + M14-COR",
+   "umbral_que_cambia_la_decision": "cambia QUÉ medidas si ≥ 0.67"
+  },
+  {
+   "tipo": "Dato que cambia la decisión",
+   "dato": "Marinilla · Riesgo de desastres · Vulnerabilidad",
+   "disponible": "NO",
+   "por_que_importa": "Resultado si se cruza el umbral: M01-RIO + M03-COR + M05-MAR + M13-COR + M14-COR",
+   "umbral_que_cambia_la_decision": "cambia QUÉ medidas si ≥ 0.93"
+  },
+  {
+   "tipo": "Dato que cambia la decisión",
+   "dato": "Marinilla · Seguridad alimentaria · Capacidad adaptativa",
+   "disponible": "NO",
+   "por_que_importa": "Resultado si se cruza el umbral: M01-RIO + M02-RIO + M03-COR + M07-GUA + M14-COR",
+   "umbral_que_cambia_la_decision": "cambia QUÉ medidas si ≤ 0.04; cambia DÓNDE si ≥ 0.51"
+  },
+  {
+   "tipo": "Dato que cambia la decisión",
+   "dato": "Marinilla · Seguridad alimentaria · Vulnerabilidad",
+   "disponible": "NO",
+   "por_que_importa": "Resultado si se cruza el umbral: M03-COR + M07-RIO + M07-MAR + M08-GUA + M08-MAR + M14-COR",
+   "umbral_que_cambia_la_decision": "cambia QUÉ medidas si ≥ 0.81; cambia DÓNDE si ≤ 0.49"
+  },
+  {
+   "tipo": "Dato que cambia la decisión",
+   "dato": "Rionegro · Recurso hídrico · Capacidad adaptativa",
+   "disponible": "NO",
+   "por_que_importa": "Resultado si se cruza el umbral: M03-COR + M05-RIO + M05-MAR + M07-MAR + M14-COR",
+   "umbral_que_cambia_la_decision": "cambia QUÉ medidas si ≤ 0.09"
+  },
+  {
+   "tipo": "Dato que cambia la decisión",
+   "dato": "Rionegro · Recurso hídrico · Vulnerabilidad",
+   "disponible": "NO",
+   "por_que_importa": "Resultado si se cruza el umbral: M03-COR + M05-RIO + M05-MAR + M07-MAR + M14-COR",
+   "umbral_que_cambia_la_decision": "cambia QUÉ medidas si ≥ 0.67"
+  },
+  {
+   "tipo": "Dato que cambia la decisión",
+   "dato": "Rionegro · Riesgo de desastres · Vulnerabilidad",
+   "disponible": "NO",
+   "por_que_importa": "Resultado si se cruza el umbral: M01-RIO + M03-COR + M05-MAR + M13-COR + M14-COR",
+   "umbral_que_cambia_la_decision": "cambia QUÉ medidas si ≥ 0.93"
+  },
+  {
+   "tipo": "Dato que cambia la decisión",
+   "dato": "Rionegro · Seguridad alimentaria · Capacidad adaptativa",
+   "disponible": "NO",
+   "por_que_importa": "Resultado si se cruza el umbral: M01-RIO + M02-RIO + M03-COR + M07-RIO + M14-COR",
+   "umbral_que_cambia_la_decision": "cambia DÓNDE si ≤ 0.49"
+  },
+  {
+   "tipo": "Dato que cambia la decisión",
+   "dato": "Rionegro · Seguridad alimentaria · Vulnerabilidad",
+   "disponible": "NO",
+   "por_que_importa": "Resultado si se cruza el umbral: M01-RIO + M02-RIO + M03-COR + M07-RIO + M14-COR",
+   "umbral_que_cambia_la_decision": "cambia DÓNDE si ≥ 0.51"
+  },
+  {
+   "tipo": "Dependencias (Reto sec. 5)",
+   "dato": "Empresa ACV → captación o fuente hídrica, caudal concesionado vs usado",
+   "disponible": "NO",
+   "por_que_importa": "Sin esto no se puede priorizar 'Uso intersectorial eficiente del agua' (M04)",
+   "umbral_que_cambia_la_decision": "—"
+  },
+  {
+   "tipo": "Dependencias (Reto sec. 5)",
+   "dato": "Empresa ACV → vía de acceso crítica, circuito eléctrico, proveedores críticos de la región, trabajadores por municipio",
+   "disponible": "NO",
+   "por_que_importa": "Sin esto no se puede priorizar infraestructura (M11, M12) ni saber qué interrupción se propaga",
+   "umbral_que_cambia_la_decision": "—"
+  },
+  {
+   "tipo": "Dependencias (Reto sec. 5)",
+   "dato": "Punto crítico de vía o servicio → población y empresas que dependen, rutas alternas, tiempo tolerable de interrupción",
+   "disponible": "NO",
+   "por_que_importa": "Define dónde una obra de infraestructura protege más",
+   "umbral_que_cambia_la_decision": "—"
+  },
+  {
+   "tipo": "Efectividad",
+   "dato": "Línea base y medición posterior del indicador de resultado de cada medida",
+   "disponible": "NO",
+   "por_que_importa": "Permitiría estimar efectividad (hoy α se prueba de 0 a 1) y, a futuro, entrenar un modelo de aprendizaje automático",
+   "umbral_que_cambia_la_decision": "—"
+  },
+  {
+   "tipo": "Salud",
+   "dato": "Vigilancia de enfermedades climato-sensibles por municipio",
+   "disponible": "NO",
+   "por_que_importa": "La medida de salud (M15) no compite por falta de datos",
+   "umbral_que_cambia_la_decision": "—"
+  },
+  {
+   "tipo": "Registro histórico",
+   "dato": "Medidas de adaptación de Marinilla (1 registro 2018–2025)",
+   "disponible": "Incompleto",
+   "por_que_importa": "Subregistro: no indica menor necesidad",
+   "umbral_que_cambia_la_decision": "—"
+  }
+ ],
+ "pesos": [
+  {
+   "criterio": "Necesidad",
+   "referencia": 0.3,
+   "stress_ssp370_2060": 0.2249999999999999
+  },
+  {
+   "criterio": "Brecha CA",
+   "referencia": 0.2,
+   "stress_ssp370_2060": 0.15
+  },
+  {
+   "criterio": "Evidencia",
+   "referencia": 0.15,
+   "stress_ssp370_2060": 0.1124999999999999
+  },
+  {
+   "criterio": "Cobertura",
+   "referencia": 0.175,
+   "stress_ssp370_2060": 0.1312499999999999
+  },
+  {
+   "criterio": "Cobeneficios",
+   "referencia": 0.175,
+   "stress_ssp370_2060": 0.1312499999999999
+  },
+  {
+   "criterio": "Robustez 2060",
+   "referencia": 0.0,
+   "stress_ssp370_2060": 0.25
+  }
+ ],
+ "medidas": [
+  {
+   "ID": "M01",
+   "dimension": "Biodiversidad",
+   "Medida": "Instrumentos de compensación y Pago por Servicios Ambientales – PSA",
+   "Costo": 1200.0,
+   "Escala": "municipal",
+   "actua_sobre": "S+CA"
+  },
+  {
+   "ID": "M02",
+   "dimension": "Biodiversidad",
+   "Medida": "Restauración de ecosistemas estratégicos",
+   "Costo": 1500.0,
+   "Escala": "municipal",
+   "actua_sobre": "S"
+  },
+  {
+   "ID": "M03",
+   "dimension": "Biodiversidad",
+   "Medida": "Fortalecimiento de sistemas de áreas protegidas",
+   "Costo": 700.0,
+   "Escala": "corredor",
+   "actua_sobre": "CA"
+  },
+  {
+   "ID": "M04",
+   "dimension": "Recurso hídrico",
+   "Medida": "Uso intersectorial eficiente del recurso hídrico",
+   "Costo": 900.0,
+   "Escala": "municipal",
+   "actua_sobre": "S+CA"
+  },
+  {
+   "ID": "M05",
+   "dimension": "Recurso hídrico",
+   "Medida": "Protección y recuperación de rondas hídricas",
+   "Costo": 1300.0,
+   "Escala": "municipal",
+   "actua_sobre": "S"
+  },
+  {
+   "ID": "M06",
+   "dimension": "Recurso hídrico",
+   "Medida": "Protección de cabeceras de cuenca y ecosistemas abastecedores",
+   "Costo": 1600.0,
+   "Escala": "municipal",
+   "actua_sobre": "S"
+  },
+  {
+   "ID": "M07",
+   "dimension": "Seguridad alimentaria",
+   "Medida": "Protección y reconversión de suelos agrícolas estratégicos",
+   "Costo": 1000.0,
+   "Escala": "municipal",
+   "actua_sobre": "S"
+  },
+  {
+   "ID": "M08",
+   "dimension": "Seguridad alimentaria",
+   "Medida": "Producción agroecológica y economía rural resiliente",
+   "Costo": 800.0,
+   "Escala": "municipal",
+   "actua_sobre": "S+CA"
+  },
+  {
+   "ID": "M09",
+   "dimension": "Hábitat",
+   "Medida": "Espacios verdes urbanos",
+   "Costo": 1000.0,
+   "Escala": "municipal",
+   "actua_sobre": "S"
+  },
+  {
+   "ID": "M10",
+   "dimension": "Hábitat",
+   "Medida": "Sistemas Urbanos de Drenaje Sostenible – SUDS",
+   "Costo": 1800.0,
+   "Escala": "municipal",
+   "actua_sobre": "S"
+  },
+  {
+   "ID": "M11",
+   "dimension": "Infraestructura",
+   "Medida": "Infraestructura resiliente al cambio climático",
+   "Costo": 2500.0,
+   "Escala": "municipal",
+   "actua_sobre": "S"
+  },
+  {
+   "ID": "M12",
+   "dimension": "Infraestructura",
+   "Medida": "Fortalecimiento de infraestructura resiliente y servicios públicos",
+   "Costo": 2000.0,
+   "Escala": "municipal",
+   "actua_sobre": "S"
+  },
+  {
+   "ID": "M13",
+   "dimension": "Riesgo de desastres",
+   "Medida": "Fortalecimiento de Sistemas de Alerta Temprana – SAT",
+   "Costo": 1200.0,
+   "Escala": "corredor",
+   "actua_sobre": "CA"
+  },
+  {
+   "ID": "M14",
+   "dimension": "Riesgo de desastres",
+   "Medida": "Conocimiento y comunicación sobre amenazas, vulnerabilidad y riesgo climático",
+   "Costo": 600.0,
+   "Escala": "corredor",
+   "actua_sobre": "CA"
+  },
+  {
+   "ID": "M15",
+   "dimension": "Salud",
+   "Medida": "Sistema de salud y entornos saludables resilientes al clima",
+   "Costo": 800.0,
+   "Escala": "municipal",
+   "actua_sobre": "CA"
+  }
+ ]
+}
